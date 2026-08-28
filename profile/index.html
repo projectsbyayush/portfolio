@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush Patil — Full Stack Web Developer</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --outer:#5A5D3A;
+  --shell:#5A5D3A;
+  --cream:#EDE6D1;
+  --cream2:#E8E0C8;
+  --yellow:#FFD600;
+  --yellow-light:#FFEF99;
+  --dark:#2E2E2A;
+  --line:#9A9588;
+  --radius:22px;
+}
+body{
+  background:var(--outer);
+  background-image:
+    radial-gradient(at 20% 30%, rgba(255,214,0,0.18) 0%, transparent 50%),
+    radial-gradient(at 90% 80%, rgba(237,230,209,0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #5A5D3A 0%, #4A4D2E 100%);
+  color:#0A0A0A;
+  font-family:'Instrument Sans','Inter',system-ui,sans-serif;
+  min-height:100vh;
+  display:grid;place-items:start center;
+  padding:14px;
+}
+.shell{
+  width:100%;
+  max-width:1180px;
+  background:transparent;
+  border-radius:18px;
+  padding:14px;
+}
+/* HEADER — glass */
+.header{
+  background:rgba(237,230,209,0.82);
+  backdrop-filter:blur(14px) saturate(1.2);
+  -webkit-backdrop-filter:blur(14px) saturate(1.2);
+  border:1px solid rgba(255,255,255,0.28);
+  box-shadow:0 8px 32px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.35);
+  border-radius:var(--radius);
+  padding:26px 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  transition:all 0.3s ease;
+}
+.header:hover{
+  background:rgba(237,230,209,0.92);
+  box-shadow:0 12px 40px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.45);
+  transform:translateY(-1px);
+}
+.header-left{
+  font-size:17px;letter-spacing:-0.03em;font-weight:500;
+  display:flex;align-items:center;gap:10px;
+}
+.header-left b{font-weight:800}
+.nav-icon{
+  width:36px;height:36px;border-radius:10px;
+  object-fit:cover;display:block;
+  border:none;
+  outline:none;
+  background:transparent;
+}
+.header-nav{
+  display:flex;gap:6px;font-size:12px;letter-spacing:0.07em;font-weight:700;
+}
+.header-nav a{
+  color:inherit;text-decoration:none;opacity:0.9;
+  padding:8px 14px;border-radius:999px;
+  transition:all 0.2s ease;
+  border:1.5px solid transparent;
+}
+.header-nav a:hover{
+  opacity:1;
+  background:var(--yellow);
+  color:#0A0A0A;
+  transform:translateY(-1px);
+  box-shadow:0 2px 8px rgba(0,0,0,0.12);
+}
+/* BENTO */
+.bento{
+  display:grid;
+  grid-template-columns:1.38fr 0.92fr 0.95fr;
+  grid-template-rows: 382px auto;
+  gap:14px;
+  margin-top:14px;
+}
+.card{
+  border-radius:var(--radius);
+  overflow:hidden;
+  position:relative;
+  background:rgba(237,230,209,0.84);
+  backdrop-filter:blur(14px) saturate(1.15);
+  -webkit-backdrop-filter:blur(14px) saturate(1.15);
+  border:1px solid rgba(255,255,255,0.32);
+  box-shadow:0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.4);
+  transition:all 0.35s cubic-bezier(0.2,0.8,0.2,1);
+}
+.card:hover{
+  transform:translateY(-5px) scale(1.012);
+  background:rgba(237,230,209,0.94);
+  border-color:rgba(255,214,0,0.45);
+  box-shadow:0 16px 48px rgba(0,0,0,0.14), 0 4px 16px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.55);
+}
+/* A - hero left top - YELLOW glass */
+.a{
+  background:rgba(255,214,0,0.90);
+  backdrop-filter:blur(14px) saturate(1.15);
+  -webkit-backdrop-filter:blur(14px) saturate(1.15);
+  border:1px solid rgba(255,255,255,0.42);
+  padding:32px;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.a:hover{
+  background:rgba(255,214,0,0.98);
+  border-color:rgba(255,255,255,0.65);
+}
+.a-flower{
+  position:absolute;top:22px;right:28px;width:98px;height:98px;opacity:0.9;
+}
+.a-flower svg{width:100%;height:100%}
+.a-text{
+  margin-top:auto;
+  max-width:420px;
+}
+.a-text h2{
+  font-size:30px;line-height:1.08;letter-spacing:-0.04em;font-weight:800;
+}
+.a-text h2 span{font-weight:400;letter-spacing:-0.03em}
+.a-text h2 b{font-weight:800}
+/* B - photo middle top - DUCK glass */
+.b{
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(14px) saturate(1.15);
+  -webkit-backdrop-filter:blur(14px) saturate(1.15);
+  padding:0;
+  display:grid;place-items:center;
+}
+.b img{
+  width:100%;height:100%;object-fit:contain;display:block;
+  padding:14px;
+  background:#FFFFFF;
+}
+/* C - right tall skills */
+.c{
+  grid-row:1 / span 2;
+  background:var(--cream);
+  padding:22px 0 0 0;
+  display:flex;flex-direction:column;
+}
+.c-head{
+  padding:0 22px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.c-head h3{font-size:18px;font-weight:800;letter-spacing:-0.03em}
+.c-head span{font-size:11px;opacity:0.5}
+.c-img{
+  margin:14px 14px 0 14px;
+  height:178px;border-radius:14px;overflow:hidden;background:#111;
+}
+.c-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);display:block}
+/* Terminal — replaces code image */
+.terminal{
+  height:100%;background:#0F1110;color:#EDE6D1;
+  font-family:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  display:flex;flex-direction:column;
+}
+.term-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 14px;background:#1A1C1B;border-bottom:1px solid #2A2C2B;
+  font-size:10px;letter-spacing:0.08em;opacity:0.9;
+}
+.dots{display:flex;gap:6px}
+.dots i{width:10px;height:10px;border-radius:50%;display:block}
+.dots i:nth-child(1){background:#FF5F56}
+.dots i:nth-child(2){background:#FFBD2E}
+.dots i:nth-child(3){background:#27C93F}
+.term-body{
+  padding:14px 14px 12px;
+  font-size:11.5px;line-height:1.65;
+  white-space:pre-wrap;word-break:break-word;
+  color:#EDE6D1;
+}
+.term-body .cmt{color:#7A7F7E}
+.term-body .key{color:#FFD600}
+.term-body .str{color:#A8D8A8}
+.term-body .val{color:#EDE6D1}
+.c-list{
+  flex:1;
+  display:flex;flex-direction:column;
+  padding:10px 0 14px 0;
+}
+.c-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12.5px 22px;
+  border-bottom:1.5px solid var(--line);
+  font-size:15.5px;font-weight:700;letter-spacing:-0.02em;
+  transition:all 0.22s ease;
+}
+.c-row:hover{
+  background:rgba(255,214,0,0.14);
+  padding-left:26px;
+  border-bottom-color:rgba(255,214,0,0.35);
+}
+.c-row:first-child{border-top:1.5px solid var(--line);margin-top:14px}
+.c-row span{font-size:10px;font-weight:700;letter-spacing:0.09em;opacity:0.45;text-transform:uppercase}
+.c-row em{font-style:normal;font-weight:400;opacity:0.6;font-size:13px}
+/* D - bottom left text — centered middle of card */
+.d{
+  background:var(--cream);
+  padding:26px 28px;
+  display:flex;flex-direction:column;gap:16px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  min-height:100%;
+}
+.d-top{
+  display:flex;justify-content:space-between;align-items:center;
+  width:100%;
+}
+.d .loc{
+  font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;opacity:0.55;
+  display:flex;align-items:center;gap:6px;
+}
+.d-badge{
+  font-size:10px;font-weight:800;letter-spacing:0.08em;
+  background:var(--yellow);border:1.5px solid #0A0A0A;border-radius:999px;
+  padding:6px 10px;display:inline-flex;align-items:center;gap:6px;
+}
+.d h3{font-size:22px;font-weight:900;letter-spacing:-0.04em;line-height:1.1;text-align:center}
+.d h3 span{font-weight:500;font-size:13px;opacity:0.6;letter-spacing:-0.02em;display:block;margin-top:4px}
+.d p{
+  font-size:13.8px;line-height:1.6;font-weight:500;letter-spacing:-0.015em;
+  opacity:0.85;text-align:center;max-width:360px;margin-left:auto;margin-right:auto;
+}
+.d p strong{font-weight:800;color:#0A0A0A}
+.about-center{
+  flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;
+  width:100%;
+}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;
+  width:100%;text-align:left;
+}
+.about-item{
+  background:rgba(255,255,255,0.7);border:1.5px solid rgba(0,0,0,0.08);
+  border-radius:14px;padding:12px 13px;
+  display:flex;flex-direction:column;gap:4px;
+  transition:all 0.25s ease;
+}
+.about-item:hover{
+  background:rgba(255,255,255,0.92);
+  transform:translateY(-2px);
+  border-color:rgba(255,214,0,0.35);
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+.about-item i{font-size:14px;opacity:0.7}
+.about-item b{font-size:12px;font-weight:800;letter-spacing:-0.02em;line-height:1.2}
+.about-item span{font-size:10.5px;font-weight:600;opacity:0.6;line-height:1.3}
+/* E - bottom middle contact — dark glass */
+.e{
+  background:rgba(46,46,42,0.82);
+  backdrop-filter:blur(16px) saturate(1.2);
+  -webkit-backdrop-filter:blur(16px) saturate(1.2);
+  border:1px solid rgba(237,230,209,0.14);
+  color:var(--cream);
+  padding:26px 24px;
+  display:flex;flex-direction:column;
+}
+.e:hover{
+  background:rgba(46,46,42,0.88);
+  border-color:rgba(255,214,0,0.28);
+}
+.e-top{font-size:13.5px;line-height:1.35;opacity:0.85;font-weight:400}
+.e-bottom{
+  margin-top:auto;
+  display:flex;justify-content:space-between;align-items:flex-end;
+}
+.e-bottom h3{font-size:29px;font-weight:700;letter-spacing:-0.04em;line-height:1}
+.e-social{
+  text-align:right;font-size:10px;letter-spacing:0.12em;line-height:2.1;opacity:0.8;
+}
+.e-social a{color:inherit;text-decoration:none;display:block}
+.e-social a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* CONTACT FORM — inputs inside E */
+.contact-form{margin:18px 0 18px 0;display:flex;flex-direction:column;gap:10px}
+.field{position:relative;display:flex;align-items:center}
+.field i{
+  position:absolute;left:13px;font-size:12px;opacity:0.6;color:var(--cream);pointer-events:none;
+}
+.field input,.field textarea{
+  width:100%;background:rgba(237,230,209,0.08);
+  border:1.5px solid rgba(237,230,209,0.18);
+  border-radius:12px;
+  color:var(--cream);
+  font-family:inherit;
+  font-size:13px;font-weight:500;
+  padding:11px 12px 11px 34px;
+  outline:none;
+  transition:border-color 0.15s, background 0.15s;
+}
+.field textarea{padding-top:12px;resize:vertical;min-height:72px;line-height:1.4}
+.field input::placeholder,.field textarea::placeholder{color:rgba(237,230,209,0.45);font-weight:400}
+.field input:focus,.field textarea:focus{
+  border-color:rgba(255,214,0,0.65);
+  background:rgba(237,230,209,0.12);
+}
+.btn-send{
+  margin-top:4px;
+  background:var(--yellow);color:#0A0A0A;
+  border:none;border-radius:999px;
+  padding:12px 18px;
+  font-family:inherit;font-size:13px;font-weight:800;letter-spacing:-0.01em;
+  cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  transition:transform 0.12s, filter 0.12s;
+}
+.btn-send:hover{transform:translateY(-1px);filter:brightness(0.98)}
+.btn-send:active{transform:translateY(0)}
+.form-note{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.45;margin-top:2px}
+
+/* EXPANDED EDUCATION TAG inside D */
+.edu-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:14px;border:1.5px solid #0A0A0A;border-radius:999px;padding:7px 12px;
+  font-size:11px;font-weight:800;letter-spacing:0.02em;background:rgba(255,255,255,0.5);
+}
+/* Resume section — bento */
+.resume{
+  grid-column:1 / -1;
+  display:grid;grid-template-columns:1.1fr 1.6fr;
+  gap:24px;padding:28px 32px;
+  align-items:center;
+}
+.resume-left h3{font-size:32px;font-weight:900;letter-spacing:-0.05em;line-height:0.9}
+.resume-left p{font-size:13px;font-weight:500;opacity:0.65;margin-top:8px;line-height:1.5;max-width:340px}
+.btn-resume{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:16px;background:#0A0A0A;color:#fff;
+  border-radius:999px;padding:11px 18px;
+  font-size:13px;font-weight:800;text-decoration:none;
+  border:1.5px solid #0A0A0A;
+  transition:transform 0.15s, background 0.15s;
+}
+.btn-resume:hover{transform:translateY(-1px);background:var(--dark)}
+.resume-timeline{
+  display:flex;flex-direction:column;gap:10px;
+}
+.rt-item{
+  display:flex;gap:14px;align-items:flex-start;
+  background:rgba(255,255,255,0.65);border:1.5px solid rgba(0,0,0,0.06);
+  border-radius:14px;padding:14px 14px;
+  transition:all 0.25s ease;
+}
+.rt-item:hover{
+  background:rgba(255,255,255,0.88);
+  transform:translateY(-2px) scale(1.01);
+  border-color:rgba(255,214,0,0.35);
+  box-shadow:0 8px 24px rgba(0,0,0,0.10);
+}
+.rt-icon{
+  width:38px;height:38px;min-width:38px;
+  background:var(--yellow);border:1.5px solid #0A0A0A;border-radius:10px;
+  display:grid;place-items:center;font-size:14px;
+}
+.rt-item b{font-size:13px;font-weight:800;letter-spacing:-0.02em}
+.rt-item span{font-size:12px;font-weight:600;opacity:0.6}
+.rt-item small{font-size:11px;opacity:0.55}
+/* Footer — glass */
+.site-footer{
+  margin-top:14px;
+  background:rgba(237,230,209,0.82);
+  backdrop-filter:blur(14px) saturate(1.2);
+  -webkit-backdrop-filter:blur(14px) saturate(1.2);
+  border:1px solid rgba(255,255,255,0.28);
+  box-shadow:0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.35);
+  border-radius:var(--radius);
+  padding:18px 24px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  font-size:11px;font-weight:700;letter-spacing:0.06em;
+  transition:all 0.3s ease;
+}
+.site-footer:hover{
+  background:rgba(237,230,209,0.92);
+  transform:translateY(-2px);
+  box-shadow:0 12px 36px rgba(0,0,0,0.12);
+}
+.site-footer a{color:inherit;text-decoration:none;opacity:0.7}
+.site-footer a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
+.foot-links{display:flex;gap:14px;flex-wrap:wrap;font-size:11px}
+/* About content little down */
+.d > div:nth-child(2){margin-top:10px}
+.d p{margin-top:6px}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+  .bento{grid-template-columns:1fr 1fr;grid-template-rows:382px 382px auto}
+  .c{grid-row:auto;grid-column:span 2}
+  .c-list{flex-direction:row;flex-wrap:wrap}
+  .c-row{width:50%;border-right:1.5px solid var(--line)}
+  .c-row:nth-child(even){border-right:none}
+  .c-img{height:220px}
+  .resume{grid-template-columns:1fr;grid-column:1 / -1}
+  .site-footer{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:640px){
+  body{padding:0}
+  .shell{border-radius:0;padding:10px}
+  .header{padding:18px 18px;flex-direction:column;align-items:flex-start;gap:10px}
+  .bento{grid-template-columns:1fr;grid-template-rows:auto}
+  .a{ min-height:360px}
+  .b{height:420px}
+  .c{grid-column:span 1}
+  .c-list{flex-direction:column}
+  .c-row{width:100%;border-right:none}
+  .d{min-height:300px}
+  .e{min-height:260px}
+  .a-text h2{font-size:26px}
+  .resume{grid-column:1 / -1;padding:22px}
+  .resume-left h3{font-size:28px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="header">
+    <div class="header-left"><img src="icon.png" alt="Ayush Patil logo" class="nav-icon"> AYUSH <b>PATIL</b></div>
+    <nav class="header-nav">
+      <a href="#skills">SKILLS</a>
+      <a href="#education">ABOUT</a>
+      <a href="#resume">RESUME</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="bento">
+    <!-- A - HERO YELLOW like Pioneer card -->
+    <div class="card a">
+      <div class="a-flower" aria-hidden="true">
+        <!-- geometric flower like in image -->
+        <svg viewBox="0 0 100 100" fill="none" stroke="#1A1A1A" stroke-width="0.9">
+          <g opacity="0.9">
+            <ellipse cx="50" cy="50" rx="8" ry="28" />
+            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(30 50 50)"/>
+            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(60 50 50)"/>
+            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(90 50 50)"/>
+            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(120 50 50)"/>
+            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(150 50 50)"/>
+            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(15 50 50)"/>
+            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(45 50 50)"/>
+            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(75 50 50)"/>
+            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(105 50 50)"/>
+            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(135 50 50)"/>
+            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(165 50 50)"/>
+            <circle cx="50" cy="50" r="3" fill="#1A1A1A" stroke="none"/>
+          </g>
+        </svg>
+      </div>
+      <div></div>
+      <div class="a-text">
+        <h2>
+          Full Stack Developer<br>
+          <span>Building Scalable Web with</span><br>
+          <b>Modern Architecture</b>
+        </h2>
+        <p style="margin-top:12px;font-size:12px;font-weight:700;letter-spacing:0.08em;opacity:0.6;text-transform:uppercase">Mumbai, India — Available for work</p>
+      </div>
+    </div>
+
+    <!-- B - DUCK IMAGE (new) -->
+    <div class="card b">
+      <img src="duck.png?v=2" alt="Yellow Duck — Ayush Patil" loading="lazy">
+    </div>
+
+    <!-- C - RIGHT TALL SKILLS - like Ackino / Manus list -->
+    <div class="card c" id="skills">
+      <div class="c-head">
+        <h3>Stack</h3>
+        <span>11 Technologies</span>
+      </div>
+      <div class="c-img">
+        <div class="terminal">
+          <div class="term-head">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span><i class="fa-solid fa-terminal" style="margin-right:6px"></i> ayush@portfolio — zsh</span>
+          </div>
+<pre class="term-body"><span class="cmt">// Full Stack Web Developer</span>
+<span class="key">const</span> ayush = {
+  <span class="key">role</span>: <span class="str">"Full Stack Web Developer"</span>,
+  <span class="key">location</span>: <span class="str">"Mumbai, India"</span>,
+  <span class="key">stack</span>: [<span class="str">"React"</span>, <span class="str">"Node"</span>, <span class="str">"Java"</span>],
+  <span class="key">available</span>: <span class="val">true</span>
+};
+<span class="cmt">// → building scalable web</span></pre>
+        </div>
+      </div>
+      <div class="c-list">
+        <div class="c-row"><span>Frontend</span> HTML5</div>
+        <div class="c-row"><span>Style</span> CSS3</div>
+        <div class="c-row"><span>Core</span> JavaScript</div>
+        <div class="c-row"><span>Library</span> React.js</div>
+        <div class="c-row"><span>Framework</span> Angular.js</div>
+        <div class="c-row"><span>Runtime</span> Node.js</div>
+        <div class="c-row"><span>Backend</span> Java</div>
+        <div class="c-row"><span>Database</span> MySQL</div>
+        <div class="c-row"><span>Database</span> PostgreSQL</div>
+        <div class="c-row"><span>Enterprise</span> Oracle SQL</div>
+        <div class="c-row" style="border-bottom:none"><span>NoSQL</span> MongoDB</div>
+      </div>
+    </div>
+
+    <!-- D - BOTTOM LEFT — centered middle of card -->
+    <div class="card d" id="education">
+      <div class="d-top">
+        <div class="loc"><i class="fa-solid fa-location-dot"></i> About — Mumbai, India</div>
+        <span class="d-badge"><i class="fa-solid fa-circle" style="font-size:6px;color:#0A0A0A"></i> Available</span>
+      </div>
+      <div class="about-center">
+        <h3>Ayush Patil <span>— Full Stack Web Developer</span></h3>
+        <p>
+          Crafting fast and minimal web experiences from frontend to backend. Focused on clean code, scalable architecture and human-centered design.
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="about-item">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <b>B.E. Computer Engineering</b>
+          <span>Pravin R. Patil College of Engineering and Technology</span>
+        </div>
+        <div class="about-item">
+          <i class="fa-solid fa-building-columns"></i>
+          <b>Mumbai University</b>
+          <span>Mumbai, India — Undergraduate Degree</span>
+        </div>
+      </div>
+      <div class="edu-pill"><i class="fa-solid fa-award"></i> Pravin R. Patil College of Engineering and Technology — Mumbai University</div>
+    </div>
+
+    <!-- E - BOTTOM MIDDLE CONTACT WITH FORM -->
+    <div class="card e" id="contact">
+      <div class="e-top">Have a<br>Project??</div>
+      <h3 style="font-size:24px;font-weight:800;letter-spacing:-0.04em;margin-top:14px;">Contact Me</h3>
+      <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); var n=this.querySelector('.form-note'); n.textContent='Message sent — I will reply soon!'; n.style.color='var(--yellow)'; setTimeout(()=>{n.textContent='* I reply within 24 hours'; n.style.color='';},3000);">
+        <label class="field">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+        </label>
+        <label class="field">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+        </label>
+        <label class="field">
+          <i class="fa-solid fa-message"></i>
+          <textarea name="message" placeholder="Tell me about your project..." rows="3" required></textarea>
+        </label>
+        <button type="submit" class="btn-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <span class="form-note">* I reply within 24 hours</span>
+      </form>
+      <div class="e-bottom" style="margin-top:auto;padding-top:14px;border-top:1px solid rgba(237,230,209,0.12);display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+        <span style="font-size:10px;letter-spacing:0.12em;opacity:0.5;display:block"><i class="fa-solid fa-location-dot"></i> MUMBAI, INDIA</span>
+        <div class="e-social" style="line-height:2;text-align:left;width:100%">
+          <a href="https://github.com/projectsbyayush" target="_blank"><i class="fa-brands fa-github"></i> github.com/projectsbyayush</a>
+          <a href="https://linkedin.com/in/projectsbyayush" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/projectsbyayush</a>
+          <a href="https://instagram.com/projectsbyayush" target="_blank"><i class="fa-brands fa-instagram"></i> instagram.com/projectsbyayush</a>
+          <a href="https://x.com/projectsbyayush" target="_blank"><i class="fa-brands fa-x-twitter"></i> x.com/projectsbyayush</a>
+          <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESUME SECTION -->
+    <div class="card resume" id="resume">
+      <div class="resume-left">
+        <div class="loc" style="font-size:11px;font-weight:800;letter-spacing:0.14em;opacity:0.55;display:flex;align-items:center;gap:6px"><i class="fa-solid fa-file-lines"></i> Resume — Download</div>
+        <h3>Resume</h3>
+        <p>B.E. Computer Engineering graduate from Mumbai University. Full Stack focus — React, Node, Java & databases. Available for full-time & freelance.</p>
+        <a href="#" onclick="window.print();return false" class="btn-resume"><i class="fa-solid fa-download"></i> Download Resume (PDF)</a>
+        <div style="margin-top:10px;font-size:11px;opacity:0.55"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com &nbsp;•&nbsp; <i class="fa-solid fa-location-dot"></i> Mumbai, India</div>
+      </div>
+      <div class="resume-timeline">
+        <div class="rt-item">
+          <div class="rt-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <b>Pravin R. Patil College of Engineering and Technology</b><br>
+            <span>Mumbai University — B.E. Computer Engineering</span><br>
+            <small><i class="fa-regular fa-calendar"></i> Graduate • Full-time</small>
+          </div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-icon"><i class="fa-solid fa-code"></i></div>
+          <div>
+            <b>Full Stack Web Developer</b><br>
+            <span>HTML5 • CSS3 • JavaScript • React.js • Angular.js • Node.js</span><br>
+            <small><i class="fa-solid fa-layer-group"></i> Frontend to Backend + Databases</small>
+          </div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-icon"><i class="fa-solid fa-database"></i></div>
+          <div>
+            <b>Databases</b><br>
+            <span>Java • MySQL • PostgreSQL • Oracle SQL • MongoDB</span><br>
+            <small><i class="fa-solid fa-server"></i> Relational & NoSQL</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer class="site-footer">
+    <div><i class="fa-solid fa-copyright"></i> 2026 Ayush Patil — <b>projectsbyayush</b> • Mumbai, India</div>
+    <div class="foot-links">
+      <a href="https://github.com/projectsbyayush" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/projectsbyayush" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://instagram.com/projectsbyayush" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://x.com/projectsbyayush" target="_blank"><i class="fa-brands fa-x-twitter"></i> X</a>
+      <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
