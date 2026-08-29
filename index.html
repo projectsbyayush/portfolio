@@ -454,6 +454,21 @@ body{
 .d > div:nth-child(2){margin-top:10px}
 .d p{margin-top:6px}
 
+/* REMOVE OUTLINES — clean borderless */
+*{outline:none}
+*:focus{outline:none}
+.card,.header,.site-footer,.a,.b,.c,.d,.e,.resume,
+.about-item,.rt-item,.field input,.field textarea,
+.edu-pill,.d-badge,.btn-resume,.rt-icon{
+  border:none !important;
+  outline:none !important;
+}
+.header-nav a{border:none !important; outline:none !important}
+.c-row{border:none !important; border-bottom:none !important}
+.c-row:first-child{border-top:none !important}
+.field input,.field textarea{border:none !important; box-shadow:none !important}
+.c-img{border:none !important}
+
 /* MOBILE OPTIMIZATION — colorful + glass performance */
 html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
 *{ -webkit-tap-highlight-color:transparent; }
