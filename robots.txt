@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://projectsbyayush.github.io/portfolio/sitemap.xml
+Host: https://projectsbyayush.github.io
