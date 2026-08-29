@@ -665,6 +665,38 @@ html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
       <div class="edu-pill"><i class="fa-solid fa-award"></i> Pravin R. Patil College of Engineering and Technology — Mumbai University</div>
     </div>
 
+    <!-- E - BOTTOM MIDDLE CONTACT WITH FORM -->
+    <div class="card e" id="contact">
+      <div class="e-top">Have a<br>Project??</div>
+      <h3 style="font-size:24px;font-weight:800;letter-spacing:-0.04em;margin-top:14px;">Contact Me</h3>
+      <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); var n=this.querySelector('.form-note'); n.textContent='Message sent — I will reply soon!'; n.style.color='var(--yellow)'; setTimeout(()=>{n.textContent='* I reply within 24 hours'; n.style.color='';},3000);">
+        <label class="field">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+        </label>
+        <label class="field">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+        </label>
+        <label class="field">
+          <i class="fa-solid fa-message"></i>
+          <textarea name="message" placeholder="Tell me about your project..." rows="3" required></textarea>
+        </label>
+        <button type="submit" class="btn-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <span class="form-note">* I reply within 24 hours</span>
+      </form>
+      <div class="e-bottom" style="margin-top:auto;padding-top:14px;border-top:1px solid rgba(237,230,209,0.12);display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+        <span style="font-size:10px;letter-spacing:0.12em;opacity:0.5;display:block"><i class="fa-solid fa-location-dot"></i> MUMBAI, INDIA</span>
+        <div class="e-social" style="line-height:2;text-align:left;width:100%">
+          <a href="https://github.com/projectsbyayush" target="_blank"><i class="fa-brands fa-github"></i> github.com/projectsbyayush</a>
+          <a href="https://linkedin.com/in/projectsbyayush" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/projectsbyayush</a>
+          <a href="https://instagram.com/projectsbyayush" target="_blank"><i class="fa-brands fa-instagram"></i> instagram.com/projectsbyayush</a>
+          <a href="https://x.com/projectsbyayush" target="_blank"><i class="fa-brands fa-x-twitter"></i> x.com/projectsbyayush</a>
+          <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
     <!-- RESUME SECTION -->
     <div class="card resume" id="resume">
       <div class="resume-left">
@@ -701,40 +733,6 @@ html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
         </div>
       </div>
     </div>
-
-    <!-- E - BOTTOM MIDDLE CONTACT WITH FORM -->
-    <div class="card e" id="contact">
-      <div class="e-top">Have a<br>Project??</div>
-      <h3 style="font-size:24px;font-weight:800;letter-spacing:-0.04em;margin-top:14px;">Contact Me</h3>
-      <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); var n=this.querySelector('.form-note'); n.textContent='Message sent — I will reply soon!'; n.style.color='var(--yellow)'; setTimeout(()=>{n.textContent='* I reply within 24 hours'; n.style.color='';},3000);">
-        <label class="field">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-        </label>
-        <label class="field">
-          <i class="fa-solid fa-envelope"></i>
-          <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
-        </label>
-        <label class="field">
-          <i class="fa-solid fa-message"></i>
-          <textarea name="message" placeholder="Tell me about your project..." rows="3" required></textarea>
-        </label>
-        <button type="submit" class="btn-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-        <span class="form-note">* I reply within 24 hours</span>
-      </form>
-      <div class="e-bottom" style="margin-top:auto;padding-top:14px;border-top:1px solid rgba(237,230,209,0.12);display:flex;flex-direction:column;align-items:flex-start;gap:10px">
-        <span style="font-size:10px;letter-spacing:0.12em;opacity:0.5;display:block"><i class="fa-solid fa-location-dot"></i> MUMBAI, INDIA</span>
-        <div class="e-social" style="line-height:2;text-align:left;width:100%">
-          <a href="https://github.com/projectsbyayush" target="_blank"><i class="fa-brands fa-github"></i> github.com/projectsbyayush</a>
-          <a href="https://linkedin.com/in/projectsbyayush" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/projectsbyayush</a>
-          <a href="https://instagram.com/projectsbyayush" target="_blank"><i class="fa-brands fa-instagram"></i> instagram.com/projectsbyayush</a>
-          <a href="https://x.com/projectsbyayush" target="_blank"><i class="fa-brands fa-x-twitter"></i> x.com/projectsbyayush</a>
-          <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com</a>
-        </div>
-      </div>
-    </div>
-
-
 
   </div>
   <footer class="site-footer">
