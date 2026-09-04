@@ -30,124 +30,159 @@
 :root{
   --bg:#0b0b0c;
   --card:#1e1f21;
-  --strip:#161719;
+  --card2:#161719;
   --ink:#f4f4f4;
   --dim:#8f8f93;
+  --line:#333437;
   --orange:#ff5c1c;
   --orange-h:#e64e12;
   --r:26px;
   --font:'Inter Tight',system-ui,-apple-system,sans-serif;
 }
-html,body{height:100%}
-html{-webkit-text-size-adjust:100%}
-body{
-  background:var(--bg);color:var(--ink);font-family:var(--font);
-  height:100dvh;overflow:hidden;
-  display:grid;place-items:center;padding:14px;
-  -webkit-font-smoothing:antialiased;
-}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:100dvh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--orange);color:#fff}
-.shell{width:min(1480px,100%);height:min(100dvh - 28px,960px);display:grid;grid-template-rows:minmax(0,1.28fr) auto minmax(0,1fr);gap:12px}
-.row{display:grid;gap:12px;min-height:0}
+/* ---------- header ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #1c1d1f}
+.topbar-in{max-width:1480px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+.brand{font-weight:700;letter-spacing:-0.02em;font-size:16px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand span{color:var(--dim);font-weight:500}
+.topnav{display:flex;gap:4px}
+.topnav a{color:var(--dim);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:100px}
+.topnav a:hover{color:var(--ink);background:#1c1d1f}
+.top-mail{background:var(--orange);color:#fff;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:100px;padding:10px 20px;white-space:nowrap}
+.top-mail:hover{background:var(--orange-h)}
+/* ---------- shell / bento ---------- */
+.shell{width:min(1480px,100%);margin:0 auto;padding:14px;display:grid;gap:12px}
+.row{display:grid;gap:12px}
 .row-top{grid-template-columns:1.55fr 1fr}
 .row-bottom{grid-template-columns:1fr 1.55fr}
-.card{background:var(--card);border-radius:var(--r);padding:clamp(20px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.card{background:var(--card);border-radius:var(--r);padding:clamp(22px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column}
 /* hero */
-.hero{justify-content:flex-start}
-.avatar{width:clamp(64px,7vw,92px);height:clamp(64px,7vw,92px);border-radius:50%;overflow:hidden;background:#2a2b2e;flex:none}
+.avatar{width:clamp(72px,7vw,92px);height:clamp(72px,7vw,92px);border-radius:50%;overflow:hidden;background:#2a2b2e;flex:none}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05)}
-.hero h1{
-  margin-top:auto;
-  font-size:clamp(30px,4.1vw,58px);
-  font-weight:600;letter-spacing:-0.035em;line-height:1.04;text-wrap:balance;
-}
-.hero h1 .w{color:var(--ink)} .hero h1 .g{color:var(--dim)}
-/* contact */
-.contact{align-items:center;justify-content:center;text-align:center;gap:clamp(14px,2.4vh,26px)}
-.rings{width:clamp(72px,8vw,116px);height:auto}
-.contact h2{font-size:clamp(26px,3.2vw,46px);font-weight:600;letter-spacing:-0.03em;line-height:1.08;text-wrap:balance}
-.mail-pill{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  background:var(--orange);color:#fff;text-decoration:none;font-weight:600;
-  font-size:clamp(16px,1.7vw,23px);letter-spacing:-0.01em;
-  border-radius:100px;padding:clamp(14px,2.2vh,22px) clamp(26px,3vw,48px);
-  transition:background .2s,transform .2s;white-space:nowrap;max-width:100%;
-}
+.hero h1{margin-top:auto;padding-top:26px;font-size:clamp(32px,4.1vw,58px);font-weight:600;letter-spacing:-0.035em;line-height:1.04;text-wrap:balance}
+.hero h1 .g{color:var(--dim)}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.hero .tags span{font-size:12px;font-weight:500;color:#c9c9cd;border:1px solid #3a3b3e;border-radius:100px;padding:7px 14px}
+/* contact mini */
+.contact{align-items:center;justify-content:center;text-align:center;gap:clamp(14px,2.4vh,24px)}
+.rings{width:clamp(72px,8vw,110px);height:auto}
+.contact h2{font-size:clamp(26px,3.2vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.08;text-wrap:balance}
+.mail-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-0.01em;border-radius:100px;padding:clamp(14px,2.2vh,20px) clamp(26px,3vw,46px);transition:background .2s,transform .2s;max-width:100%}
 .mail-pill:hover{background:var(--orange-h);transform:translateY(-2px)}
 /* social strip */
 .strip{grid-template-columns:repeat(6,1fr)}
-.strip a{
-  background:var(--strip);color:var(--ink);text-decoration:none;text-align:center;
-  font-size:clamp(12px,1.25vw,17px);font-weight:500;letter-spacing:-0.01em;
-  border-radius:100px;padding:clamp(12px,1.9vh,19px) 8px;
-  transition:background .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
+.strip a{background:var(--card2);color:var(--ink);text-decoration:none;text-align:center;font-size:clamp(12px,1.25vw,16px);font-weight:500;border-radius:100px;padding:clamp(13px,1.9vh,18px) 8px;transition:background .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .strip a:hover{background:#222426}
 /* based */
-.based{justify-content:flex-start;gap:clamp(12px,3vh,30px)}
-.globe{width:clamp(64px,7vw,104px);height:auto}
-.based p{margin-top:auto;font-size:clamp(26px,3.2vw,46px);font-weight:600;letter-spacing:-0.03em;line-height:1.08}
+.based{justify-content:flex-start;gap:clamp(14px,3vh,28px)}
+.globe{width:clamp(64px,7vw,100px);height:auto}
+.based p{margin-top:auto;font-size:clamp(26px,3.2vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.1}
 .based p .g{color:var(--dim)}
+.based small{font-size:13px;color:var(--dim);font-weight:500}
 /* projects */
-.work{justify-content:flex-start;gap:2px}
-.work-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:clamp(6px,1.2vh,12px);flex:none}
-.work-head h2{font-size:clamp(15px,1.4vw,19px);font-weight:600;letter-spacing:-0.01em}
+.work-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:clamp(8px,1.4vh,14px)}
+.work-head h2{font-size:clamp(16px,1.4vw,20px);font-weight:600;letter-spacing:-0.01em}
 .work-head h2 sup{font-size:.62em;color:var(--dim);font-weight:500;margin-left:6px}
-.work-head a{font-size:clamp(12px,1.1vw,14px);color:var(--dim);text-decoration:none;font-weight:500}
+.work-head a{font-size:13px;color:var(--dim);text-decoration:none;font-weight:500}
 .work-head a:hover{color:var(--ink)}
-.proj{
-  flex:1 1 0;min-height:0;
-  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(10px,1.4vw,18px);
-  padding:clamp(6px,1vh,12px) clamp(8px,1vw,14px);
-  border-top:1px solid #333437;border-radius:16px;
-  text-decoration:none;color:var(--ink);
-  transition:background .22s ease,transform .22s ease;
-}
-.proj:last-of-type{border-bottom:1px solid #333437}
-.proj:hover{background:#26282c;transform:translateX(4px)}
-.proj .thumb{width:clamp(38px,3.6vw,48px);height:clamp(38px,3.6vw,48px);border-radius:14px;display:grid;place-items:center;flex:none}
-.proj .thumb svg{width:46%;height:46%}
-.thumb.t-blue{background:rgba(77,159,255,.13);color:#6db3ff}
-.thumb.t-amber{background:rgba(255,176,32,.13);color:#ffb020}
-.thumb.t-green{background:rgba(61,220,132,.12);color:#3ddc84}
-.proj .t{min-width:0}
-.proj .t b{display:flex;align-items:baseline;gap:8px;font-size:clamp(16px,1.8vw,24px);font-weight:600;letter-spacing:-0.025em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.proj .t b .n{font-size:.55em;color:var(--dim);font-weight:500;letter-spacing:0}
-.proj .t span{display:block;font-size:clamp(11px,1.05vw,13.5px);color:var(--dim);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}
-.proj .t .tags{display:flex;gap:6px;margin-top:6px;overflow:hidden}
-.proj .t .tags i{font-style:normal;font-size:clamp(9.5px,.9vw,11px);font-weight:600;letter-spacing:.02em;border:1px solid #3a3b3e;border-radius:100px;padding:3px 9px;color:#bdbdc0;white-space:nowrap;transition:border-color .2s,color .2s}
-.proj:hover .t .tags i{border-color:#4a4c50;color:#e8e8ea}
-.proj .a{width:clamp(34px,3.4vw,46px);height:clamp(34px,3.4vw,46px);border-radius:50%;border:1px solid #3a3b3e;display:grid;place-items:center;flex:none;transition:background .22s,border-color .22s,transform .22s}
-.proj:hover .a{background:var(--orange);border-color:var(--orange);transform:rotate(-45deg)}
-.proj .a svg{width:40%;height:40%}
-.work-foot{margin-top:auto;padding-top:clamp(6px,1.2vh,12px);font-size:clamp(11px,1vw,13px);color:var(--dim);display:flex;justify-content:space-between;gap:10px;font-weight:500;flex:none}
+.proj-cols{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1vw,14px)}
+.pcol{display:flex;flex-direction:column;gap:8px;min-width:0;border-top:1px solid var(--line);border-radius:14px;padding:14px 10px;text-decoration:none;color:var(--ink);transition:background .22s}
+.pcol:hover{background:#26282c}
+.pcol .n{font-size:12px;color:var(--dim);font-weight:500}
+.pcol b{font-size:clamp(18px,1.9vw,25px);font-weight:600;letter-spacing:-0.025em;line-height:1.1}
+.pcol p{font-size:13px;color:var(--dim);font-weight:500;line-height:1.55}
+.pcol .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.pcol .tags i{font-style:normal;font-size:10.5px;font-weight:600;border:1px solid #3a3b3e;border-radius:100px;padding:3px 9px;color:#bdbdc0;white-space:nowrap}
+.pcol:hover .tags i{border-color:#4a4c50;color:#e8e8ea}
+.pcol .view{margin-top:auto;padding-top:10px;font-size:12.5px;font-weight:600;color:var(--dim)}
+.pcol:hover .view{color:var(--orange)}
+.work-foot{padding-top:12px;font-size:12.5px;color:var(--dim);display:flex;justify-content:space-between;gap:10px;font-weight:500}
 .work-foot a{color:var(--dim);text-decoration:none}
 .work-foot a:hover{color:var(--orange)}
-/* short screens */
-@media (max-height:720px){
-  .hero h1{font-size:clamp(26px,3.4vw,44px)}
-  .contact h2{font-size:clamp(22px,2.6vw,36px)}
-  .based p{font-size:clamp(22px,2.6vw,36px)}
-  .avatar{width:60px;height:60px}
-  .rings,.globe{width:64px}
+/* ---------- marquee ---------- */
+.marquee{background:#101012;border-top:1px solid #1c1d1f;border-bottom:1px solid #1c1d1f;overflow:hidden;white-space:nowrap;padding:13px 0;margin-top:12px}
+.marquee-track{display:inline-block;animation:scroll 28s linear infinite;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.marquee-track b{color:var(--orange);margin:0 18px;font-weight:600}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* ---------- sections ---------- */
+.section{width:min(1480px,100%);margin:0 auto;padding:clamp(48px,7vh,84px) 14px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px}
+.sec-head h2{font-size:clamp(30px,4vw,52px);font-weight:600;letter-spacing:-0.035em;line-height:1.02}
+.sec-head h2 span{color:var(--dim)}
+.sec-head p{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.lead{color:var(--dim);font-size:15.5px;line-height:1.7;max-width:640px}
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:22px}
+.about-main p{font-size:clamp(17px,1.8vw,22px);line-height:1.55;letter-spacing:-0.015em;font-weight:500}
+.about-main p .g{color:var(--dim)}
+.edu{margin-top:20px;border:1px dashed #3a3b3e;border-radius:16px;padding:16px 18px;font-size:14px;line-height:1.65;color:var(--dim)}
+.edu b{color:var(--ink)}
+.counts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.count{background:#101012;border:1px solid #26272a;border-radius:16px;padding:16px 10px;text-align:center}
+.count b{font-size:30px;font-weight:600;letter-spacing:-0.03em;display:block}
+.count b em{font-style:normal;color:var(--orange)}
+.count span{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.side-stack{display:flex;flex-direction:column;gap:12px}
+.fact{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.fact small{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.fact b{font-size:clamp(19px,2vw,26px);font-weight:600;letter-spacing:-0.02em}
+.fact p{font-size:13.5px;color:var(--dim);line-height:1.6}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.svc{background:var(--card);border-radius:var(--r);padding:26px;transition:transform .22s,background .22s}
+.svc:hover{transform:translateY(-4px);background:#232527}
+.svc .n{font-size:12px;color:var(--dim);font-weight:500}
+.svc h3{font-size:20px;font-weight:600;letter-spacing:-0.02em;margin-top:30px}
+.svc p{font-size:13.5px;color:var(--dim);line-height:1.65;margin-top:8px}
+.svc .tags{margin-top:14px;font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--orange)}
+/* stack */
+.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.stack-card h3{font-size:21px;font-weight:600;letter-spacing:-0.02em}
+.stack-card>p{font-size:13.5px;color:var(--dim);line-height:1.6;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-size:12.5px;font-weight:500;border:1px solid #3a3b3e;border-radius:100px;padding:7px 14px;color:#d5d5d9;transition:border-color .2s,color .2s}
+.chips span:hover{border-color:var(--orange);color:#fff}
+.term{background:#101012;border:1px solid #26272a;border-radius:16px;padding:18px;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12.5px;line-height:1.75;white-space:pre-wrap;color:#d8d8d8;margin-top:16px}
+.term .k{color:var(--orange)} .term .s{color:#7ee2a8}
+/* contact */
+.contact-big{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);align-items:start}
+.contact-big h3{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-0.03em;line-height:1.1}
+.contact-big>p{font-size:14.5px;color:var(--dim);line-height:1.7;margin-top:12px}
+.clinks{display:flex;flex-direction:column;gap:2px;margin-top:16px}
+.clinks a{color:#c9c9cd;text-decoration:none;font-size:14.5px;font-weight:500;padding:9px 0;border-bottom:1px solid #26272a;display:flex;justify-content:space-between;gap:10px}
+.clinks a:hover{color:var(--orange)}
+.clinks a span:last-child{color:var(--dim)}
+.cform{display:flex;flex-direction:column;gap:10px}
+.cform input,.cform textarea{width:100%;background:#101012;border:1px solid #2c2d30;border-radius:14px;color:#fff;font-family:var(--font);font-size:16px;padding:14px 16px;outline:none;transition:border-color .2s}
+.cform input:focus,.cform textarea:focus{border-color:var(--orange)}
+.cform textarea{min-height:120px;resize:vertical}
+.send-btn{background:var(--orange);color:#fff;border:none;border-radius:100px;padding:15px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:var(--font);transition:background .2s,transform .2s}
+.send-btn:hover{background:var(--orange-h);transform:translateY(-1px)}
+/* footer */
+.footer{width:min(1480px,100%);margin:0 auto;padding:26px 20px 40px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--dim)}
+.footer a{color:var(--dim);text-decoration:none;font-weight:600}
+.footer a:hover{color:var(--orange)}
+.foot-links{display:flex;gap:16px;flex-wrap:wrap}
+.to-top{width:44px;height:44px;border-radius:50%;border:1px solid #333437;background:var(--card);color:var(--ink);cursor:pointer;font-size:16px}
+.to-top:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+@media(max-width:960px){
+  .topnav{display:none}
+  .row-top,.row-bottom,.about-grid,.contact-big{grid-template-columns:1fr}
+  .svc-grid,.stack-grid{grid-template-columns:1fr 1fr}
 }
-/* mobile */
-@media (max-width:760px){
-  body{padding:10px}
-  .shell{height:min(100dvh - 20px,1000px);gap:8px}
-  .row{gap:8px}
-  .row-top{grid-template-columns:1fr;grid-template-rows:minmax(0,1.25fr) minmax(0,1fr)}
-  .row-bottom{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}
-  .card{padding:18px;border-radius:20px}
-  .hero h1{font-size:clamp(25px,7.4vw,34px)}
-  .contact h2{font-size:clamp(21px,6vw,28px)}
-  .mail-pill{font-size:15px;padding:13px 24px}
+@media(max-width:640px){
   .strip{grid-template-columns:repeat(3,1fr)}
-  .strip a{font-size:12px;padding:11px 6px}
-  .based{flex-direction:row;align-items:center;gap:14px}
-  .based p{font-size:clamp(19px,5.4vw,25px);margin-top:0}
-  .globe{width:52px}
-  .proj .t b{font-size:16px}
+  .svc-grid,.stack-grid{grid-template-columns:1fr}
+  .counts{grid-template-columns:repeat(3,1fr)}
+  .hero h1{font-size:clamp(28px,8.4vw,38px)}
+  .based{flex-direction:row;align-items:center}
+  .based p{font-size:clamp(22px,6.4vw,30px)}
+  .globe{width:56px}
+  .proj-cols{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .proj-cols::-webkit-scrollbar{display:none}
+  .pcol{scroll-snap-align:start}
 }
 </style>
 <script type="application/ld+json">
@@ -155,11 +190,23 @@ body{
 </script>
 </head>
 <body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top">ayush patil <span>— mumbai</span></a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#work">work</a><a href="#about">about</a><a href="#services">services</a><a href="#stack">stack</a><a href="#contact">contact</a>
+    </nav>
+    <a class="top-mail" href="mailto:projectsbyayush@gmail.com">get in touch</a>
+  </div>
+</header>
+
+<main id="top">
 <div class="shell">
   <div class="row row-top">
     <section class="card hero" aria-label="About Ayush Patil">
       <div class="avatar"><img src="duck.png" alt="Ayush Patil" width="184" height="184" fetchpriority="high"></div>
-      <h1><span class="w">ayush patil is a full stack web developer</span> <span class="g">crafting fast websites, apis &amp; databases.</span></h1>
+      <h1>ayush patil is a full stack web developer <span class="g">crafting fast websites, apis &amp; databases.</span></h1>
+      <div class="tags"><span>mumbai, india</span><span>ist (utc+5:30)</span><span>english &amp; hindi</span><span>open to work</span></div>
     </section>
     <section class="card contact" aria-label="Contact">
       <svg class="rings" viewBox="0 0 120 62" fill="none" stroke="#f4f4f4" stroke-width="4" aria-hidden="true">
@@ -183,7 +230,7 @@ body{
     <a href="mailto:projectsbyayush@gmail.com">mail.</a>
     <a href="#" onclick="window.print();return false">resume.</a>
   </nav>
-  <div class="row row-bottom">
+  <div class="row row-bottom" id="work">
     <section class="card based" aria-label="Location">
       <svg class="globe" viewBox="0 0 120 72" fill="none" stroke="#f4f4f4" stroke-width="4" aria-hidden="true">
         <ellipse cx="60" cy="36" rx="52" ry="30"/>
@@ -194,27 +241,126 @@ body{
         <path d="M18 54c10-6 28-9 42-9s32 3 42 9"/>
       </svg>
       <p>Based in<br>Mumbai, India<br><span class="g">IST (UTC+5:30)</span></p>
+      <small>available worldwide — remote &amp; on-site</small>
     </section>
     <section class="card work" aria-label="Selected work">
       <div class="work-head"><h2>selected work<sup>(03)</sup></h2><a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">github &#8599;</a></div>
-      <a class="proj" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
-        <span class="thumb t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-5 4 5 4"/><path d="m16 8 5 4-5 4"/><path d="m13 4-2 16"/></svg></span>
-        <span class="t"><b>frontend <span class="n">/ 01</span></b><span>Interfaces that convert — semantic, responsive, interactive.</span><span class="tags"><i>HTML5</i><i>CSS3</i><i>JavaScript</i><i>React.js</i><i>Angular.js</i></span></span>
-        <span class="a"><svg viewBox="0 0 24 24" fill="none" stroke="#f4f4f4" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </a>
-      <a class="proj" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
-        <span class="thumb t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
-        <span class="t"><b>backend <span class="n">/ 02</span></b><span>APIs that scale — secure, tested, documented.</span><span class="tags"><i>Node.js</i><i>Java</i><i>REST</i></span></span>
-        <span class="a"><svg viewBox="0 0 24 24" fill="none" stroke="#f4f4f4" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </a>
-      <a class="proj" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
-        <span class="thumb t-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="2.8"/><path d="M4 5.5v6c0 1.5 3.6 2.8 8 2.8s8-1.3 8-2.8v-6"/><path d="M4 11.5v6c0 1.5 3.6 2.8 8 2.8s8-1.3 8-2.8v-6"/></svg></span>
-        <span class="t"><b>databases <span class="n">/ 03</span></b><span>Data you can trust — modelled, indexed, backed up.</span><span class="tags"><i>MySQL</i><i>PostgreSQL</i><i>Oracle SQL</i><i>MongoDB</i></span></span>
-        <span class="a"><svg viewBox="0 0 24 24" fill="none" stroke="#f4f4f4" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </a>
+      <div class="proj-cols">
+        <a class="pcol" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
+          <span class="n">/ 01</span>
+          <b>frontend</b>
+          <p>Interfaces that convert — semantic, responsive, interactive.</p>
+          <span class="tags"><i>HTML5</i><i>CSS3</i><i>JavaScript</i><i>React.js</i><i>Angular.js</i></span>
+          <span class="view">view &#8599;</span>
+        </a>
+        <a class="pcol" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
+          <span class="n">/ 02</span>
+          <b>backend</b>
+          <p>APIs that scale — secure, tested, documented.</p>
+          <span class="tags"><i>Node.js</i><i>Java</i><i>REST</i></span>
+          <span class="view">view &#8599;</span>
+        </a>
+        <a class="pcol" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
+          <span class="n">/ 03</span>
+          <b>databases</b>
+          <p>Data you can trust — modelled, indexed, backed up.</p>
+          <span class="tags"><i>MySQL</i><i>PostgreSQL</i><i>Oracle SQL</i><i>MongoDB</i></span>
+          <span class="view">view &#8599;</span>
+        </a>
+      </div>
       <div class="work-foot"><span>© 2026 ayush patil</span><a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">more on github &#8599;</a></div>
     </section>
   </div>
 </div>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+<section class="section" id="about">
+  <div class="sec-head"><h2>about <span>me.</span></h2><p>01 — profile</p></div>
+  <div class="about-grid">
+    <div class="card about-main">
+      <p>Ayush Patil — full stack web developer based in <span class="g">Mumbai, India.</span> I build fast, minimal web experiences from frontend to backend — <span class="g">clean interfaces, robust APIs and databases that scale.</span></p>
+      <div class="edu"><b>B.E. Computer Engineering</b> — Pravin R. Patil College of Engineering and Technology, Mumbai University.</div>
+      <div class="counts">
+        <div class="count"><b>11<em>+</em></b><span>technologies</span></div>
+        <div class="count"><b>03<em>×</em></b><span>layers</span></div>
+        <div class="count"><b>24<em>h</em></b><span>reply time</span></div>
+      </div>
+    </div>
+    <div class="side-stack">
+      <div class="card fact"><small>location</small><b>Mumbai, India</b><p>IST (UTC+5:30) — English &amp; Hindi. Open to remote &amp; on-site collaborations worldwide.</p></div>
+      <div class="card fact"><small>currently</small><b>Open to work</b><p>Freelance projects, full-time roles and collaborations — frontend to database.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="sec-head"><h2>services <span>i provide.</span></h2><p>02 — what i do</p></div>
+  <div class="svc-grid">
+    <div class="svc"><span class="n">/ 01</span><h3>Frontend development</h3><p>Semantic markup, modern layouts and interactive experiences that feel instant on any device.</p><div class="tags">HTML5 · CSS3 · JAVASCRIPT</div></div>
+    <div class="svc"><span class="n">/ 02</span><h3>Component UI</h3><p>Reusable, maintainable interfaces with React.js and Angular.js that stay fast as you grow.</p><div class="tags">REACT.JS · ANGULAR.JS</div></div>
+    <div class="svc"><span class="n">/ 03</span><h3>Backend &amp; APIs</h3><p>Secure server logic and REST integrations with Node.js and Java — tested and documented.</p><div class="tags">NODE.JS · JAVA</div></div>
+    <div class="svc"><span class="n">/ 04</span><h3>Database design</h3><p>Relational and NoSQL done properly — modelled, indexed and backed up.</p><div class="tags">MYSQL · POSTGRES · ORACLE · MONGO</div></div>
+    <div class="svc"><span class="n">/ 05</span><h3>Performance</h3><p>Optimized delivery — small bundles, fast paint, zero bloat. This page is 13KB.</p><div class="tags">SPEED · SEO</div></div>
+    <div class="svc"><span class="n">/ 06</span><h3>Support</h3><p>Maintenance, fixes and iteration with replies inside 24 hours.</p><div class="tags">MUMBAI · REMOTE</div></div>
+  </div>
+</section>
+
+<section class="section" id="stack">
+  <div class="sec-head"><h2>tools <span>i use.</span></h2><p>03 — full stack</p></div>
+  <p class="lead">Eleven technologies across three layers — minimal tools, maximum impact.</p>
+  <div class="stack-grid">
+    <div class="card stack-card"><h3>frontend</h3><p>What users see and touch.</p><div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Angular.js</span></div></div>
+    <div class="card stack-card"><h3>backend</h3><p>What makes it work.</p><div class="chips"><span>Node.js</span><span>Java</span><span>REST APIs</span></div><div class="term"><span class="k">const</span> ayush = {
+  role: <span class="s">"full stack"</span>,
+  location: <span class="s">"mumbai"</span>,
+  available: <span class="k">true</span>
+}</div></div>
+    <div class="card stack-card"><h3>databases</h3><p>Where it all lives.</p><div class="chips"><span>MySQL</span><span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span></div></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="sec-head"><h2>have a project <span>in mind?</span></h2><p>04 — contact</p></div>
+  <div class="card contact-big">
+    <div>
+      <h3>Let's build something that ships.</h3>
+      <p>Tell me what you want to build — landing pages, web apps, APIs or databases. Based in Mumbai, working worldwide.</p>
+      <div class="clinks">
+        <a href="mailto:projectsbyayush@gmail.com"><span>projectsbyayush@gmail.com</span><span>&#8599;</span></a>
+        <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><span>github.com/projectsbyayush</span><span>&#8599;</span></a>
+        <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><span>linkedin.com/in/projectsbyayush</span><span>&#8599;</span></a>
+        <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><span>instagram.com/projectsbyayush</span><span>&#8599;</span></a>
+        <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><span>x.com/projectsbyayush</span><span>&#8599;</span></a>
+      </div>
+    </div>
+    <form class="cform" onsubmit="event.preventDefault();this.reset();var b=this.querySelector('.send-btn');var o=b.textContent;b.textContent='Message sent — I will reply soon!';setTimeout(()=>{b.textContent=o},3000);">
+      <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+      <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+      <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+      <button class="send-btn" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div>© 2026 ayush patil — <b>projectsbyayush</b> · mumbai, india</div>
+  <div class="foot-links">
+    <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">github</a>
+    <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener">instagram</a>
+    <a href="mailto:projectsbyayush@gmail.com">email</a>
+    <button class="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8593;</button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items=["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB","Mumbai, India"];
+  var half=items.map(function(t){return t+" <b>•</b> "}).join("");
+  document.getElementById("marquee").innerHTML=half+half;
+})();
+</script>
 </body>
 </html>
