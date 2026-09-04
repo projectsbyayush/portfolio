@@ -4,760 +4,406 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayush Patil — Full Stack Web Developer | Mumbai, India</title>
-<meta name="description" content="Ayush Patil — Full Stack Web Developer based in Mumbai, India. B.E. Computer Engineering, Mumbai University. Specialized in HTML5, CSS3, JavaScript, React.js, Angular.js, Node.js, Java, MySQL, PostgreSQL, Oracle SQL & MongoDB. Building fast, minimal, scalable web experiences.">
-<meta name="keywords" content="Ayush Patil, Full Stack Web Developer, Mumbai, India, React.js, Angular.js, Node.js, Java, JavaScript, HTML5, CSS3, MySQL, PostgreSQL, MongoDB, Oracle SQL, Portfolio, projectsbyayush, Web Developer Mumbai">
+<meta name="description" content="Ayush Patil — Full Stack Web Developer based in Mumbai, India. B.E. Computer Engineering, Mumbai University. Specialized in HTML5, CSS3, JavaScript, React.js, Angular.js, Node.js, Java, MySQL, PostgreSQL, Oracle SQL & MongoDB.">
+<meta name="keywords" content="Ayush Patil, Full Stack Web Developer, Mumbai, India, React.js, Angular.js, Node.js, Java, JavaScript, HTML5, CSS3, MySQL, PostgreSQL, MongoDB, Oracle SQL, Portfolio, projectsbyayush">
 <meta name="author" content="Ayush Patil">
-<meta name="publisher" content="Ayush Patil">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="googlebot" content="index, follow">
-<meta name="theme-color" content="#5A5D3A">
-<meta name="format-detection" content="telephone=no">
-<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A0A0A">
 <link rel="canonical" href="https://projectsbyayush.github.io/portfolio/">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
-<!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en_IN">
 <meta property="og:site_name" content="Ayush Patil Portfolio">
 <meta property="og:url" content="https://projectsbyayush.github.io/portfolio/">
 <meta property="og:title" content="Ayush Patil — Full Stack Web Developer | Mumbai, India">
-<meta property="og:description" content="Full Stack Web Developer from Mumbai building scalable, minimal web experiences. B.E. Computer Engineering. Stack: React, Node, Java, MySQL, PostgreSQL, MongoDB.">
+<meta property="og:description" content="Full Stack Web Developer from Mumbai. B.E. Computer Engineering. Stack: React, Node, Java, MySQL, PostgreSQL, MongoDB.">
 <meta property="og:image" content="https://projectsbyayush.github.io/portfolio/icon.png">
-<meta property="og:image:alt" content="Ayush Patil — Full Stack Web Developer">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@projectsbyayush">
-<meta name="twitter:creator" content="@projectsbyayush">
 <meta name="twitter:title" content="Ayush Patil — Full Stack Web Developer">
-<meta name="twitter:description" content="Full Stack Web Developer — Mumbai, India. React, Node, Java, Databases. Available for work.">
+<meta name="twitter:description" content="Full Stack Web Developer — Mumbai, India. React, Node, Java, Databases.">
 <meta name="twitter:image" content="https://projectsbyayush.github.io/portfolio/icon.png">
-<meta name="twitter:image:alt" content="Ayush Patil portfolio preview">
-<!-- Preconnect -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --outer:#5A5D3A;
-  --shell:#5A5D3A;
-  --cream:#EDE6D1;
-  --cream2:#E8E0C8;
+  --bg:#0B0B0B;
+  --card:#141414;
+  --card2:#1A1A1A;
+  --line:#262626;
+  --line2:#2E2E2E;
+  --txt:#EDEDEA;
+  --muted:#9C9C9C;
+  --muted2:#7A7A7A;
+  --purple:#A78BFA;
+  --purple-dim:rgba(167,139,250,0.14);
   --yellow:#FFD600;
-  --yellow-light:#FFEF99;
-  --coral:#FF6B6B;
-  --teal:#2EC4B6;
-  --lavender:#A78BFA;
-  --mint:#6EE7B7;
-  --peach:#FBBF24;
-  --pink:#F472B6;
-  --dark:#2E2E2A;
-  --line:#9A9588;
-  --radius:22px;
+  --radius:20px;
 }
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  background:var(--outer);
+  background:#132433;
   background-image:
-    radial-gradient(at 15% 25%, rgba(255,214,0,0.22) 0%, transparent 45%),
-    radial-gradient(at 85% 20%, rgba(255,107,107,0.18) 0%, transparent 45%),
-    radial-gradient(at 90% 85%, rgba(46,196,182,0.16) 0%, transparent 50%),
-    radial-gradient(at 25% 85%, rgba(167,139,250,0.14) 0%, transparent 45%),
-    linear-gradient(180deg, #5A5D3A 0%, #4A4D2E 100%);
-  color:#0A0A0A;
-  font-family:'Instrument Sans','Inter',system-ui,sans-serif;
+    radial-gradient(ellipse at 20% 0%, rgba(120,160,190,0.25), transparent 55%),
+    radial-gradient(ellipse at 85% 100%, rgba(80,120,150,0.20), transparent 55%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.022) 0 2px, transparent 2px 14px),
+    linear-gradient(180deg,#1B3446 0%, #0F2230 60%, #0B1A25 100%);
+  background-attachment:fixed;
+  color:var(--txt);
+  font-family:'Inter',system-ui,sans-serif;
   min-height:100vh;
   display:grid;place-items:start center;
-  padding:14px;
+  padding:28px 16px;
+  -webkit-font-smoothing:antialiased;
 }
+*{ -webkit-tap-highlight-color:transparent; }
+*:focus-visible{outline:2px solid var(--purple);outline-offset:2px}
 .shell{
-  width:100%;
-  max-width:1180px;
-  background:transparent;
-  border-radius:18px;
-  padding:14px;
+  width:100%;max-width:1180px;
+  background:var(--bg);
+  border:1px solid #1F1F1F;
+  border-radius:28px;
+  padding:16px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.55);
 }
-/* HEADER — glass */
-.header{
-  background:rgba(237,230,209,0.82);
-  backdrop-filter:blur(14px) saturate(1.2);
-  -webkit-backdrop-filter:blur(14px) saturate(1.2);
-  border:1px solid rgba(255,255,255,0.28);
-  box-shadow:0 8px 32px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.35);
-  border-radius:var(--radius);
-  padding:26px 32px;
-  display:flex;justify-content:space-between;align-items:center;
-  transition:all 0.3s ease;
-}
-.header:hover{
-  background:rgba(237,230,209,0.92);
-  box-shadow:0 12px 40px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.45);
-  transform:translateY(-1px);
-}
-.header-left{
-  font-size:17px;letter-spacing:-0.03em;font-weight:500;
-  display:flex;align-items:center;gap:10px;
-}
-.header-left b{font-weight:800}
-.nav-icon{
-  width:36px;height:36px;border-radius:10px;
-  object-fit:cover;display:block;
-  border:none;
-  outline:none;
-  background:transparent;
-}
-.header-nav{
-  display:flex;gap:6px;font-size:12px;letter-spacing:0.07em;font-weight:700;
-}
-.header-nav a{
-  color:inherit;text-decoration:none;opacity:0.9;
-  padding:8px 14px;border-radius:999px;
-  transition:all 0.2s ease;
-  border:1.5px solid transparent;
-}
-.header-nav a:hover{
-  opacity:1;
-  background:var(--yellow);
-  color:#0A0A0A;
-  transform:translateY(-1px);
-  box-shadow:0 2px 8px rgba(0,0,0,0.12);
-}
-/* BENTO */
+/* ===== BENTO GRID ===== */
 .bento{
   display:grid;
-  grid-template-columns:1.38fr 0.92fr 0.95fr;
-  grid-template-rows: 382px auto;
+  grid-template-columns:1.08fr 1fr;
   gap:14px;
-  margin-top:14px;
 }
+.col{display:flex;flex-direction:column;gap:14px;min-width:0}
 .card{
+  background:var(--card);
+  border:1px solid var(--line);
   border-radius:var(--radius);
-  overflow:hidden;
-  position:relative;
-  background:rgba(237,230,209,0.84);
-  backdrop-filter:blur(14px) saturate(1.15);
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);
-  border:1px solid rgba(255,255,255,0.32);
-  box-shadow:0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.4);
-  transition:all 0.35s cubic-bezier(0.2,0.8,0.2,1);
+  padding:22px;
+  position:relative;overflow:hidden;
+  transition:transform .25s ease, border-color .25s ease, background .25s ease;
 }
-.card:hover{
-  transform:translateY(-5px) scale(1.012);
-  background:rgba(237,230,209,0.94);
-  border-color:rgba(255,214,0,0.45);
-  box-shadow:0 16px 48px rgba(0,0,0,0.14), 0 4px 16px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.55);
+.card:hover{transform:translateY(-2px);border-color:#3A3A3A;background:#171717}
+/* ---- PROFILE ---- */
+.profile-top{display:flex;gap:18px;align-items:center}
+.avatar{
+  width:112px;height:112px;min-width:112px;border-radius:22px;overflow:hidden;
+  background:#FFD600;display:grid;place-items:center;
+  border:1px solid #2A2A2A;
 }
-/* A - hero left top - YELLOW glass */
-.a{
-  background:rgba(255,214,0,0.90);
-  backdrop-filter:blur(14px) saturate(1.15);
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);
-  border:1px solid rgba(255,255,255,0.42);
-  padding:32px;
-  display:flex;flex-direction:column;justify-content:space-between;
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avail{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:600;color:var(--txt);
+  border:1px solid var(--line2);border-radius:999px;padding:6px 12px;
+  background:#1C1C1C;
 }
-.a:hover{
-  background:rgba(255,214,0,0.98);
-  border-color:rgba(255,255,255,0.65);
+.avail i{width:7px;height:7px;border-radius:50%;background:#22C55E;display:block;box-shadow:0 0 8px #22C55E}
+.profile-name{font-size:24px;font-weight:700;letter-spacing:-0.03em;margin-top:10px}
+.profile-role{font-size:13px;color:var(--muted);margin-top:3px}
+.profile-role b{color:var(--purple);font-weight:600}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:14px;border:1px solid var(--line);border-radius:16px;background:#101010}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:500;color:#D6D6D6;
+  border:1px solid var(--line2);border-radius:999px;padding:7px 13px;background:#181818;
 }
-.a-flower{
-  position:absolute;top:22px;right:28px;width:98px;height:98px;opacity:0.9;
+.pill i{color:var(--purple);font-size:12px}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.sbtn{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  background:#1E1E1E;border:1px solid var(--line);border-radius:12px;
+  padding:12px 8px;font-size:12.5px;font-weight:500;color:#CFCFCF;text-decoration:none;
+  transition:all .2s;min-height:44px;
 }
-.a-flower svg{width:100%;height:100%}
-.a-text{
-  margin-top:auto;
-  max-width:420px;
+.sbtn i{color:var(--purple);font-size:14px}
+.sbtn:hover{background:#242424;border-color:#3A3A3A;color:#fff;transform:translateY(-1px)}
+/* ---- LEFT BOTTOM ---- */
+.left-bottom{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mini-label{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:12px;
 }
-.a-text h1,.a-text h2{
-  font-size:30px;line-height:1.08;letter-spacing:-0.04em;font-weight:800;
+.mini-label i{color:var(--purple)}
+.mini-icon{
+  width:44px;height:44px;border-radius:50%;background:#222;display:grid;place-items:center;
+  margin:0 auto 12px auto;font-size:18px;color:var(--purple);
 }
-.a-text h1 span,.a-text h2 span{font-weight:400;letter-spacing:-0.03em}
-.a-text h1 b,.a-text h2 b{font-weight:800}
-/* B - photo middle top - DUCK glass */
-.b{
-  background:rgba(255,255,255,0.88);
-  backdrop-filter:blur(14px) saturate(1.15);
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);
-  padding:0;
-  display:grid;place-items:center;
+.card h2{font-size:21px;font-weight:600;letter-spacing:-0.02em;text-align:center}
+.about-text{font-size:12.5px;line-height:1.65;color:var(--muted);margin-top:12px}
+.about-text b{color:#D8D8D8}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}
+.svc{
+  display:flex;align-items:center;gap:8px;
+  border:1px solid var(--line2);border-radius:12px;padding:11px 10px;
+  font-size:11.5px;font-weight:500;color:#C8C8C8;background:#191919;min-height:44px;
 }
-.b img{
-  width:100%;height:100%;object-fit:contain;display:block;
-  padding:14px;
-  background:#FFFFFF;
+.svc i{color:var(--purple);font-size:13px;min-width:16px;text-align:center}
+/* ---- RIGHT TOP ---- */
+.right-top{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stack-tiles{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}
+.tile{
+  display:flex;align-items:center;gap:8px;
+  border:1px solid var(--line2);border-radius:12px;padding:10px;
+  font-size:12px;font-weight:500;color:#CFCFCF;background:#191919;
+  transition:all .2s;min-height:44px;
 }
-/* C - right tall skills — colorful mint glass */
-.c{
-  grid-row:1 / span 2;
-  background:linear-gradient(135deg, rgba(237,230,209,0.90) 0%, rgba(110,231,183,0.18) 100%);
-  backdrop-filter:blur(14px) saturate(1.15);
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);
-  border:1px solid rgba(255,255,255,0.32);
-  padding:22px 0 0 0;
-  display:flex;flex-direction:column;
+.tile:hover{border-color:var(--purple);background:#1F1C2A}
+.tile i{width:28px;height:28px;min-width:28px;border-radius:8px;background:#242424;display:grid;place-items:center;font-size:13px;color:var(--purple)}
+.tile small{display:block;font-size:9.5px;color:var(--muted2);font-weight:400}
+/* together */
+.together{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.crown{
+  width:74px;height:74px;border-radius:50%;background:#222;display:grid;place-items:center;
+  font-size:32px;color:var(--purple);margin-bottom:14px;
 }
-.c-head{
-  padding:0 22px;
-  display:flex;justify-content:space-between;align-items:center;
+.together h2{font-size:19px}
+.talk-btn{
+  margin-top:16px;width:100%;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:#222;border:1px solid var(--line2);border-radius:14px;
+  padding:14px;font-size:16px;font-weight:600;color:#fff;text-decoration:none;
+  transition:all .2s;min-height:48px;
 }
-.c-head h3{font-size:18px;font-weight:800;letter-spacing:-0.03em}
-.c-head span{font-size:11px;opacity:0.5}
-.c-img{
-  margin:14px 14px 0 14px;
-  height:178px;border-radius:14px;overflow:hidden;background:#111;
+.talk-btn i{color:var(--purple);font-size:20px}
+.talk-btn:hover{background:var(--purple);border-color:var(--purple);color:#0A0A0A}
+.talk-btn:hover i{color:#0A0A0A}
+/* ---- RIGHT MID ---- */
+.right-mid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px}
+.works{text-align:center}
+.works-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:8px}
+.edu-mini{font-size:12px;color:var(--muted);line-height:1.6;margin-top:10px}
+.edu-mini b{color:#E2E2E2}
+.resume-mini{text-align:center;display:flex;flex-direction:column;padding:14px}
+.resume-mini .thumb{
+  flex:1;border-radius:12px;overflow:hidden;background:#0D0D0D;border:1px solid var(--line);
+  min-height:120px;display:flex;flex-direction:column;
 }
-.c-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);display:block}
-/* Terminal — replaces code image */
-.terminal{
-  height:100%;background:#0F1110;color:#EDE6D1;
-  font-family:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
-  display:flex;flex-direction:column;
+.resume-mini h3{font-size:15px;font-weight:600;margin-top:10px;line-height:1.3}
+.dl-btn{
+  margin-top:10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  background:var(--purple);color:#0A0A0A;border-radius:10px;padding:10px;
+  font-size:12px;font-weight:700;text-decoration:none;min-height:40px;
 }
-.term-head{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:10px 14px;background:#1A1C1B;border-bottom:1px solid #2A2C2B;
-  font-size:10px;letter-spacing:0.08em;opacity:0.9;
+.dl-btn:hover{filter:brightness(1.1)}
+/* ---- RIGHT BOTTOM ---- */
+.right-bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.thumb-card{padding:12px;display:flex;flex-direction:column}
+.thumb-card .thumb{
+  border-radius:12px;overflow:hidden;background:#0D0D0D;border:1px solid var(--line);
+  min-height:150px;flex:1;
 }
-.dots{display:flex;gap:6px}
-.dots i{width:10px;height:10px;border-radius:50%;display:block}
-.dots i:nth-child(1){background:#FF5F56}
-.dots i:nth-child(2){background:#FFBD2E}
-.dots i:nth-child(3){background:#27C93F}
-.term-body{
-  padding:14px 14px 12px;
-  font-size:11.5px;line-height:1.65;
-  white-space:pre-wrap;word-break:break-word;
-  color:#EDE6D1;
+.term{background:#0D0F0E;color:#D8D8D8;font-family:ui-monospace,monospace;font-size:10px;line-height:1.6;padding:10px;white-space:pre-wrap}
+.term .k{color:var(--purple)} .term .s{color:#8FED8F}
+.dblist{padding:10px;font-size:10.5px;line-height:2;color:#BDBDBD}
+.dblist b{color:#fff}
+.more-card{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.more-card .star{width:44px;height:44px;border-radius:50%;background:#222;display:grid;place-items:center;color:var(--purple);font-size:18px;margin-bottom:10px}
+.view-btn{
+  margin-top:12px;background:var(--purple);color:#0A0A0A;border-radius:999px;
+  padding:10px 22px;font-size:13px;font-weight:700;text-decoration:none;min-height:40px;
+  display:inline-flex;align-items:center;
 }
-.term-body .cmt{color:#7A7F7E}
-.term-body .key{color:#FFD600}
-.term-body .str{color:#A8D8A8}
-.term-body .val{color:#EDE6D1}
-.c-list{
-  flex:1;
-  display:flex;flex-direction:column;
-  padding:10px 0 14px 0;
+.view-btn:hover{filter:brightness(1.08)}
+.made{
+  margin-top:10px;font-size:10px;font-weight:700;background:#fff;color:#000;
+  border-radius:999px;padding:6px 12px;display:inline-flex;gap:6px;align-items:center;
 }
-.c-row{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:12.5px 22px;
-  border-bottom:1.5px solid var(--line);
-  font-size:15.5px;font-weight:700;letter-spacing:-0.02em;
-  transition:all 0.22s ease;
+/* ---- CONTACT + FOOTER ---- */
+.contact-card{margin-top:14px;display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:start}
+.contact-card h2{text-align:left;font-size:22px}
+.contact-card p{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+.cform{display:flex;flex-direction:column;gap:9px}
+.cform input,.cform textarea{
+  width:100%;background:#101010;border:1px solid var(--line2);border-radius:12px;
+  color:#fff;font-family:inherit;font-size:16px;padding:12px 14px;outline:none;
 }
-.c-row:hover{
-  background:rgba(255,214,0,0.14);
-  padding-left:26px;
-  border-bottom-color:rgba(255,214,0,0.35);
-}
-.c-row:first-child{border-top:1.5px solid var(--line);margin-top:14px}
-.c-row span{font-size:10px;font-weight:700;letter-spacing:0.09em;opacity:0.45;text-transform:uppercase}
-.c-row em{font-style:normal;font-weight:400;opacity:0.6;font-size:13px}
-/* D - bottom left text — colorful lavender glass, centered */
-.d{
-  background:linear-gradient(135deg, rgba(237,230,209,0.90) 0%, rgba(167,139,250,0.18) 100%);
-  backdrop-filter:blur(14px) saturate(1.15);
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);
-  border:1px solid rgba(255,255,255,0.32);
-  padding:26px 28px;
-  display:flex;flex-direction:column;gap:16px;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  min-height:100%;
-}
-.d-top{
-  display:flex;justify-content:space-between;align-items:center;
-  width:100%;
-}
-.d .loc{
-  font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;opacity:0.55;
-  display:flex;align-items:center;gap:6px;
-}
-.d-badge{
-  font-size:10px;font-weight:800;letter-spacing:0.08em;
-  background:var(--yellow);border:1.5px solid #0A0A0A;border-radius:999px;
-  padding:6px 10px;display:inline-flex;align-items:center;gap:6px;
-}
-.d h3{font-size:22px;font-weight:900;letter-spacing:-0.04em;line-height:1.1;text-align:center}
-.d h3 span{font-weight:500;font-size:13px;opacity:0.6;letter-spacing:-0.02em;display:block;margin-top:4px}
-.d p{
-  font-size:13.8px;line-height:1.6;font-weight:500;letter-spacing:-0.015em;
-  opacity:0.85;text-align:center;max-width:360px;margin-left:auto;margin-right:auto;
-}
-.d p strong{font-weight:800;color:#0A0A0A}
-.about-center{
-  flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;
-  width:100%;
-}
-.about-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;
-  width:100%;text-align:left;
-}
-.about-item{
-  background:rgba(255,255,255,0.7);border:1.5px solid rgba(0,0,0,0.08);
-  border-radius:14px;padding:12px 13px;
-  display:flex;flex-direction:column;gap:4px;
-  transition:all 0.25s ease;
-}
-.about-item:hover{
-  background:rgba(255,255,255,0.92);
-  transform:translateY(-2px);
-  border-color:rgba(255,214,0,0.35);
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
-}
-.about-item i{font-size:14px;opacity:0.7}
-.about-item b{font-size:12px;font-weight:800;letter-spacing:-0.02em;line-height:1.2}
-.about-item span{font-size:10.5px;font-weight:600;opacity:0.6;line-height:1.3}
-/* E - bottom middle contact — dark glass */
-.e{
-  background:rgba(46,46,42,0.82);
-  backdrop-filter:blur(16px) saturate(1.2);
-  -webkit-backdrop-filter:blur(16px) saturate(1.2);
-  border:1px solid rgba(237,230,209,0.14);
-  color:var(--cream);
-  padding:26px 24px;
-  display:flex;flex-direction:column;
-}
-.e:hover{
-  background:rgba(46,46,42,0.88);
-  border-color:rgba(255,214,0,0.28);
-}
-.e-top{font-size:13.5px;line-height:1.35;opacity:0.85;font-weight:400}
-.e-bottom{
-  margin-top:auto;
-  display:flex;justify-content:space-between;align-items:flex-end;
-}
-.e-bottom h3{font-size:29px;font-weight:700;letter-spacing:-0.04em;line-height:1}
-.e-social{
-  text-align:right;font-size:10px;letter-spacing:0.12em;line-height:2.1;opacity:0.8;
-}
-.e-social a{color:inherit;text-decoration:none;display:block}
-.e-social a:hover{text-decoration:underline;text-underline-offset:3px}
-
-/* CONTACT FORM — inputs inside E */
-.contact-form{margin:18px 0 18px 0;display:flex;flex-direction:column;gap:10px}
-.field{position:relative;display:flex;align-items:center}
-.field i{
-  position:absolute;left:13px;font-size:12px;opacity:0.6;color:var(--cream);pointer-events:none;
-}
-.field input,.field textarea{
-  width:100%;background:rgba(237,230,209,0.08);
-  border:1.5px solid rgba(237,230,209,0.18);
-  border-radius:12px;
-  color:var(--cream);
-  font-family:inherit;
-  font-size:13px;font-weight:500;
-  padding:11px 12px 11px 34px;
-  outline:none;
-  transition:border-color 0.15s, background 0.15s;
-}
-.field textarea{padding-top:12px;resize:vertical;min-height:72px;line-height:1.4}
-.field input::placeholder,.field textarea::placeholder{color:rgba(237,230,209,0.45);font-weight:400}
-.field input:focus,.field textarea:focus{
-  border-color:rgba(255,214,0,0.65);
-  background:rgba(237,230,209,0.12);
-}
-.btn-send{
-  margin-top:4px;
-  background:var(--yellow);color:#0A0A0A;
-  border:none;border-radius:999px;
-  padding:12px 18px;
-  font-family:inherit;font-size:13px;font-weight:800;letter-spacing:-0.01em;
-  cursor:pointer;
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  transition:transform 0.12s, filter 0.12s;
-}
-.btn-send:hover{transform:translateY(-1px);filter:brightness(0.98)}
-.btn-send:active{transform:translateY(0)}
-.form-note{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.45;margin-top:2px}
-
-/* EXPANDED EDUCATION TAG inside D */
-.edu-pill{
-  display:inline-flex;align-items:center;gap:8px;
-  margin-top:14px;border:1.5px solid #0A0A0A;border-radius:999px;padding:7px 12px;
-  font-size:11px;font-weight:800;letter-spacing:0.02em;background:rgba(255,255,255,0.5);
-}
-/* Resume section — colorful peach glass */
-.resume{
-  grid-column:1 / -1;
-  background:linear-gradient(135deg, rgba(237,230,209,0.90) 0%, rgba(251,191,36,0.18) 100%);
-  backdrop-filter:blur(14px) saturate(1.15);
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);
-  border:1px solid rgba(255,255,255,0.32);
-  display:grid;grid-template-columns:1.1fr 1.6fr;
-  gap:24px;padding:28px 32px;
-  align-items:center;
-}
-.resume-left h3{font-size:32px;font-weight:900;letter-spacing:-0.05em;line-height:0.9}
-.resume-left p{font-size:13px;font-weight:500;opacity:0.65;margin-top:8px;line-height:1.5;max-width:340px}
-.btn-resume{
-  display:inline-flex;align-items:center;gap:8px;
-  margin-top:16px;background:#0A0A0A;color:#fff;
-  border-radius:999px;padding:11px 18px;
-  font-size:13px;font-weight:800;text-decoration:none;
-  border:1.5px solid #0A0A0A;
-  transition:transform 0.15s, background 0.15s;
-}
-.btn-resume:hover{transform:translateY(-1px);background:var(--dark)}
-.resume-timeline{
-  display:flex;flex-direction:column;gap:10px;
-}
-.rt-item{
-  display:flex;gap:14px;align-items:flex-start;
-  background:rgba(255,255,255,0.65);border:1.5px solid rgba(0,0,0,0.06);
-  border-radius:14px;padding:14px 14px;
-  transition:all 0.25s ease;
-}
-.rt-item:hover{
-  background:rgba(255,255,255,0.88);
-  transform:translateY(-2px) scale(1.01);
-  border-color:rgba(255,214,0,0.35);
-  box-shadow:0 8px 24px rgba(0,0,0,0.10);
-}
-.rt-icon{
-  width:38px;height:38px;min-width:38px;
-  background:var(--yellow);border:1.5px solid #0A0A0A;border-radius:10px;
-  display:grid;place-items:center;font-size:14px;
-}
-.rt-item:nth-child(2) .rt-icon{background:var(--teal); color:#0A0A0A;}
-.rt-item:nth-child(3) .rt-icon{background:var(--lavender);}
-.rt-item b{font-size:13px;font-weight:800;letter-spacing:-0.02em}
-.rt-item span{font-size:12px;font-weight:600;opacity:0.6}
-.rt-item small{font-size:11px;opacity:0.55}
-/* Footer — glass */
-.site-footer{
-  margin-top:14px;
-  background:rgba(237,230,209,0.82);
-  backdrop-filter:blur(14px) saturate(1.2);
-  -webkit-backdrop-filter:blur(14px) saturate(1.2);
-  border:1px solid rgba(255,255,255,0.28);
-  box-shadow:0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.35);
-  border-radius:var(--radius);
-  padding:18px 24px;
-  display:flex;justify-content:space-between;align-items:center;gap:16px;
-  font-size:11px;font-weight:700;letter-spacing:0.06em;
-  transition:all 0.3s ease;
-}
-.site-footer:hover{
-  background:rgba(237,230,209,0.92);
-  transform:translateY(-2px);
-  box-shadow:0 12px 36px rgba(0,0,0,0.12);
-}
-.site-footer a{color:inherit;text-decoration:none;opacity:0.7}
-.site-footer a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
-.foot-links{display:flex;gap:14px;flex-wrap:wrap;font-size:11px}
-/* About content little down */
-.d > div:nth-child(2){margin-top:10px}
-.d p{margin-top:6px}
-
-/* REMOVE OUTLINES — clean borderless */
-*{outline:none}
-*:focus{outline:none}
-.card,.header,.site-footer,.a,.b,.c,.d,.e,.resume,
-.about-item,.rt-item,.field input,.field textarea,
-.edu-pill,.d-badge,.btn-resume,.rt-icon{
-  border:none !important;
-  outline:none !important;
-}
-.header-nav a{border:none !important; outline:none !important}
-.c-row{border:none !important; border-bottom:none !important}
-.c-row:first-child{border-top:none !important}
-.field input,.field textarea{border:none !important; box-shadow:none !important}
-.c-img{border:none !important}
-
-/* MOBILE OPTIMIZATION — colorful + glass performance */
-html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
-*{ -webkit-tap-highlight-color:transparent; }
+.cform input:focus,.cform textarea:focus{border-color:var(--purple)}
+.cform textarea{min-height:84px;resize:vertical}
+.send-btn{background:var(--purple);color:#0A0A0A;border:none;border-radius:12px;padding:13px;font-weight:800;font-size:13px;cursor:pointer;min-height:44px}
+.send-btn:hover{filter:brightness(1.08)}
+.clinks{display:flex;flex-direction:column;gap:6px;margin-top:12px;font-size:11.5px}
+.clinks a{color:#BDBDBD;text-decoration:none}
+.clinks a:hover{color:var(--purple)}
+.clinks i{color:var(--purple);width:18px}
+.site-footer{margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;font-size:11px;color:var(--muted)}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:var(--purple)}
+.foot-links{display:flex;gap:12px;flex-wrap:wrap}
+/* ===== RESPONSIVE / MOBILE ===== */
 @media(max-width:980px){
-  .bento{grid-template-columns:1fr 1fr;grid-template-rows:382px auto auto}
-  .c{grid-row:auto;grid-column:span 2}
-  .c-list{flex-direction:row;flex-wrap:wrap}
-  .c-row{width:50%;border-right:1.5px solid var(--line)}
-  .c-row:nth-child(even){border-right:none}
-  .c-img{height:220px}
-  .resume{grid-template-columns:1fr;grid-column:1 / -1}
-  .site-footer{flex-direction:column;align-items:flex-start}
-  .card{backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);}
+  .bento{grid-template-columns:1fr}
+  .contact-card{grid-template-columns:1fr}
 }
 @media(max-width:640px){
-  body{padding:8px; background-attachment:fixed;}
-  .shell{border-radius:0;padding:8px;gap:10px}
-  .header{padding:16px 16px;flex-direction:column;align-items:flex-start;gap:12px; border-radius:18px;}
-  .header-left{font-size:15px}
-  .nav-icon{width:32px;height:32px;border-radius:8px}
-  .header-nav{width:100%;gap:6px;overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:4px;}
-  .header-nav::-webkit-scrollbar{display:none}
-  .header-nav a{white-space:nowrap; min-height:40px; display:inline-flex; align-items:center; font-size:11px; padding:8px 12px; flex-shrink:0;}
-  .bento{grid-template-columns:1fr;grid-template-rows:auto; gap:12px; margin-top:12px;}
-  .a{ min-height:420px; padding:24px; border-radius:20px;}
-  .a-flower{width:72px;height:72px;top:14px;right:14px}
-  .a-text h1{font-size:clamp(26px, 8vw, 32px)}
-  .b{height:360px; border-radius:20px;}
-  .b img{padding:10px}
-  .c{grid-column:span 1; border-radius:20px;}
-  .c-head h3{font-size:17px}
-  .c-img{height:190px; margin:12px 12px 0 12px}
-  .term-body{font-size:10.5px}
-  .c-list{padding:8px 0 10px 0}
-  .c-row{width:100%;border-right:none; padding:11px 16px; font-size:14px; min-height:44px;}
-  .d{min-height:auto; padding:20px 18px; border-radius:20px; gap:14px;}
-  .d-top{flex-direction:column; align-items:flex-start; gap:8px;}
-  .d h3{font-size:20px}
-  .d p{font-size:13.5px; line-height:1.6}
-  .about-grid{grid-template-columns:1fr; gap:8px}
-  .about-item{padding:12px; min-height:44px;}
-  .e{padding:20px 16px; border-radius:20px;}
-  .e-top{font-size:13px}
-  .field input,.field textarea{font-size:16px; min-height:44px; padding:12px 12px 12px 34px;}
-  .field textarea{min-height:80px}
-  .btn-send,.btn-resume{min-height:44px; padding:12px 20px;}
-  .resume{grid-column:1 / -1; padding:20px 18px; gap:16px; border-radius:20px;}
-  .resume-left h3{font-size:26px}
-  .rt-item{padding:12px; min-height:44px;}
-  .site-footer{padding:16px; border-radius:18px; gap:12px; font-size:10px;}
-  .foot-links{gap:10px}
-  .card{border-radius:20px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);}
+  body{padding:10px}
+  .shell{padding:10px;border-radius:22px}
+  .card{padding:18px;border-radius:18px}
+  .profile-top{flex-direction:row;gap:14px}
+  .avatar{width:88px;height:88px;min-width:88px;border-radius:18px}
+  .profile-name{font-size:20px}
+  .pills{gap:6px;padding:12px}
+  .pill{font-size:11px;padding:6px 10px}
+  .socials{grid-template-columns:1fr 1fr}
+  .left-bottom{grid-template-columns:1fr}
+  .right-top{grid-template-columns:1fr}
+  .right-mid{grid-template-columns:1fr}
+  .right-bottom{grid-template-columns:1fr}
+  .stack-tiles{grid-template-columns:1fr 1fr}
+  .card h2{font-size:19px}
+  .site-footer{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:380px){
-  .a{padding:20px}
-  .header{padding:14px}
-  .header-nav a{padding:7px 10px; font-size:10px}
-  .b{height:320px}
+  .stack-tiles{grid-template-columns:1fr}
+  .profile-top{flex-direction:column;align-items:flex-start}
 }
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://projectsbyayush.github.io/portfolio/#person",
-      "name": "Ayush Patil",
-      "url": "https://projectsbyayush.github.io/portfolio/",
-      "image": "https://projectsbyayush.github.io/portfolio/icon.png",
-      "jobTitle": "Full Stack Web Developer",
-      "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" },
-      "affiliation": { "@type": "CollegeOrUniversity", "name": "Pravin R. Patil College of Engineering and Technology, Mumbai University" },
-      "sameAs": ["https://github.com/projectsbyayush","https://linkedin.com/in/projectsbyayush","https://instagram.com/projectsbyayush","https://x.com/projectsbyayush"],
-      "knowsAbout": ["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB"]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://projectsbyayush.github.io/portfolio/#website",
-      "url": "https://projectsbyayush.github.io/portfolio/",
-      "name": "Ayush Patil Portfolio",
-      "publisher": { "@id": "https://projectsbyayush.github.io/portfolio/#person" },
-      "inLanguage": "en-IN"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://projectsbyayush.github.io/portfolio/" },
-        { "@type": "ListItem", "position": 2, "name": "Skills", "item": "https://projectsbyayush.github.io/portfolio/#skills" },
-        { "@type": "ListItem", "position": 3, "name": "Resume", "item": "https://projectsbyayush.github.io/portfolio/#resume" }
-      ]
-    }
-  ]
-}
+{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://projectsbyayush.github.io/portfolio/#person","name":"Ayush Patil","url":"https://projectsbyayush.github.io/portfolio/","image":"https://projectsbyayush.github.io/portfolio/icon.png","jobTitle":"Full Stack Web Developer","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},"affiliation":{"@type":"CollegeOrUniversity","name":"Pravin R. Patil College of Engineering and Technology, Mumbai University"},"sameAs":["https://github.com/projectsbyayush","https://linkedin.com/in/projectsbyayush","https://instagram.com/projectsbyayush","https://x.com/projectsbyayush"],"knowsAbout":["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB"]},{"@type":"WebSite","url":"https://projectsbyayush.github.io/portfolio/","name":"Ayush Patil Portfolio","publisher":{"@id":"https://projectsbyayush.github.io/portfolio/#person"},"inLanguage":"en-IN"}]}
 </script>
 </head>
 <body>
 <div class="shell">
-  <header class="header">
-    <div class="header-left"><img src="icon.png" alt="Ayush Patil logo" class="nav-icon"> AYUSH <b>PATIL</b></div>
-    <nav class="header-nav">
-      <a href="#skills">SKILLS</a>
-      <a href="#education">ABOUT</a>
-      <a href="#resume">RESUME</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-  </header>
-
   <div class="bento">
-    <!-- A - HERO YELLOW like Pioneer card -->
-    <div class="card a">
-      <div class="a-flower" aria-hidden="true">
-        <!-- geometric flower like in image -->
-        <svg viewBox="0 0 100 100" fill="none" stroke="#1A1A1A" stroke-width="0.9">
-          <g opacity="0.9">
-            <ellipse cx="50" cy="50" rx="8" ry="28" />
-            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(30 50 50)"/>
-            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(60 50 50)"/>
-            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(90 50 50)"/>
-            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(120 50 50)"/>
-            <ellipse cx="50" cy="50" rx="8" ry="28" transform="rotate(150 50 50)"/>
-            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(15 50 50)"/>
-            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(45 50 50)"/>
-            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(75 50 50)"/>
-            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(105 50 50)"/>
-            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(135 50 50)"/>
-            <ellipse cx="50" cy="50" rx="6" ry="22" transform="rotate(165 50 50)"/>
-            <circle cx="50" cy="50" r="3" fill="#1A1A1A" stroke="none"/>
-          </g>
-        </svg>
-      </div>
-      <div></div>
-      <div class="a-text">
-        <h1>
-          Full Stack Developer<br>
-          <span>Building Scalable Web with</span><br>
-          <b>Modern Architecture</b>
-        </h1>
-        <p style="margin-top:12px;font-size:12px;font-weight:700;letter-spacing:0.08em;opacity:0.6;text-transform:uppercase">Mumbai, India — Available for work</p>
-      </div>
-    </div>
-
-    <!-- B - DUCK IMAGE (new) -->
-    <div class="card b">
-      <img src="duck.png?v=2" alt="Yellow Duck — Ayush Patil" loading="lazy">
-    </div>
-
-    <!-- C - RIGHT TALL SKILLS - like Ackino / Manus list -->
-    <div class="card c" id="skills">
-      <div class="c-head">
-        <h3>Stack</h3>
-        <span>11 Technologies</span>
-      </div>
-      <div class="c-img">
-        <div class="terminal">
-          <div class="term-head">
-            <span class="dots"><i></i><i></i><i></i></span>
-            <span><i class="fa-solid fa-terminal" style="margin-right:6px"></i> ayush@portfolio — zsh</span>
-          </div>
-<pre class="term-body"><span class="cmt">// Full Stack Web Developer</span>
-<span class="key">const</span> ayush = {
-  <span class="key">role</span>: <span class="str">"Full Stack Web Developer"</span>,
-  <span class="key">location</span>: <span class="str">"Mumbai, India"</span>,
-  <span class="key">stack</span>: [<span class="str">"React"</span>, <span class="str">"Node"</span>, <span class="str">"Java"</span>],
-  <span class="key">available</span>: <span class="val">true</span>
-};
-<span class="cmt">// → building scalable web</span></pre>
-        </div>
-      </div>
-      <div class="c-list">
-        <div class="c-row"><span>Frontend</span> HTML5</div>
-        <div class="c-row"><span>Style</span> CSS3</div>
-        <div class="c-row"><span>Core</span> JavaScript</div>
-        <div class="c-row"><span>Library</span> React.js</div>
-        <div class="c-row"><span>Framework</span> Angular.js</div>
-        <div class="c-row"><span>Runtime</span> Node.js</div>
-        <div class="c-row"><span>Backend</span> Java</div>
-        <div class="c-row"><span>Database</span> MySQL</div>
-        <div class="c-row"><span>Database</span> PostgreSQL</div>
-        <div class="c-row"><span>Enterprise</span> Oracle SQL</div>
-        <div class="c-row" style="border-bottom:none"><span>NoSQL</span> MongoDB</div>
-      </div>
-    </div>
-
-    <!-- D - BOTTOM LEFT — centered middle of card -->
-    <div class="card d" id="education">
-      <div class="d-top">
-        <div class="loc"><i class="fa-solid fa-location-dot"></i> About — Mumbai, India</div>
-        <span class="d-badge"><i class="fa-solid fa-circle" style="font-size:6px;color:#0A0A0A"></i> Available</span>
-      </div>
-      <div class="about-center">
-        <h3>Ayush Patil <span>— Full Stack Web Developer</span></h3>
-        <p>
-          Crafting fast and minimal web experiences from frontend to backend. Focused on clean code, scalable architecture and human-centered design.
-        </p>
-      </div>
-      <div class="about-grid">
-        <div class="about-item">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <b>B.E. Computer Engineering</b>
-          <span>Pravin R. Patil College of Engineering and Technology</span>
-        </div>
-        <div class="about-item">
-          <i class="fa-solid fa-building-columns"></i>
-          <b>Mumbai University</b>
-          <span>Mumbai, India — B.E. Computer Engineering</span>
-        </div>
-      </div>
-      <div class="edu-pill"><i class="fa-solid fa-award"></i> Pravin R. Patil College of Engineering and Technology — Mumbai University</div>
-    </div>
-
-    <!-- E - BOTTOM MIDDLE CONTACT WITH FORM -->
-    <div class="card e" id="contact">
-      <div class="e-top">Have a<br>Project??</div>
-      <h3 style="font-size:24px;font-weight:800;letter-spacing:-0.04em;margin-top:14px;">Contact Me</h3>
-      <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); var n=this.querySelector('.form-note'); n.textContent='Message sent — I will reply soon!'; n.style.color='var(--yellow)'; setTimeout(()=>{n.textContent='* I reply within 24 hours'; n.style.color='';},3000);">
-        <label class="field">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-        </label>
-        <label class="field">
-          <i class="fa-solid fa-envelope"></i>
-          <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
-        </label>
-        <label class="field">
-          <i class="fa-solid fa-message"></i>
-          <textarea name="message" placeholder="Tell me about your project..." rows="3" required></textarea>
-        </label>
-        <button type="submit" class="btn-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-        <span class="form-note">* I reply within 24 hours</span>
-      </form>
-      <div class="e-bottom" style="margin-top:auto;padding-top:14px;border-top:1px solid rgba(237,230,209,0.12);display:flex;flex-direction:column;align-items:flex-start;gap:10px">
-        <span style="font-size:10px;letter-spacing:0.12em;opacity:0.5;display:block"><i class="fa-solid fa-location-dot"></i> MUMBAI, INDIA</span>
-        <div class="e-social" style="line-height:2;text-align:left;width:100%">
-          <a href="https://github.com/projectsbyayush" target="_blank"><i class="fa-brands fa-github"></i> github.com/projectsbyayush</a>
-          <a href="https://linkedin.com/in/projectsbyayush" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/projectsbyayush</a>
-          <a href="https://instagram.com/projectsbyayush" target="_blank"><i class="fa-brands fa-instagram"></i> instagram.com/projectsbyayush</a>
-          <a href="https://x.com/projectsbyayush" target="_blank"><i class="fa-brands fa-x-twitter"></i> x.com/projectsbyayush</a>
-          <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- RESUME SECTION -->
-    <div class="card resume" id="resume">
-      <div class="resume-left">
-        <div class="loc" style="font-size:11px;font-weight:800;letter-spacing:0.14em;opacity:0.55;display:flex;align-items:center;gap:6px"><i class="fa-solid fa-file-lines"></i> Resume — Download</div>
-        <h3>Resume</h3>
-        <p>B.E. Computer Engineering — Mumbai University. Full Stack focus — React, Node, Java & databases. Available for full-time & freelance.</p>
-        <a href="#" onclick="window.print();return false" class="btn-resume"><i class="fa-solid fa-download"></i> Download Resume (PDF)</a>
-        <div style="margin-top:10px;font-size:11px;opacity:0.55"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com &nbsp;•&nbsp; <i class="fa-solid fa-location-dot"></i> Mumbai, India</div>
-      </div>
-      <div class="resume-timeline">
-        <div class="rt-item">
-          <div class="rt-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+    <!-- LEFT -->
+    <div class="col">
+      <div class="card">
+        <div class="profile-top">
+          <div class="avatar"><img src="duck.png" alt="Ayush Patil — Full Stack Web Developer avatar"></div>
           <div>
-            <b>Pravin R. Patil College of Engineering and Technology</b><br>
-            <span>Mumbai University — B.E. Computer Engineering</span><br>
-            <small><i class="fa-regular fa-calendar"></i> Mumbai University • B.E. Program</small>
+            <span class="avail"><i></i> Available to work</span>
+            <h1 class="profile-name">Ayush Patil</h1>
+            <p class="profile-role">Full Stack <b>Web Developer</b></p>
           </div>
         </div>
-        <div class="rt-item">
-          <div class="rt-icon"><i class="fa-solid fa-code"></i></div>
-          <div>
-            <b>Full Stack Web Developer</b><br>
-            <span>HTML5 • CSS3 • JavaScript • React.js • Angular.js • Node.js</span><br>
-            <small><i class="fa-solid fa-layer-group"></i> Frontend to Backend + Databases</small>
-          </div>
+        <div class="pills">
+          <span class="pill"><i class="fa-solid fa-location-dot"></i> Mumbai, India</span>
+          <span class="pill"><i class="fa-solid fa-clock"></i> IST (UTC+5:30)</span>
+          <span class="pill"><i class="fa-solid fa-globe"></i> English &amp; Hindi</span>
+          <span class="pill"><i class="fa-solid fa-code"></i> Frontend</span>
+          <span class="pill"><i class="fa-solid fa-server"></i> Backend &amp; Database</span>
+          <span class="pill"><i class="fa-solid fa-face-smile"></i> Open to work</span>
         </div>
-        <div class="rt-item">
-          <div class="rt-icon"><i class="fa-solid fa-database"></i></div>
-          <div>
-            <b>Databases</b><br>
-            <span>Java • MySQL • PostgreSQL • Oracle SQL • MongoDB</span><br>
-            <small><i class="fa-solid fa-server"></i> Relational & NoSQL</small>
+        <div class="socials">
+          <a class="sbtn" href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a class="sbtn" href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a class="sbtn" href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="sbtn" href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> Mail</a>
+        </div>
+      </div>
+      <div class="left-bottom">
+        <div class="card">
+          <div class="mini-icon"><i class="fa-solid fa-face-smile"></i></div>
+          <h2>About Me</h2>
+          <p class="about-text"><b>Ayush Patil</b> — Full Stack Web Developer based in <b>Mumbai, India</b>.</p>
+          <p class="about-text">I build fast, minimal web experiences from frontend to backend — clean interfaces, robust APIs and databases that scale.</p>
+          <p class="about-text"><b>B.E. Computer Engineering</b> — Pravin R. Patil College of Engineering and Technology, Mumbai University.</p>
+        </div>
+        <div class="card">
+          <div class="mini-label"><i class="fa-solid fa-table-cells"></i> Services</div>
+          <h2>I Provide</h2>
+          <div class="svc-grid">
+            <div class="svc"><i class="fa-solid fa-laptop-code"></i> Frontend Development</div>
+            <div class="svc"><i class="fa-solid fa-gears"></i> Backend &amp; APIs</div>
+            <div class="svc"><i class="fa-solid fa-database"></i> Database Design</div>
+            <div class="svc"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</div>
+            <div class="svc"><i class="fa-brands fa-react"></i> React / Angular</div>
+            <div class="svc"><i class="fa-brands fa-node-js"></i> Node.js / Java</div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- RIGHT -->
+    <div class="col">
+      <div class="right-top">
+        <div class="card">
+          <div class="mini-label"><i class="fa-solid fa-layer-group"></i> My Stacks</div>
+          <h2>Tools I Use</h2>
+          <div class="stack-tiles">
+            <div class="tile"><i class="fa-brands fa-html5"></i><div>HTML5<small>Markup</small></div></div>
+            <div class="tile"><i class="fa-brands fa-css3-alt"></i><div>CSS3<small>Styling</small></div></div>
+            <div class="tile"><i class="fa-brands fa-js"></i><div>JavaScript<small>ES6+</small></div></div>
+            <div class="tile"><i class="fa-brands fa-react"></i><div>React.js<small>UI Library</small></div></div>
+            <div class="tile"><i class="fa-brands fa-angular"></i><div>Angular.js<small>Framework</small></div></div>
+            <div class="tile"><i class="fa-brands fa-node-js"></i><div>Node.js<small>Runtime</small></div></div>
+            <div class="tile"><i class="fa-brands fa-java"></i><div>Java<small>Backend</small></div></div>
+            <div class="tile"><i class="fa-solid fa-database"></i><div>MySQL<small>Database</small></div></div>
+            <div class="tile"><i class="fa-solid fa-elephant"></i><div>PostgreSQL<small>Database</small></div></div>
+            <div class="tile"><i class="fa-solid fa-server"></i><div>Oracle SQL<small>Enterprise</small></div></div>
+            <div class="tile"><i class="fa-solid fa-leaf"></i><div>MongoDB<small>NoSQL</small></div></div>
+            <div class="tile"><i class="fa-solid fa-plus"></i><div>11 Stacks<small>Full Stack</small></div></div>
+          </div>
+        </div>
+        <div class="card together">
+          <div class="crown"><i class="fa-solid fa-crown"></i></div>
+          <h2>Let's Work Together</h2>
+          <a class="talk-btn" href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-face-smile"></i> Let's Talk</a>
+          <p style="font-size:11px;color:var(--muted);margin-top:12px">Mumbai • Remote worldwide<br>projectsbyayush@gmail.com</p>
+        </div>
+      </div>
+      <div class="right-mid">
+        <div class="card works">
+          <div class="mini-icon"><i class="fa-solid fa-suitcase"></i></div>
+          <h2>Education</h2>
+          <div class="works-meta"><span>Mumbai, India</span><span>Available</span></div>
+          <p class="edu-mini"><b>Pravin R. Patil College of Engineering and Technology</b><br>Mumbai University — <b>B.E. Computer Engineering</b><br>Frontend to backend + databases: HTML5, CSS3, JavaScript, React.js, Angular.js, Node.js, Java, MySQL, PostgreSQL, Oracle SQL, MongoDB.</p>
+        </div>
+        <div class="card resume-mini">
+          <div class="thumb"><div class="term"><span class="k">const</span> ayush = {
+  role: <span class="s">"Full Stack"</span>,
+  location: <span class="s">"Mumbai"</span>,
+  available: true
+}</div></div>
+          <h3>B.E. Computer<br>Engineering</h3>
+          <a class="dl-btn" href="#" onclick="window.print();return false"><i class="fa-solid fa-download"></i> Resume</a>
+        </div>
+      </div>
+      <div class="right-bottom">
+        <div class="card thumb-card">
+          <div class="thumb"><div class="term"><span class="k">stack</span>: [React, Node,
+  Java, MySQL,
+  MongoDB]
+<span class="s">// 11 technologies</span></div></div>
+        </div>
+        <div class="card thumb-card">
+          <div class="thumb"><div class="dblist"><b>Frontend</b> — HTML5, CSS3, JS<br><b>Library</b> — React, Angular<br><b>Backend</b> — Node, Java<br><b>DB</b> — MySQL, Postgres,<br>Oracle, MongoDB</div></div>
+        </div>
+        <div class="card more-card">
+          <div class="star"><i class="fa-solid fa-star"></i></div>
+          <h2>More Of<br>My Work</h2>
+          <a class="view-btn" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">View More</a>
+          <span class="made"><i class="fa-solid fa-hammer"></i> projectsbyayush</span>
+        </div>
+      </div>
+    </div>
   </div>
-  <footer class="site-footer">
+  <div class="card contact-card" id="contact">
+    <div>
+      <div class="mini-label" style="justify-content:flex-start"><i class="fa-solid fa-envelope"></i> Have a project?</div>
+      <h2>Contact Me</h2>
+      <p>Full Stack Web Developer — Mumbai, India. Open to remote &amp; on-site collaborations. I reply within 24 hours.</p>
+      <div class="clinks">
+        <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/projectsbyayush</a>
+        <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/projectsbyayush</a>
+        <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> instagram.com/projectsbyayush</a>
+        <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> x.com/projectsbyayush</a>
+        <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com</a>
+      </div>
+    </div>
+    <form class="cform" onsubmit="event.preventDefault();this.reset();var n=this.querySelector('.send-btn');var o=n.textContent;n.textContent='Message sent — I will reply soon!';setTimeout(()=>{n.textContent=o},3000);">
+      <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+      <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+      <textarea name="message" placeholder="Tell me about your project..." rows="4" required></textarea>
+      <button class="send-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+  <footer class="card site-footer">
     <div><i class="fa-solid fa-copyright"></i> 2026 Ayush Patil — <b>projectsbyayush</b> • Mumbai, India</div>
     <div class="foot-links">
-      <a href="https://github.com/projectsbyayush" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-      <a href="https://linkedin.com/in/projectsbyayush" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-      <a href="https://instagram.com/projectsbyayush" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-      <a href="https://x.com/projectsbyayush" target="_blank"><i class="fa-brands fa-x-twitter"></i> X</a>
-      <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:projectsbyayush@gmail.com">Email</a>
     </div>
   </footer>
 </div>
