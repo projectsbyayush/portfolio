@@ -1,0 +1,27 @@
+# Ayush Patil — Full Stack Web Developer
+
+> Portfolio of Ayush Patil, a Full Stack Web Developer based in Mumbai, India (IST, UTC+5:30). B.E. Computer Engineering, Pravin R. Patil College of Engineering and Technology, Mumbai University.
+
+## Details
+
+- Name: Ayush Patil
+- Role: Full Stack Web Developer
+- Location: Mumbai, India
+- Education: B.E. Computer Engineering — Pravin R. Patil College of Engineering and Technology, Mumbai University
+- Email: projectsbyayush@gmail.com
+- GitHub: https://github.com/projectsbyayush
+- LinkedIn: https://linkedin.com/in/projectsbyayush
+- Instagram: https://instagram.com/projectsbyayush
+- X: https://x.com/projectsbyayush
+
+## Stack
+
+Frontend: HTML5, CSS3, JavaScript, React.js, Angular.js. Backend: Node.js, Java, REST APIs. Databases: MySQL, PostgreSQL, Oracle SQL, MongoDB.
+
+## Services
+
+Frontend development, component UI, backend and APIs, database design, performance optimization, maintenance and support. Open to freelance, full-time and remote collaborations. Replies within 24 hours.
+
+## Canonical site
+
+- https://projectsbyayush.github.io/portfolio/
