@@ -66,7 +66,11 @@
   --input-bd:#2c2d30;
   --topbar-bg:rgba(11,11,12,.66);--glass:rgba(26,27,30,.55);--glass-bd:rgba(255,255,255,.09);
 }
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:110px}
+section[id]{scroll-margin-top:104px}
+img{max-width:100%}
+a{-webkit-tap-highlight-color:transparent}
+button{-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);background-image:radial-gradient(1000px 520px at 6% -6%,rgba(255,214,0,.20),transparent 60%),radial-gradient(900px 520px at 96% 18%,rgba(255,110,40,.12),transparent 60%),radial-gradient(1100px 640px at 50% 115%,rgba(0,150,200,.14),transparent 60%);background-attachment:fixed;color:var(--ink);font-family:var(--font);min-height:100dvh;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding:0 clamp(12px,3vw,44px)}
 [data-theme="dark"] body{background-image:radial-gradient(1000px 520px at 6% -6%,rgba(255,214,0,.13),transparent 60%),radial-gradient(900px 520px at 96% 18%,rgba(255,110,40,.10),transparent 60%),radial-gradient(1100px 640px at 50% 115%,rgba(0,150,200,.16),transparent 60%)}
 ::selection{background:var(--orange);color:#0b0b0c}
@@ -245,9 +249,10 @@ body{background:var(--bg);background-image:radial-gradient(1000px 520px at 6% -6
   .based{flex-direction:row;align-items:center}
   .based p{font-size:clamp(22px,6.4vw,30px)}
   .globe{width:56px}
-  .proj-cols{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
-  .proj-cols::-webkit-scrollbar{display:none}
-  .pcol{scroll-snap-align:start}
+  .proj-cols{grid-template-columns:1fr;gap:8px;overflow:visible}
+  .pcol{padding:14px 12px}
+  .pcol p{white-space:normal}
+  .pcol .tags{flex-wrap:wrap}
 }
 </style>
 <script type="application/ld+json">
@@ -257,7 +262,7 @@ body{background:var(--bg);background-image:radial-gradient(1000px 520px at 6% -6
 <body>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="#top"><img src="duck-face.png" alt="Ayush Patil logo" class="brand-logo" width="60" height="60"> @projectsbyayush</a>
+    <a class="brand" href="#top" aria-label="Ayush Patil home"><img src="icon.png" alt="Ayush Patil logo" class="brand-logo" width="60" height="60"></a>
     <nav class="topnav" aria-label="Primary">
       <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#contact">Contact</a><a href="resume.html" download="Ayush-Patil-Resume.html" title="Download resume">Resume</a>
     </nav>
