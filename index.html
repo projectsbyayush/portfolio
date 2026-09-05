@@ -70,8 +70,9 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:100dvh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--orange);color:#0b0b0c}
 /* ---------- header ---------- */
-.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--edge-soft)}
-.topbar-in{max-width:1480px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+.topbar{position:sticky;top:12px;z-index:50;width:min(1480px,calc(100% - 24px));margin:12px auto 0;background:var(--topbar-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--edge-soft);border-radius:100px;box-shadow:0 12px 32px rgba(0,0,0,.10)}
+[data-theme="dark"] .topbar{box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.topbar-in{max-width:1480px;margin:0 auto;padding:8px 8px 8px 22px;display:flex;align-items:center;gap:10px}
 .brand{font-weight:700;letter-spacing:-0.02em;font-size:16px;text-decoration:none;color:var(--ink);margin-right:auto}
 .brand span{color:var(--dim);font-weight:500}
 .topnav{display:flex;gap:4px}
@@ -170,7 +171,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .stack-card>p{font-size:13.5px;color:var(--dim);line-height:1.6;margin-top:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .chips span{font-size:12.5px;font-weight:500;border:1px solid var(--edge);border-radius:100px;padding:7px 14px;color:var(--soft);transition:border-color .2s,color .2s}
-.chips span:hover{border-color:var(--orange);color:#fff}
+.chips span:hover{border-color:var(--orange);color:var(--ink);box-shadow:0 0 14px rgba(255,214,0,.35)}
+.stack-card{transition:transform .25s,box-shadow .25s,border-color .25s;border:1px solid transparent}
+.stack-card:hover{transform:translateY(-5px);border-color:rgba(255,214,0,.55);box-shadow:0 0 0 1px rgba(255,214,0,.45),0 20px 55px rgba(255,180,0,.22)}
+[data-theme="dark"] .stack-card:hover{box-shadow:0 0 0 1px rgba(255,214,0,.6),0 20px 60px rgba(255,214,0,.16)}
+.stack-card:hover h3 i{text-shadow:0 0 18px rgba(255,214,0,.65)}
 /* contact */
 .contact-big{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);align-items:start}
 .contact-big h3{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-0.03em;line-height:1.1}
@@ -253,7 +258,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   <div class="topbar-in">
     <a class="brand" href="#top"><i class="fa-solid fa-bolt"></i> Ayush Patil <span>— Mumbai</span></a>
     <nav class="topnav" aria-label="Primary">
-      <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#contact">Contact</a><a href="resume.html" download="Ayush-Patil-Resume.html" title="Download resume">Resume</a>
     </nav>
     <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" aria-pressed="false"><i class="fa-solid fa-moon"></i></button>
     <a class="top-mail" href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
@@ -288,7 +293,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram.</a>
     <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>X.</a>
     <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i>Mail.</a>
-    <a href="#" onclick="window.print();return false"><i class="fa-solid fa-file-lines"></i>Resume.</a>
+    <a href="resume.html" download="Ayush-Patil-Resume.html"><i class="fa-solid fa-file-lines"></i>Resume.</a>
   </nav>
   <div class="row row-bottom" id="work">
     <section class="card based" aria-label="Location">
