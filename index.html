@@ -7,7 +7,9 @@
 <meta name="description" content="Ayush Patil — Full Stack Web Developer based in Mumbai, India. B.E. Computer Engineering, Mumbai University. HTML5, CSS3, JavaScript, React.js, Angular.js, Node.js, Java, MySQL, PostgreSQL, Oracle SQL, MongoDB.">
 <meta name="author" content="Ayush Patil">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#0b0b0c">
+<meta name="theme-color" content="#FAF6EE" id="themeColor">
+<meta name="color-scheme" content="light dark">
+<script>try{if(localStorage.getItem("ap-theme")==="dark"){document.documentElement.dataset.theme="dark";var m=document.getElementById("themeColor");if(m)m.setAttribute("content","#0b0b0c");}}catch(e){}</script>
 <link rel="canonical" href="https://projectsbyayush.github.io/portfolio/">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
@@ -29,28 +31,52 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
+  --bg:#FAF6EE;
+  --card:#FFFFFF;
+  --card2:#F0E8D5;
+  --ink:#17130B;
+  --dim:#6F6353;
+  --line:#E2D7BE;
+  --orange:#FFD600;
+  --orange-h:#E6C200;
+  --gold:#9A7400;
+  --raise:#EEE4CC;
+  --inset:#FFFFFF;
+  --soft:#4D4536;
+  --edge:#D9CDAF;
+  --edge-soft:#E7DCC3;
+  --input-bd:#D3C6A4;
+  --topbar-bg:rgba(250,246,238,.86);
+  --r:26px;
+  --font:'Inter Tight',system-ui,-apple-system,sans-serif;
+}
+[data-theme="dark"]{
   --bg:#0b0b0c;
   --card:#1e1f21;
   --card2:#161719;
   --ink:#f4f4f4;
   --dim:#8f8f93;
   --line:#333437;
-  --orange:#FFD600;
-  --orange-h:#E6C200;
-  --r:26px;
-  --font:'Inter Tight',system-ui,-apple-system,sans-serif;
+  --gold:#FFD600;
+  --raise:#222426;
+  --inset:#101012;
+  --soft:#c9c9cd;
+  --edge:#3a3b3e;
+  --edge-soft:#26272a;
+  --input-bd:#2c2d30;
+  --topbar-bg:rgba(11,11,12,.82);
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:100dvh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--orange);color:#0b0b0c}
 /* ---------- header ---------- */
-.topbar{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #1c1d1f}
+.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--edge-soft)}
 .topbar-in{max-width:1480px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
 .brand{font-weight:700;letter-spacing:-0.02em;font-size:16px;text-decoration:none;color:var(--ink);margin-right:auto}
 .brand span{color:var(--dim);font-weight:500}
 .topnav{display:flex;gap:4px}
 .topnav a{color:var(--dim);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:100px}
-.topnav a:hover{color:var(--ink);background:#1c1d1f}
+.topnav a:hover{color:var(--ink);background:var(--raise)}
 .top-mail{background:var(--orange);color:#0b0b0c;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:100px;padding:10px 20px;white-space:nowrap}
 .top-mail:hover{background:var(--orange-h)}
 /* ---------- shell / bento ---------- */
@@ -60,25 +86,25 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .row-bottom{grid-template-columns:1fr 1.55fr}
 .card{background:var(--card);border-radius:var(--r);padding:clamp(22px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column}
 /* hero */
-.avatar{width:clamp(72px,7vw,92px);height:clamp(72px,7vw,92px);border-radius:50%;overflow:hidden;background:#2a2b2e;flex:none}
+.avatar{width:clamp(72px,7vw,92px);height:clamp(72px,7vw,92px);border-radius:50%;overflow:hidden;background:var(--raise);flex:none}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .hero h1{margin-top:auto;padding-top:26px;font-size:clamp(32px,4.1vw,58px);font-weight:600;letter-spacing:-0.035em;line-height:1.04;text-wrap:balance}
 .hero h1 .g{color:var(--dim)}
 .hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.hero .tags span{font-size:12px;font-weight:500;color:#c9c9cd;border:1px solid #3a3b3e;border-radius:100px;padding:7px 14px}
+.hero .tags span{font-size:12px;font-weight:500;color:var(--soft);border:1px solid var(--edge);border-radius:100px;padding:7px 14px}
 /* contact mini */
 .contact{align-items:center;justify-content:center;text-align:center;gap:clamp(14px,2.4vh,24px)}
-.rings{width:clamp(72px,8vw,110px);height:auto}
+.rings{width:clamp(72px,8vw,110px);height:auto;color:var(--ink)}
 .contact h2{font-size:clamp(26px,3.2vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.08;text-wrap:balance}
 .mail-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#0b0b0c;text-decoration:none;font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-0.01em;border-radius:100px;padding:clamp(14px,2.2vh,20px) clamp(26px,3vw,46px);transition:background .2s,transform .2s;max-width:100%}
 .mail-pill:hover{background:var(--orange-h);transform:translateY(-2px)}
 /* social strip */
 .strip{grid-template-columns:repeat(6,1fr)}
 .strip a{background:var(--card2);color:var(--ink);text-decoration:none;text-align:center;font-size:clamp(12px,1.25vw,16px);font-weight:500;border-radius:100px;padding:clamp(13px,1.9vh,18px) 8px;transition:background .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.strip a:hover{background:#222426}
+.strip a:hover{background:var(--raise)}
 /* based */
 .based{justify-content:flex-start;gap:clamp(14px,3vh,28px)}
-.globe{width:clamp(64px,7vw,100px);height:auto}
+.globe{width:clamp(64px,7vw,100px);height:auto;color:var(--ink)}
 .based p{margin-top:auto;font-size:clamp(26px,3.2vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.1}
 .based p .g{color:var(--dim)}
 .based small{font-size:13px;color:var(--dim);font-weight:500}
@@ -90,22 +116,22 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .work-head a:hover{color:var(--ink)}
 .proj-cols{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1vw,14px)}
 .pcol{display:flex;flex-direction:column;gap:8px;min-width:0;border-top:1px solid var(--line);border-radius:14px;padding:14px 10px;text-decoration:none;color:var(--ink);transition:background .22s}
-.pcol:hover{background:#26282c}
+.pcol:hover{background:var(--raise)}
 .pcol .n{font-size:12px;color:var(--dim);font-weight:500}
 .pcol b{font-size:clamp(18px,1.9vw,25px);font-weight:600;letter-spacing:-0.025em;line-height:1.1}
 .pcol p{font-size:13px;color:var(--dim);font-weight:500;line-height:1.55}
 .pcol .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
-.pcol .tags i{font-style:normal;font-size:10.5px;font-weight:600;border:1px solid #3a3b3e;border-radius:100px;padding:3px 9px;color:#bdbdc0;white-space:nowrap}
-.pcol:hover .tags i{border-color:#4a4c50;color:#e8e8ea}
+.pcol .tags i{font-style:normal;font-size:10.5px;font-weight:600;border:1px solid var(--edge);border-radius:100px;padding:3px 9px;color:var(--soft);white-space:nowrap;transition:border-color .2s,color .2s}
+.pcol:hover .tags i{border-color:var(--orange);color:var(--ink)}
 .pcol .view{margin-top:auto;padding-top:10px;font-size:12.5px;font-weight:600;color:var(--dim)}
-.pcol:hover .view{color:var(--orange)}
+.pcol:hover .view{color:var(--gold)}
 .work-foot{padding-top:12px;font-size:12.5px;color:var(--dim);display:flex;justify-content:space-between;gap:10px;font-weight:500}
 .work-foot a{color:var(--dim);text-decoration:none}
-.work-foot a:hover{color:var(--orange)}
+.work-foot a:hover{color:var(--gold)}
 /* ---------- marquee ---------- */
-.marquee{background:#101012;border-top:1px solid #1c1d1f;border-bottom:1px solid #1c1d1f;overflow:hidden;white-space:nowrap;padding:13px 0;margin-top:12px}
+.marquee{background:var(--inset);border-top:1px solid var(--edge-soft);border-bottom:1px solid var(--edge-soft);overflow:hidden;white-space:nowrap;padding:13px 0;margin-top:12px}
 .marquee-track{display:inline-block;animation:scroll 28s linear infinite;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-.marquee-track b{color:var(--orange);margin:0 18px;font-weight:600}
+.marquee-track b{color:var(--gold);margin:0 18px;font-weight:600}
 @keyframes scroll{to{transform:translateX(-50%)}}
 /* ---------- sections ---------- */
 .section{width:min(1480px,100%);margin:0 auto;padding:clamp(48px,7vh,84px) 14px 0}
@@ -118,12 +144,12 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:22px}
 .about-main p{font-size:clamp(17px,1.8vw,22px);line-height:1.55;letter-spacing:-0.015em;font-weight:500}
 .about-main p .g{color:var(--dim)}
-.edu{margin-top:20px;border:1px dashed #3a3b3e;border-radius:16px;padding:16px 18px;font-size:14px;line-height:1.65;color:var(--dim)}
+.edu{margin-top:20px;border:1px dashed var(--edge);border-radius:16px;padding:16px 18px;font-size:14px;line-height:1.65;color:var(--dim)}
 .edu b{color:var(--ink)}
 .counts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
-.count{background:#101012;border:1px solid #26272a;border-radius:16px;padding:16px 10px;text-align:center}
+.count{background:var(--inset);border:1px solid var(--edge-soft);border-radius:16px;padding:16px 10px;text-align:center}
 .count b{font-size:30px;font-weight:600;letter-spacing:-0.03em;display:block}
-.count b em{font-style:normal;color:var(--orange)}
+.count b em{font-style:normal;color:var(--gold)}
 .count span{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .side-stack{display:flex;flex-direction:column;gap:12px}
 .fact{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px}
@@ -133,28 +159,28 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 /* services */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
 .svc{background:var(--card);border-radius:var(--r);padding:26px;transition:transform .22s,background .22s}
-.svc:hover{transform:translateY(-4px);background:#232527}
+.svc:hover{transform:translateY(-4px);background:var(--raise)}
 .svc .n{font-size:12px;color:var(--dim);font-weight:500}
 .svc h3{font-size:20px;font-weight:600;letter-spacing:-0.02em;margin-top:30px}
 .svc p{font-size:13.5px;color:var(--dim);line-height:1.65;margin-top:8px}
-.svc .tags{margin-top:14px;font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--orange)}
+.svc .tags{margin-top:14px;font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--gold)}
 /* stack */
 .stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
 .stack-card h3{font-size:21px;font-weight:600;letter-spacing:-0.02em}
 .stack-card>p{font-size:13.5px;color:var(--dim);line-height:1.6;margin-top:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.chips span{font-size:12.5px;font-weight:500;border:1px solid #3a3b3e;border-radius:100px;padding:7px 14px;color:#d5d5d9;transition:border-color .2s,color .2s}
+.chips span{font-size:12.5px;font-weight:500;border:1px solid var(--edge);border-radius:100px;padding:7px 14px;color:var(--soft);transition:border-color .2s,color .2s}
 .chips span:hover{border-color:var(--orange);color:#fff}
 /* contact */
 .contact-big{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);align-items:start}
 .contact-big h3{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-0.03em;line-height:1.1}
 .contact-big>p{font-size:14.5px;color:var(--dim);line-height:1.7;margin-top:12px}
 .clinks{display:flex;flex-direction:column;gap:2px;margin-top:16px}
-.clinks a{color:#c9c9cd;text-decoration:none;font-size:14.5px;font-weight:500;padding:9px 0;border-bottom:1px solid #26272a;display:flex;justify-content:space-between;gap:10px}
-.clinks a:hover{color:var(--orange)}
+.clinks a{color:var(--soft);text-decoration:none;font-size:14.5px;font-weight:500;padding:9px 0;border-bottom:1px solid var(--edge-soft);display:flex;justify-content:space-between;gap:10px}
+.clinks a:hover{color:var(--gold)}
 .clinks a span:last-child{color:var(--dim)}
 .cform{display:flex;flex-direction:column;gap:10px}
-.cform input,.cform textarea{width:100%;background:#101012;border:1px solid #2c2d30;border-radius:14px;color:#fff;font-family:var(--font);font-size:16px;padding:14px 16px;outline:none;transition:border-color .2s}
+.cform input,.cform textarea{width:100%;background:var(--inset);border:1px solid var(--input-bd);border-radius:14px;color:var(--ink);font-family:var(--font);font-size:16px;padding:14px 16px;outline:none;transition:border-color .2s}
 .cform input:focus,.cform textarea:focus{border-color:var(--orange)}
 .cform textarea{min-height:120px;resize:vertical}
 .send-btn{background:var(--orange);color:#0b0b0c;border:none;border-radius:100px;padding:15px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:var(--font);transition:background .2s,transform .2s}
@@ -162,22 +188,33 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 /* footer */
 .footer{width:min(1480px,100%);margin:0 auto;padding:26px 20px 40px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--dim)}
 .footer a{color:var(--dim);text-decoration:none;font-weight:600}
-.footer a:hover{color:var(--orange)}
+.footer a:hover{color:var(--gold)}
 .foot-links{display:flex;gap:16px;flex-wrap:wrap}
-.to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:52px;height:52px;border-radius:50%;border:1px solid #3a3b3e;background:#17181b;color:var(--ink);cursor:pointer;font-size:17px;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.45);opacity:0;translate:0 14px;pointer-events:none;transition:opacity .3s,translate .3s,background .2s,transform .2s}
+.to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:52px;height:52px;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;font-size:17px;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.45);opacity:0;translate:0 14px;pointer-events:none;transition:opacity .3s,translate .3s,background .2s,transform .2s}
 .to-top.show{opacity:1;translate:0 0;pointer-events:auto}
 .to-top:hover{background:var(--orange);color:#0b0b0c;transform:translateY(-3px)}
 .to-top svg.ring{position:absolute;inset:-1px;transform:rotate(-90deg)}
 .to-top svg.ring circle{fill:none;stroke-width:3}
-.to-top svg.ring .bgc{stroke:#333437}
+.to-top svg.ring .bgc{stroke:var(--line)}
 .to-top svg.ring .fgc{stroke:var(--orange);stroke-linecap:round;transition:stroke-dashoffset .1s linear}
+/* font awesome accents */
+.theme-btn{width:40px;height:40px;flex:none;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;display:grid;place-items:center;transition:border-color .2s,transform .2s}
+.theme-btn:hover{border-color:var(--orange);transform:translateY(-1px)}
+.sec-head p i{color:var(--gold);margin-right:8px}
+.svc .sic{width:44px;height:44px;border-radius:14px;background:var(--raise);display:grid;place-items:center;font-size:18px;color:var(--gold);margin-bottom:4px}
+.stack-card h3 i{color:var(--gold);margin-right:9px;font-size:.9em}
+.strip a i{color:var(--gold);margin-right:7px;font-size:.92em}
+.clinks a>i:first-child{color:var(--gold);font-size:13px;margin-right:2px}
+.mail-pill i,.top-mail i,.send-btn i{font-size:.92em}
+.brand i{color:var(--gold);margin-right:2px}
 /* scroll reveal */
 .rv{opacity:0;translate:0 26px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;translate:0 0}
 .rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
 /* spotlight hover */
 .card{--mx:50%;--my:50%}
-.card.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(255,214,0,.10),transparent 65%);opacity:0;transition:opacity .3s}
+.card.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(154,116,0,.12),transparent 65%);opacity:0;transition:opacity .3s}
+[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circle at var(--mx) var(--my),rgba(255,214,0,.10),transparent 65%)}
 .card.spot:hover::after{opacity:1}
 /* topbar shadow on scroll */
 .topbar{transition:box-shadow .3s,background .3s}
@@ -214,11 +251,12 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 <body>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="#top">Ayush Patil <span>— Mumbai</span></a>
+    <a class="brand" href="#top"><i class="fa-solid fa-bolt"></i> Ayush Patil <span>— Mumbai</span></a>
     <nav class="topnav" aria-label="Primary">
       <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#contact">Contact</a>
     </nav>
-    <a class="top-mail" href="mailto:projectsbyayush@gmail.com">Get in Touch</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" aria-pressed="false"><i class="fa-solid fa-moon"></i></button>
+    <a class="top-mail" href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
   </div>
 </header>
 
@@ -231,7 +269,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
       <div class="tags"><span>Mumbai, India</span><span>IST (UTC+5:30)</span><span>English &amp; Hindi</span><span>Open to Work</span></div>
     </section>
     <section class="card contact" aria-label="Contact">
-      <svg class="rings" viewBox="0 0 120 62" fill="none" stroke="#f4f4f4" stroke-width="4" aria-hidden="true">
+      <svg class="rings" viewBox="0 0 120 62" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true">
         <ellipse cx="26" cy="31" rx="11" ry="25"/>
         <ellipse cx="40" cy="31" rx="11" ry="25"/>
         <ellipse cx="54" cy="31" rx="11" ry="25"/>
@@ -241,20 +279,20 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
         <path d="M82 6v50" opacity=".9"/>
       </svg>
       <h2>Have a project<br>in mind?</h2>
-      <a class="mail-pill" href="mailto:projectsbyayush@gmail.com">projectsbyayush@gmail.com</a>
+      <a class="mail-pill" href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com</a>
     </section>
   </div>
   <nav class="row strip" aria-label="Social links">
-    <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">GitHub.</a>
-    <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener">LinkedIn.</a>
-    <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener">Instagram.</a>
-    <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener">X.</a>
-    <a href="mailto:projectsbyayush@gmail.com">Mail.</a>
-    <a href="#" onclick="window.print();return false">Resume.</a>
+    <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub.</a>
+    <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i>LinkedIn.</a>
+    <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram.</a>
+    <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>X.</a>
+    <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i>Mail.</a>
+    <a href="#" onclick="window.print();return false"><i class="fa-solid fa-file-lines"></i>Resume.</a>
   </nav>
   <div class="row row-bottom" id="work">
     <section class="card based" aria-label="Location">
-      <svg class="globe" viewBox="0 0 120 72" fill="none" stroke="#f4f4f4" stroke-width="4" aria-hidden="true">
+      <svg class="globe" viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true">
         <ellipse cx="60" cy="36" rx="52" ry="30"/>
         <ellipse cx="60" cy="36" rx="34" ry="30"/>
         <ellipse cx="60" cy="36" rx="15" ry="30"/>
@@ -298,7 +336,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
 
 <section class="section" id="about">
-  <div class="sec-head"><h2>About <span>Me.</span></h2><p>01 — Profile</p></div>
+  <div class="sec-head"><h2>About <span>Me.</span></h2><p><i class="fa-solid fa-user"></i>01 — Profile</p></div>
   <div class="about-grid">
     <div class="card about-main">
       <p>Ayush Patil — Full Stack Web Developer based in <span class="g">Mumbai, India.</span> I build fast, minimal web experiences from frontend to backend — <span class="g">clean interfaces, robust APIs and databases that scale.</span></p>
@@ -317,46 +355,46 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 </section>
 
 <section class="section" id="services">
-  <div class="sec-head"><h2>Services <span>I Provide.</span></h2><p>02 — What I Do</p></div>
+  <div class="sec-head"><h2>Services <span>I Provide.</span></h2><p><i class="fa-solid fa-briefcase"></i>02 — What I Do</p></div>
   <div class="svc-grid">
-    <div class="svc"><span class="n">/ 01</span><h3>Frontend development</h3><p>Semantic markup, modern layouts and interactive experiences that feel instant on any device.</p><div class="tags">HTML5 · CSS3 · JAVASCRIPT</div></div>
-    <div class="svc"><span class="n">/ 02</span><h3>Component UI</h3><p>Reusable, maintainable interfaces with React.js and Angular.js that stay fast as you grow.</p><div class="tags">REACT.JS · ANGULAR.JS</div></div>
-    <div class="svc"><span class="n">/ 03</span><h3>Backend &amp; APIs</h3><p>Secure server logic and REST integrations with Node.js and Java — tested and documented.</p><div class="tags">NODE.JS · JAVA</div></div>
-    <div class="svc"><span class="n">/ 04</span><h3>Database design</h3><p>Relational and NoSQL done properly — modelled, indexed and backed up.</p><div class="tags">MYSQL · POSTGRES · ORACLE · MONGO</div></div>
-    <div class="svc"><span class="n">/ 05</span><h3>Performance</h3><p>Optimized delivery — small bundles, fast paint, zero bloat. This page is 13KB.</p><div class="tags">SPEED · SEO</div></div>
-    <div class="svc"><span class="n">/ 06</span><h3>Support</h3><p>Maintenance, fixes and iteration with replies inside 24 hours.</p><div class="tags">MUMBAI · REMOTE</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-code"></i></div><span class="n">/ 01</span><h3>Frontend development</h3><p>Semantic markup, modern layouts and interactive experiences that feel instant on any device.</p><div class="tags">HTML5 · CSS3 · JAVASCRIPT</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-layer-group"></i></div><span class="n">/ 02</span><h3>Component UI</h3><p>Reusable, maintainable interfaces with React.js and Angular.js that stay fast as you grow.</p><div class="tags">REACT.JS · ANGULAR.JS</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-server"></i></div><span class="n">/ 03</span><h3>Backend &amp; APIs</h3><p>Secure server logic and REST integrations with Node.js and Java — tested and documented.</p><div class="tags">NODE.JS · JAVA</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-database"></i></div><span class="n">/ 04</span><h3>Database design</h3><p>Relational and NoSQL done properly — modelled, indexed and backed up.</p><div class="tags">MYSQL · POSTGRES · ORACLE · MONGO</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-gauge-high"></i></div><span class="n">/ 05</span><h3>Performance</h3><p>Optimized delivery — small bundles, fast paint, zero bloat. This page is 13KB.</p><div class="tags">SPEED · SEO</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-headset"></i></div><span class="n">/ 06</span><h3>Support</h3><p>Maintenance, fixes and iteration with replies inside 24 hours.</p><div class="tags">MUMBAI · REMOTE</div></div>
   </div>
 </section>
 
 <section class="section" id="stack">
-  <div class="sec-head"><h2>Tools <span>I Use.</span></h2><p>03 — Full Stack</p></div>
+  <div class="sec-head"><h2>Tools <span>I Use.</span></h2><p><i class="fa-solid fa-layer-group"></i>03 — Full Stack</p></div>
   <p class="lead">Eleven technologies across three layers — minimal tools, maximum impact.</p>
   <div class="stack-grid">
-    <div class="card stack-card"><h3>Frontend</h3><p>What users see and touch.</p><div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Angular.js</span></div></div>
-    <div class="card stack-card"><h3>Backend</h3><p>What makes it work.</p><div class="chips"><span>Node.js</span><span>Java</span><span>REST APIs</span></div></div>
-    <div class="card stack-card"><h3>Databases</h3><p>Where it all lives.</p><div class="chips"><span>MySQL</span><span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span></div></div>
+    <div class="card stack-card"><h3><i class="fa-solid fa-laptop-code"></i>Frontend</h3><p>What users see and touch.</p><div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Angular.js</span></div></div>
+    <div class="card stack-card"><h3><i class="fa-solid fa-gears"></i>Backend</h3><p>What makes it work.</p><div class="chips"><span>Node.js</span><span>Java</span><span>REST APIs</span></div></div>
+    <div class="card stack-card"><h3><i class="fa-solid fa-database"></i>Databases</h3><p>Where it all lives.</p><div class="chips"><span>MySQL</span><span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span></div></div>
   </div>
 </section>
 
 <section class="section" id="contact">
-  <div class="sec-head"><h2>Have a Project <span>in Mind?</span></h2><p>04 — Contact</p></div>
+  <div class="sec-head"><h2>Have a Project <span>in Mind?</span></h2><p><i class="fa-solid fa-envelope"></i>04 — Contact</p></div>
   <div class="card contact-big">
     <div>
       <h3>Let's Build Something That Ships.</h3>
       <p>Tell me what you want to build — landing pages, web apps, APIs or databases. Based in Mumbai, working worldwide.</p>
       <div class="clinks">
-        <a href="mailto:projectsbyayush@gmail.com"><span>projectsbyayush@gmail.com</span><span>&#8599;</span></a>
-        <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><span>github.com/projectsbyayush</span><span>&#8599;</span></a>
-        <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><span>linkedin.com/in/projectsbyayush</span><span>&#8599;</span></a>
-        <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><span>instagram.com/projectsbyayush</span><span>&#8599;</span></a>
-        <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><span>x.com/projectsbyayush</span><span>&#8599;</span></a>
+        <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i><span>projectsbyayush@gmail.com</span><span>&#8599;</span></a>
+        <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span>github.com/projectsbyayush</span><span>&#8599;</span></a>
+        <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/projectsbyayush</span><span>&#8599;</span></a>
+        <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i><span>instagram.com/projectsbyayush</span><span>&#8599;</span></a>
+        <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i><span>x.com/projectsbyayush</span><span>&#8599;</span></a>
       </div>
     </div>
     <form class="cform" onsubmit="event.preventDefault();this.reset();var b=this.querySelector('.send-btn');var o=b.textContent;b.textContent='Message sent — I will reply soon!';setTimeout(()=>{b.textContent=o},3000);">
       <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
       <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
       <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-      <button class="send-btn" type="submit">Send Message</button>
+      <button class="send-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
     </form>
   </div>
 </section>
@@ -395,6 +433,21 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   }else{
     els.forEach(function(el){el.classList.add("in");});
   }
+
+  /* light / dark theme (light is default) */
+  var themeBtn=document.getElementById("themeBtn"),themeMeta=document.getElementById("themeColor");
+  function paintTheme(dark){
+    if(dark){document.documentElement.dataset.theme="dark";}else{document.documentElement.removeAttribute("data-theme");}
+    themeBtn.innerHTML=dark?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';
+    themeBtn.setAttribute("aria-pressed",dark?"true":"false");
+    themeBtn.setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode");
+    if(themeMeta)themeMeta.setAttribute("content",dark?"#0b0b0c":"#FAF6EE");
+    try{localStorage.setItem("ap-theme",dark?"dark":"light");}catch(e){}
+  }
+  themeBtn.addEventListener("click",function(){
+    paintTheme(document.documentElement.dataset.theme!=="dark");
+  });
+  paintTheme(document.documentElement.dataset.theme==="dark");
 
   /* topbar shadow + back-to-top with progress ring */
   var bar=document.querySelector(".topbar"),top=document.getElementById("toTop"),fg=document.getElementById("ringFg");
