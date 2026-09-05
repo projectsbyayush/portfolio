@@ -34,14 +34,14 @@
   --ink:#f4f4f4;
   --dim:#8f8f93;
   --line:#333437;
-  --orange:#ff5c1c;
-  --orange-h:#e64e12;
+  --orange:#FFD600;
+  --orange-h:#E6C200;
   --r:26px;
   --font:'Inter Tight',system-ui,-apple-system,sans-serif;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:100dvh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--orange);color:#fff}
+::selection{background:var(--orange);color:#0b0b0c}
 /* ---------- header ---------- */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #1c1d1f}
 .topbar-in{max-width:1480px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
@@ -50,7 +50,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .topnav{display:flex;gap:4px}
 .topnav a{color:var(--dim);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:100px}
 .topnav a:hover{color:var(--ink);background:#1c1d1f}
-.top-mail{background:var(--orange);color:#fff;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:100px;padding:10px 20px;white-space:nowrap}
+.top-mail{background:var(--orange);color:#0b0b0c;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:100px;padding:10px 20px;white-space:nowrap}
 .top-mail:hover{background:var(--orange-h)}
 /* ---------- shell / bento ---------- */
 .shell{width:min(1480px,100%);margin:0 auto;padding:14px;display:grid;gap:12px}
@@ -69,7 +69,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .contact{align-items:center;justify-content:center;text-align:center;gap:clamp(14px,2.4vh,24px)}
 .rings{width:clamp(72px,8vw,110px);height:auto}
 .contact h2{font-size:clamp(26px,3.2vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.08;text-wrap:balance}
-.mail-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-0.01em;border-radius:100px;padding:clamp(14px,2.2vh,20px) clamp(26px,3vw,46px);transition:background .2s,transform .2s;max-width:100%}
+.mail-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#0b0b0c;text-decoration:none;font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-0.01em;border-radius:100px;padding:clamp(14px,2.2vh,20px) clamp(26px,3vw,46px);transition:background .2s,transform .2s;max-width:100%}
 .mail-pill:hover{background:var(--orange-h);transform:translateY(-2px)}
 /* social strip */
 .strip{grid-template-columns:repeat(6,1fr)}
@@ -156,7 +156,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .cform input,.cform textarea{width:100%;background:#101012;border:1px solid #2c2d30;border-radius:14px;color:#fff;font-family:var(--font);font-size:16px;padding:14px 16px;outline:none;transition:border-color .2s}
 .cform input:focus,.cform textarea:focus{border-color:var(--orange)}
 .cform textarea{min-height:120px;resize:vertical}
-.send-btn{background:var(--orange);color:#fff;border:none;border-radius:100px;padding:15px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:var(--font);transition:background .2s,transform .2s}
+.send-btn{background:var(--orange);color:#0b0b0c;border:none;border-radius:100px;padding:15px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:var(--font);transition:background .2s,transform .2s}
 .send-btn:hover{background:var(--orange-h);transform:translateY(-1px)}
 /* footer */
 .footer{width:min(1480px,100%);margin:0 auto;padding:26px 20px 40px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--dim)}
@@ -164,7 +164,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .footer a:hover{color:var(--orange)}
 .foot-links{display:flex;gap:16px;flex-wrap:wrap}
 .to-top{width:44px;height:44px;border-radius:50%;border:1px solid #333437;background:var(--card);color:var(--ink);cursor:pointer;font-size:16px}
-.to-top:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.to-top:hover{background:var(--orange);border-color:var(--orange);color:#0b0b0c}
 @media(max-width:960px){
   .topnav{display:none}
   .row-top,.row-bottom,.about-grid,.contact-big{grid-template-columns:1fr}
