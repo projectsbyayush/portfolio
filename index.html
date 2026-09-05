@@ -46,7 +46,7 @@
   --edge:#D9CDAF;
   --edge-soft:#E7DCC3;
   --input-bd:#D3C6A4;
-  --topbar-bg:rgba(250,246,238,.86);
+  --topbar-bg:rgba(250,246,238,.7);--glass:rgba(255,255,255,.55);--glass-bd:rgba(255,255,255,.7);
   --r:26px;
   --font:'Inter Tight',system-ui,-apple-system,sans-serif;
 }
@@ -64,13 +64,14 @@
   --edge:#3a3b3e;
   --edge-soft:#26272a;
   --input-bd:#2c2d30;
-  --topbar-bg:rgba(11,11,12,.82);
+  --topbar-bg:rgba(11,11,12,.66);--glass:rgba(26,27,30,.55);--glass-bd:rgba(255,255,255,.09);
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:100dvh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);background-image:radial-gradient(1000px 520px at 6% -6%,rgba(255,214,0,.20),transparent 60%),radial-gradient(900px 520px at 96% 18%,rgba(255,110,40,.12),transparent 60%),radial-gradient(1100px 640px at 50% 115%,rgba(0,150,200,.14),transparent 60%);background-attachment:fixed;color:var(--ink);font-family:var(--font);min-height:100dvh;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding:0 clamp(12px,3vw,44px)}
+[data-theme="dark"] body{background-image:radial-gradient(1000px 520px at 6% -6%,rgba(255,214,0,.13),transparent 60%),radial-gradient(900px 520px at 96% 18%,rgba(255,110,40,.10),transparent 60%),radial-gradient(1100px 640px at 50% 115%,rgba(0,150,200,.16),transparent 60%)}
 ::selection{background:var(--orange);color:#0b0b0c}
 /* ---------- header ---------- */
-.topbar{position:sticky;top:12px;z-index:50;width:min(1480px,calc(100% - 24px));margin:12px auto 0;background:var(--topbar-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--edge-soft);border-radius:100px;box-shadow:0 12px 32px rgba(0,0,0,.10)}
+.topbar{position:sticky;top:12px;z-index:50;width:min(1480px,calc(100% - 24px));margin:12px auto 0;background:var(--topbar-bg);backdrop-filter:blur(22px) saturate(1.7);-webkit-backdrop-filter:blur(22px) saturate(1.7);border:1px solid var(--edge-soft);border-radius:100px;box-shadow:0 12px 32px rgba(0,0,0,.10)}
 [data-theme="dark"] .topbar{box-shadow:0 12px 32px rgba(0,0,0,.5)}
 .topbar-in{max-width:1480px;margin:0 auto;padding:8px 8px 8px 22px;display:flex;align-items:center;gap:10px}
 .brand{font-weight:700;letter-spacing:-0.02em;font-size:16px;text-decoration:none;color:var(--ink);margin-right:auto}
@@ -85,7 +86,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .row{display:grid;gap:12px}
 .row-top{grid-template-columns:1.55fr 1fr}
 .row-bottom{grid-template-columns:1fr 1.55fr}
-.card{background:var(--card);border-radius:var(--r);padding:clamp(22px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.card{background:var(--glass);backdrop-filter:blur(22px) saturate(1.6);-webkit-backdrop-filter:blur(22px) saturate(1.6);border:1px solid var(--glass-bd);border-radius:var(--r);padding:clamp(22px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(20,16,4,.12),inset 0 1px 0 rgba(255,255,255,.55)}
+[data-theme="dark"] .card{box-shadow:0 24px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.07)}
 /* hero */
 .avatar{width:clamp(72px,7vw,92px);height:clamp(72px,7vw,92px);border-radius:50%;overflow:hidden;background:var(--raise);flex:none}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
@@ -159,8 +161,9 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .fact p{font-size:13.5px;color:var(--dim);line-height:1.6}
 /* services */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
-.svc{background:var(--card);border-radius:var(--r);padding:26px;transition:transform .22s,background .22s}
-.svc:hover{transform:translateY(-4px);background:var(--raise)}
+.svc{background:var(--glass);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:1px solid var(--glass-bd);border-radius:var(--r);padding:26px;transition:transform .22s,box-shadow .22s;box-shadow:0 16px 40px rgba(20,16,4,.10),inset 0 1px 0 rgba(255,255,255,.5)}
+[data-theme="dark"] .svc{box-shadow:0 16px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06)}
+.svc:hover{transform:translateY(-4px);box-shadow:0 26px 60px rgba(20,16,4,.18),inset 0 1px 0 rgba(255,255,255,.65)}
 .svc .n{font-size:12px;color:var(--dim);font-weight:500}
 .svc h3{font-size:20px;font-weight:600;letter-spacing:-0.02em;margin-top:30px}
 .svc p{font-size:13.5px;color:var(--dim);line-height:1.65;margin-top:8px}
@@ -211,7 +214,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .strip a i{color:var(--gold);margin-right:7px;font-size:.92em}
 .clinks a>i:first-child{color:var(--gold);font-size:13px;margin-right:2px}
 .mail-pill i,.top-mail i,.send-btn i{font-size:.92em}
-.brand i{color:var(--gold);margin-right:2px}
+.brand-logo{width:30px;height:30px;border-radius:9px;object-fit:cover;display:block;flex:none}
 /* scroll reveal */
 .rv{opacity:0;translate:0 26px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;translate:0 0}
@@ -225,8 +228,6 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .topbar{transition:box-shadow .3s,background .3s}
 .topbar.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.35)}
 /* hero entrance */
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.avatar{animation:floaty 5s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;translate:0 0}
@@ -256,7 +257,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 <body>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="#top"><i class="fa-solid fa-bolt"></i> Ayush Patil <span>— Mumbai</span></a>
+    <a class="brand" href="#top"><img src="duck-face.png" alt="Ayush Patil logo" class="brand-logo" width="60" height="60"> @projectsbyayush</a>
     <nav class="topnav" aria-label="Primary">
       <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#contact">Contact</a><a href="resume.html" download="Ayush-Patil-Resume.html" title="Download resume">Resume</a>
     </nav>
@@ -284,7 +285,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
         <path d="M82 6v50" opacity=".9"/>
       </svg>
       <h2>Have a project<br>in mind?</h2>
-      <a class="mail-pill" href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i> projectsbyayush@gmail.com</a>
+      <a class="mail-pill" href="mailto:projectsbyayush@gmail.com">projectsbyayush@gmail.com</a>
     </section>
   </div>
   <nav class="row strip" aria-label="Social links">
@@ -399,7 +400,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
       <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
       <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
       <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-      <button class="send-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+      <button class="send-btn" type="submit">Send Message</button>
     </form>
   </div>
 </section>
