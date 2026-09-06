@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Ayush Patil - Full Stack Web Developer | Mumbai, India</title>
-<meta name="description" content="Full Stack Developer in Mumbai, India - React, Node.js, Java, MySQL, PostgreSQL and MongoDB. Freelance websites, APIs and databases. Replies within 24 hours.">
+<title>Ayush Patil â€” Full Stack Web Developer | Mumbai, India</title>
+<meta name="description" content="Ayush Patil â€” Full Stack Web Developer based in Mumbai, India. B.E. Computer Engineering, Mumbai University. HTML5, CSS3, JavaScript, React.js, Angular.js, Node.js, Java, MySQL, PostgreSQL, Oracle SQL, MongoDB.">
 <meta name="author" content="Ayush Patil">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#0b0b0c" id="themeColor">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#FAF6EE" id="themeColor">
+<meta name="color-scheme" content="light dark">
+<script>try{if(localStorage.getItem("ap-theme")==="dark"){document.documentElement.dataset.theme="dark";var m=document.getElementById("themeColor");if(m)m.setAttribute("content","#0b0b0c");}}catch(e){}</script>
 <link rel="canonical" href="https://projectsbyayush.github.io/portfolio/">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
@@ -20,24 +21,42 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ayush Patil Portfolio">
 <meta property="og:url" content="https://projectsbyayush.github.io/portfolio/">
-<meta property="og:title" content="Ayush Patil - Full Stack Web Developer | Mumbai, India">
+<meta property="og:title" content="Ayush Patil â€” Full Stack Web Developer | Mumbai, India">
 <meta property="og:description" content="Full Stack Web Developer from Mumbai. B.E. Computer Engineering. React, Node, Java, MySQL, PostgreSQL, MongoDB.">
 <meta property="og:image" content="https://projectsbyayush.github.io/portfolio/icon.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ayush Patil - Full Stack Web Developer">
-<meta name="twitter:description" content="Full Stack Web Developer - Mumbai, India. React, Node, Java, Databases.">
+<meta name="twitter:title" content="Ayush Patil â€” Full Stack Web Developer">
+<meta name="twitter:description" content="Full Stack Web Developer â€” Mumbai, India. React, Node, Java, Databases.">
 <meta name="twitter:image" content="https://projectsbyayush.github.io/portfolio/icon.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
+  --bg:#FAF6EE;
+  --card:#FFFFFF;
+  --card2:#F0E8D5;
+  --ink:#17130B;
+  --dim:#6F6353;
+  --line:#E2D7BE;
+  --orange:#FFD600;
+  --orange-h:#E6C200;
+  --gold:#9A7400;
+  --raise:#EEE4CC;
+  --inset:#FFFFFF;
+  --soft:#4D4536;
+  --edge:#D9CDAF;
+  --edge-soft:#E7DCC3;
+  --input-bd:#D3C6A4;
+  --topbar-bg:rgba(250,246,238,.7);--glass:rgba(255,255,255,.55);--glass-bd:rgba(255,255,255,.7);
+  --r:26px;
+  --font:'Inter Tight',system-ui,-apple-system,sans-serif;
+}
+[data-theme="dark"]{
   --bg:#0b0b0c;
   --card:#1e1f21;
   --card2:#161719;
   --ink:#f4f4f4;
   --dim:#8f8f93;
   --line:#333437;
-  --orange:#FFD600;
-  --orange-h:#E6C200;
   --gold:#FFD600;
   --raise:#222426;
   --inset:#101012;
@@ -46,8 +65,6 @@
   --edge-soft:#26272a;
   --input-bd:#2c2d30;
   --topbar-bg:rgba(11,11,12,.66);--glass:rgba(26,27,30,.55);--glass-bd:rgba(255,255,255,.09);
-  --r:26px;
-  --font:'Inter Tight',system-ui,-apple-system,sans-serif;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:110px}
 section[id]{scroll-margin-top:104px}
@@ -73,8 +90,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .row{display:grid;gap:12px}
 .row-top{grid-template-columns:1.55fr 1fr}
 .row-bottom{grid-template-columns:1fr 1.55fr}
-.card{background:var(--glass);backdrop-filter:blur(22px) saturate(1.6);-webkit-backdrop-filter:blur(22px) saturate(1.6);border:1px solid var(--glass-bd);border-radius:var(--r);padding:clamp(22px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(20,16,4,.08),inset 0 1px 0 rgba(255,255,255,.55)}
-[data-theme="dark"] .card{box-shadow:0 12px 32px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.07)}
+.card{background:var(--glass);backdrop-filter:blur(22px) saturate(1.6);-webkit-backdrop-filter:blur(22px) saturate(1.6);border:1px solid var(--glass-bd);border-radius:var(--r);padding:clamp(22px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(20,16,4,.12),inset 0 1px 0 rgba(255,255,255,.55)}
+[data-theme="dark"] .card{box-shadow:0 24px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.07)}
 /* hero */
 .avatar{width:clamp(72px,7vw,92px);height:clamp(72px,7vw,92px);border-radius:50%;overflow:hidden;background:var(--raise);flex:none}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
@@ -112,32 +129,19 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .pcol p{font-size:13px;color:var(--dim);font-weight:500;line-height:1.55}
 .pcol .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .pcol .tags i{font-style:normal;font-size:10.5px;font-weight:600;border:1px solid var(--edge);border-radius:100px;padding:3px 9px;color:var(--soft);white-space:nowrap;transition:border-color .2s,color .2s}
-.pcol:hover .tags i{border-color:var(--gold);color:var(--ink);background:rgba(255,214,0,.15)}
-.proj-cols .pcol:nth-child(1):hover .tags i{border-color:#FFD600;background:rgba(255,214,0,.15)}
-.proj-cols .pcol:nth-child(2):hover .tags i{border-color:#38BDF8;background:rgba(56,189,248,.14)}
-.proj-cols .pcol:nth-child(3):hover .tags i{border-color:#34D399;background:rgba(52,211,153,.14)}
-[data-theme="dark"] .proj-cols .pcol:nth-child(1):hover .tags i{border-color:#FFD600}
-[data-theme="dark"] .proj-cols .pcol:nth-child(2):hover .tags i{border-color:#38BDF8}
-[data-theme="dark"] .proj-cols .pcol:nth-child(3):hover .tags i{border-color:#34D399}
+.pcol:hover .tags i{border-color:var(--orange);color:var(--ink)}
 .pcol .view{margin-top:auto;padding-top:10px;font-size:12.5px;font-weight:600;color:var(--dim)}
 .pcol:hover .view{color:var(--gold)}
-.proj-cols .pcol:nth-child(1):hover .view{color:#FFD600}
-.proj-cols .pcol:nth-child(2):hover .view{color:#38BDF8}
-.proj-cols .pcol:nth-child(3):hover .view{color:#34D399}
-[data-theme="dark"] .proj-cols .pcol:nth-child(1):hover .view{color:#FFD600}
-[data-theme="dark"] .proj-cols .pcol:nth-child(2):hover .view{color:#38BDF8}
-[data-theme="dark"] .proj-cols .pcol:nth-child(3):hover .view{color:#34D399}
 .work-foot{padding-top:12px;font-size:12.5px;color:var(--dim);display:flex;justify-content:space-between;gap:10px;font-weight:500}
 .work-foot a{color:var(--dim);text-decoration:none}
 .work-foot a:hover{color:var(--gold)}
 /* ---------- marquee ---------- */
 .marquee{background:var(--inset);border-top:1px solid var(--edge-soft);border-bottom:1px solid var(--edge-soft);overflow:hidden;white-space:nowrap;padding:13px 0;margin-top:12px}
-.shell .marquee{border:1px solid var(--edge-soft);border-radius:18px;margin-top:0}
 .marquee-track{display:inline-block;animation:scroll 28s linear infinite;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
 .marquee-track b{color:var(--gold);margin:0 18px;font-weight:600}
 @keyframes scroll{to{transform:translateX(-50%)}}
 /* ---------- sections ---------- */
-.section{width:min(1480px,100%);margin:0 auto;padding:clamp(48px,7vh,84px) 14px 0;content-visibility:auto;contain-intrinsic-size:auto 900px}
+.section{width:min(1480px,100%);margin:0 auto;padding:clamp(48px,7vh,84px) 14px 0}
 .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px}
 .sec-head h2{font-size:clamp(30px,4vw,52px);font-weight:600;letter-spacing:-0.035em;line-height:1.02}
 .sec-head h2 span{color:var(--dim)}
@@ -161,8 +165,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .fact p{font-size:13.5px;color:var(--dim);line-height:1.6}
 /* services */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
-.svc{background:var(--glass);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:none;border-radius:var(--r);padding:26px;transition:transform .22s,box-shadow .22s;box-shadow:0 10px 28px rgba(20,16,4,.08)}
-[data-theme="dark"] .svc{box-shadow:0 10px 28px rgba(0,0,0,.40)}
+.svc{background:var(--glass);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:none;border-radius:var(--r);padding:26px;transition:transform .22s,box-shadow .22s;box-shadow:0 16px 40px rgba(20,16,4,.10)}
+[data-theme="dark"] .svc{box-shadow:0 16px 40px rgba(0,0,0,.45)}
 .svc{--mx:50%;--my:50%}
 .svc.spot{position:relative;overflow:hidden}
 .svc.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at var(--mx) var(--my),rgba(154,116,0,.14),transparent 65%);opacity:0;transition:opacity .3s}
@@ -205,7 +209,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .foot-links{display:flex;gap:16px;flex-wrap:wrap}
 .to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:52px;height:52px;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;font-size:17px;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.45);opacity:0;translate:0 14px;pointer-events:none;transition:opacity .3s,translate .3s,background .2s,transform .2s}
 .to-top.show{opacity:1;translate:0 0;pointer-events:auto}
-.to-top:hover{background:var(--ink);color:var(--bg);transform:translateY(-3px)}
+.to-top:hover{background:var(--orange);color:#0b0b0c;transform:translateY(-3px)}
 .to-top svg.ring{position:absolute;inset:-1px;transform:rotate(-90deg)}
 .to-top svg.ring circle{fill:none;stroke-width:3}
 .to-top svg.ring .bgc{stroke:var(--line)}
@@ -213,187 +217,14 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 /* font awesome accents */
 .theme-btn{width:40px;height:40px;flex:none;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;display:grid;place-items:center;transition:border-color .2s,transform .2s}
 .theme-btn:hover{border-color:var(--orange);transform:translateY(-1px)}
-.sec-head p i{color:var(--orange);margin-right:8px}
-.svc .sic{width:44px;height:44px;border-radius:14px;background:var(--raise);display:grid;place-items:center;font-size:18px;color:var(--orange);margin-bottom:4px}
-.stack-card h3 i{color:var(--orange);margin-right:9px;font-size:.9em}
-.strip a i{color:var(--orange);margin-right:7px;font-size:.92em}
-.clinks a>i:first-child{color:var(--orange);font-size:13px;margin-right:2px}
+.sec-head p i{color:var(--gold);margin-right:8px}
+.svc .sic{width:44px;height:44px;border-radius:14px;background:var(--raise);display:grid;place-items:center;font-size:18px;color:var(--gold);margin-bottom:4px}
+.stack-card h3 i{color:var(--gold);margin-right:9px;font-size:.9em}
+.strip a i{color:var(--gold);margin-right:7px;font-size:.92em}
+.clinks a>i:first-child{color:var(--gold);font-size:13px;margin-right:2px}
 .mail-pill i,.top-mail i,.send-btn i{font-size:.92em}
 .brand-logo{width:30px;height:30px;border-radius:9px;object-fit:cover;display:block;flex:none}
-/* ---------- hamburger + mobile menu ---------- */
-.menu-btn{display:none;width:40px;height:40px;flex:none;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;place-items:center;transition:border-color .2s,transform .2s}
-.menu-btn:hover{border-color:var(--orange);transform:translateY(-1px)}
-.menu-btn span{display:block;width:16px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:background .25s}
-.menu-btn span::before,.menu-btn span::after{content:'';position:absolute;left:0;width:100%;height:2px;background:currentColor;border-radius:2px;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-.menu-btn span::before{top:-5px}
-.menu-btn span::after{top:5px}
-.menu-btn.open span{background:transparent}
-.menu-btn.open span::before{transform:translateY(5px) rotate(45deg)}
-.menu-btn.open span::after{transform:translateY(-5px) rotate(-45deg)}
-.mobile-menu{position:absolute;top:calc(100% + 10px);left:12px;right:12px;background:rgba(18,19,22,.9);backdrop-filter:blur(30px) saturate(1.8);-webkit-backdrop-filter:blur(30px) saturate(1.8);border:1px solid var(--edge);border-radius:22px;padding:10px;box-shadow:0 24px 60px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.08);opacity:0;translate:0 -10px;scale:.98;pointer-events:none;transition:opacity .3s,translate .35s cubic-bezier(.2,.7,.2,1),scale .35s cubic-bezier(.2,.7,.2,1);z-index:55}
-.mobile-menu.open{opacity:1;translate:0 0;scale:1;pointer-events:auto}
-.mobile-menu a{display:flex;align-items:center;justify-content:space-between;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:13px 16px;border-radius:14px;opacity:0;translate:-10px 0;transition:opacity .3s,translate .35s cubic-bezier(.2,.7,.2,1),background .2s}
-.mobile-menu a::after{content:'\2197';color:var(--dim);font-size:13px}
-.mobile-menu.open a{opacity:1;translate:0 0}
-.mobile-menu.open a:nth-child(1){transition-delay:.04s}.mobile-menu.open a:nth-child(2){transition-delay:.08s}.mobile-menu.open a:nth-child(3){transition-delay:.12s}.mobile-menu.open a:nth-child(4){transition-delay:.16s}.mobile-menu.open a:nth-child(5){transition-delay:.2s}.mobile-menu.open a:nth-child(6){transition-delay:.24s}.mobile-menu.open a:nth-child(7){transition-delay:.28s}
-.mobile-menu a:hover{background:var(--raise)}
-.mobile-menu a.mm-cta{background:var(--orange);color:#0b0b0c;justify-content:center;margin-top:6px}
-.mobile-menu a.mm-cta::after{content:''}
-@media(min-width:961px){.mobile-menu{display:none}}
-@media(max-width:960px){.menu-btn{display:grid}}
-@media(max-width:640px){.top-mail{display:none}}
 /* scroll reveal */
-.rv{opacity:0;translate:0 26px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;translate:0 0}
-.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
-/* scroll flavours per section (about slides, services/stack zoom) */
-.rv-l{opacity:0;translate:-36px 0;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1)}
-.rv-r{opacity:0;translate:36px 0;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1)}
-.rv-z{opacity:0;translate:0 18px;scale:.94;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1),scale .7s cubic-bezier(.2,.7,.2,1)}
-.rv.in,.rv-l.in,.rv-r.in,.rv-z.in{opacity:1;translate:0 0;scale:1}
-/* ---------- colorful cards ---------- */
-.svc{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s cubic-bezier(.2,.7,.2,1)}
-.svc:nth-child(1){--acc:#FFD600;--acc-ink:#FFD600;--acc-soft:rgba(255,214,0,.22)}
-.svc:nth-child(2){--acc:#38BDF8;--acc-ink:#7DD3FC;--acc-soft:rgba(56,189,248,.22)}
-.svc:nth-child(3){--acc:#34D399;--acc-ink:#6EE7B7;--acc-soft:rgba(52,211,153,.22)}
-.svc:nth-child(4){--acc:#C084FC;--acc-ink:#C4B5FD;--acc-soft:rgba(192,132,252,.24)}
-.svc:nth-child(5){--acc:#FB923C;--acc-ink:#FDBA74;--acc-soft:rgba(251,146,60,.24)}
-.svc:nth-child(6){--acc:#FB7185;--acc-ink:#FDA4AF;--acc-soft:rgba(251,113,133,.22)}
-.svc .sic{background:var(--acc);color:#0b0b0c;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
-.svc .tags{color:var(--acc-ink)}
-.svc:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(20,16,4,.14)}
-.svc:hover .sic{transform:rotate(-10deg) scale(1.1);box-shadow:0 10px 24px var(--acc-soft)}
-body .svc.spot::after{background:radial-gradient(360px circle at var(--mx) var(--my),var(--acc-soft),transparent 65%)}
-[data-theme="dark"] .svc:hover{box-shadow:0 18px 40px rgba(0,0,0,.5)}
-.stack-grid .stack-card:nth-child(1){--acc:#38BDF8;--acc-soft:rgba(56,189,248,.22)}
-.stack-grid .stack-card:nth-child(2){--acc:#34D399;--acc-soft:rgba(52,211,153,.22)}
-.stack-grid .stack-card:nth-child(3){--acc:#C084FC;--acc-soft:rgba(192,132,252,.24)}
-.stack-card h3 i{background:var(--acc,#FFD600);color:#0b0b0c;border-radius:8px;padding:4px 5px;font-size:.72em;vertical-align:1px;transition:box-shadow .3s}
-.stack-card:hover{transform:translateY(-5px) scale(1.01);border-color:rgba(255,255,255,.85);box-shadow:0 18px 40px rgba(20,16,4,.14)}
-.stack-card:hover h3 i{box-shadow:0 6px 18px var(--acc-soft,rgba(255,214,0,.4))}
-.stack-card .chips span:hover{border-color:var(--acc,var(--gold));background:var(--acc-soft,rgba(255,214,0,.18));box-shadow:0 0 14px var(--acc-soft,rgba(255,214,0,.35))}
-[data-theme="dark"] .stack-card:hover{border-color:rgba(255,255,255,.28);box-shadow:0 20px 44px rgba(0,0,0,.55)}
-.fact{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s cubic-bezier(.2,.7,.2,1)}
-.fact:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(20,16,4,.12)}
-.count{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
-.count:hover{transform:translateY(-4px)}
-.proj-cols .pcol{transition:background .25s,transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
-.proj-cols .pcol:nth-child(1):hover{box-shadow:0 10px 20px rgba(20,16,4,.10);transform:translateY(-3px)}
-.proj-cols .pcol:nth-child(2):hover{box-shadow:0 10px 20px rgba(20,16,4,.10);transform:translateY(-3px)}
-.proj-cols .pcol:nth-child(3):hover{box-shadow:0 10px 20px rgba(20,16,4,.10);transform:translateY(-3px)}
-/* ---------- colorful card backgrounds ---------- */
-.svc:nth-child(1){--acc-bg:rgba(255,214,0,.20)}
-.svc:nth-child(2){--acc-bg:rgba(56,189,248,.20)}
-.svc:nth-child(3){--acc-bg:rgba(52,211,153,.20)}
-.svc:nth-child(4){--acc-bg:rgba(192,132,252,.22)}
-.svc:nth-child(5){--acc-bg:rgba(251,146,60,.22)}
-.svc:nth-child(6){--acc-bg:rgba(251,113,133,.20)}
-.svc{background-image:linear-gradient(155deg,var(--acc-bg),transparent 108%)}
-.stack-grid .stack-card:nth-child(1){--acc-bg:rgba(56,189,248,.20)}
-.stack-grid .stack-card:nth-child(2){--acc-bg:rgba(52,211,153,.20)}
-.stack-grid .stack-card:nth-child(3){--acc-bg:rgba(192,132,252,.22)}
-.stack-card{background-image:linear-gradient(155deg,var(--acc-bg),transparent 70%)}
-.hero{background-image:linear-gradient(150deg,rgba(255,214,0,.16),transparent 60%)}
-.contact{background-image:linear-gradient(150deg,rgba(251,146,60,.16),transparent 60%)}
-.based{background-image:linear-gradient(150deg,rgba(56,189,248,.16),transparent 60%)}
-.work{background-image:linear-gradient(150deg,rgba(52,211,153,.14),transparent 60%)}
-.contact-big{background-image:linear-gradient(150deg,rgba(255,214,0,.12),transparent 60%)}
-/* ---------- cursor spotlight follows each card's own color ---------- */
-.hero{--glow:rgba(255,200,0,.14)}
-.contact{--glow:rgba(251,146,60,.14)}
-.based{--glow:rgba(56,189,248,.16)}
-.work{--glow:rgba(52,211,153,.16)}
-.about-main{--glow:rgba(251,146,60,.14)}
-.contact-big{--glow:rgba(255,190,0,.14)}
-body .card.spot::after{background:radial-gradient(420px circle at var(--mx) var(--my),var(--glow,rgba(154,116,0,.12)),transparent 65%)}
-body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circle at var(--mx) var(--my),var(--glow,rgba(255,214,0,.10)),transparent 65%)}
-/* ---------- hover glow matches each card's own color ---------- */
-.count{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
-/* ---------- social icons: true brand colors, visible in both themes ---------- */
-.strip a i{transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
-.strip a:nth-child(1) i{color:var(--ink)}
-.strip a:nth-child(2) i{color:#3B9BE8}
-.strip a:nth-child(3) i{color:#F0568C}
-.strip a:nth-child(4) i{color:var(--ink)}
-.strip a:nth-child(5) i{color:#F0666E}
-.strip a:nth-child(6) i{color:#34D399}
-.strip a:hover i{transform:scale(1.25) rotate(-8deg)}
-/* ---------- tilt + motion extras ---------- */
-.tilting{will-change:transform}
-.top-mail{transition:background .25s,translate .25s cubic-bezier(.2,.7,.2,1)}
-.mail-pill{transition:background .2s,transform .2s,translate .25s cubic-bezier(.2,.7,.2,1)}
-.send-btn{transition:background .2s,transform .2s,translate .25s cubic-bezier(.2,.7,.2,1)}
-.theme-btn{transition:border-color .2s,transform .2s,translate .25s cubic-bezier(.2,.7,.2,1)}
-.shine{position:relative;overflow:hidden;isolation:isolate}
-.shine::before{content:'';position:absolute;top:-10%;left:-90%;width:80%;height:120%;pointer-events:none;background:linear-gradient(105deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);filter:blur(5px);transition:left .7s ease;z-index:1}
-.shine:hover::before{left:150%}
-[data-theme="dark"] .shine::before{background:linear-gradient(105deg,transparent,rgba(255,255,255,.14),transparent)}
-.topnav a.active{background:var(--raise);color:var(--ink);outline:2px solid var(--gold);outline-offset:1px}
-.mobile-menu a.active{background:var(--raise);outline:2px solid var(--gold);outline-offset:-2px}
-.hero .tags span{transition:background .25s,color .25s,transform .25s,border-color .25s}
-.hero .tags span:hover{background:var(--orange);color:#0b0b0c;border-color:transparent;transform:translateY(-2px)}
-@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -7px}}
-.avatar{animation:floaty 5s ease-in-out infinite}
-.avatar img{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
-.avatar:hover img{transform:scale(1.12) rotate(5deg)}
-.marquee:hover .marquee-track{animation-duration:10s}
-.count b{transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
-.count:hover b{transform:scale(1.12)}
-.pcol .view{display:inline-block;transition:translate .3s cubic-bezier(.2,.7,.2,1),color .2s}
-.pcol:hover .view{translate:5px 0}
-.clinks a span:last-child{transition:translate .3s cubic-bezier(.2,.7,.2,1)}
-.clinks a:hover span:last-child{translate:3px -3px}
-.contact .rings{transform-box:fill-box;transform-origin:center;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
-.contact:hover .rings{transform:scale(1.14)}
-.stack-card .chips span{transition:border-color .25s,color .25s,background .25s,box-shadow .25s,translate .3s cubic-bezier(.2,.7,.2,1)}
-.stack-card:hover .chips span:nth-child(1){translate:0 -3px}
-.stack-card:hover .chips span:nth-child(2){translate:0 -3px;transition-delay:.05s}
-.stack-card:hover .chips span:nth-child(3){translate:0 -3px;transition-delay:.1s}
-.stack-card:hover .chips span:nth-child(4){translate:0 -3px;transition-delay:.15s}
-.stack-card:hover .chips span:nth-child(5){translate:0 -3px;transition-delay:.2s}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-/* ---------- signature effects (different per section) ---------- */
-@property --beam{syntax:'<angle>';initial-value:0deg;inherits:false}
-.stack-card:hover::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:2px;background:conic-gradient(from var(--beam),transparent 0 68%,var(--acc,#FFD600) 86%,transparent 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;animation:beamSpin 1.8s linear infinite;pointer-events:none}
-@keyframes beamSpin{to{--beam:360deg}}
-.proj-cols .pcol{position:relative;overflow:hidden;isolation:isolate}
-.proj-cols .pcol:nth-child(1){--wipe:#FFD600}
-.proj-cols .pcol:nth-child(2){--wipe:#38BDF8}
-.proj-cols .pcol:nth-child(3){--wipe:#34D399}
-.pcol::before{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--wipe,#FFD600);opacity:.22;transform:scaleX(0);transform-origin:left;transition:transform .38s cubic-bezier(.2,.7,.2,1);z-index:-1}
-.pcol:hover::before{transform:scaleX(1)}
-.hero::before{content:'';position:absolute;top:0;bottom:0;left:-60%;width:60%;background:linear-gradient(105deg,transparent,rgba(255,214,0,.10),transparent);transform:skewX(-18deg);filter:blur(4px);animation:sheenMove 9s ease-in-out infinite;pointer-events:none}
-@keyframes sheenMove{0%{left:-60%}55%,100%{left:135%}}
-.mail-pill{--pulse:rgba(251,146,60,.28);animation:pulseRing 2.8s ease-out infinite}
-@keyframes pulseRing{0%{box-shadow:0 0 0 0 var(--pulse)}70%{box-shadow:0 0 0 26px rgba(251,146,60,0)}100%{box-shadow:0 0 0 0 rgba(251,146,60,0)}}
-.strip a:nth-child(1):hover{background:rgba(23,19,11,.08)}
-.strip a:nth-child(2):hover{background:rgba(10,102,194,.14)}
-.strip a:nth-child(3):hover{background:rgba(225,48,108,.14)}
-.strip a:nth-child(4):hover{background:rgba(23,19,11,.08)}
-.strip a:nth-child(5):hover{background:rgba(225,29,72,.12)}
-.strip a:nth-child(6):hover{background:rgba(5,150,105,.14)}
-[data-theme="dark"] .strip a:hover{background:rgba(255,255,255,.07)}
-.svc:active,.stack-card:active,.fact:active,.count:active,.pcol:active,.strip a:active{transform:scale(.97)}
-/* ---------- motion extras round 2 ---------- */
-.topbar{transition:box-shadow .3s,background .3s,translate .35s cubic-bezier(.2,.7,.2,1)}
-.topbar-in{transition:padding .3s cubic-bezier(.2,.7,.2,1)}
-.top-mail{transition:background .25s,translate .25s cubic-bezier(.2,.7,.2,1),padding .3s cubic-bezier(.2,.7,.2,1),font-size .3s}
-.theme-btn{transition:border-color .2s,transform .2s,translate .25s cubic-bezier(.2,.7,.2,1),width .3s,height .3s,font-size .3s}
-.brand-logo{transition:width .3s cubic-bezier(.2,.7,.2,1),height .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
-@media(min-width:961px){
-  .topbar.scrolled .topbar-in{padding:5px 5px 5px 16px}
-  .topbar.scrolled .top-mail{padding:7px 16px;font-size:12.5px}
-  .topbar.scrolled .theme-btn{width:34px;height:34px;font-size:13px}
-  .topbar.scrolled .brand-logo{width:26px;height:26px}
-}
-.based .globe{animation:bob 6s ease-in-out infinite}
-@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -6px}}
-.sec-head h2{transition:translate .35s cubic-bezier(.2,.7,.2,1)}
-.sec-head:hover h2{translate:8px 0}
-.strip a{position:relative}
-.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.65);transform:scale(0);animation:rip .6s ease-out forwards;pointer-events:none;z-index:2}
-@keyframes rip{to{transform:scale(4);opacity:0}}
-[data-theme="dark"] .ripple{background:rgba(255,255,255,.35)}
 /* ---------- FAQ (green) ---------- */
 .faq-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px;align-items:start}
 .faq-list{display:flex;flex-direction:column;gap:12px}
@@ -417,10 +248,11 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
 .faq-a p a:hover{text-decoration:underline}
 #faq .sec-head p i{color:#4ADE80}
 [data-theme="dark"] #faq .sec-head p i{color:#4ADE80}
-/* ---------- snow inside Tools cards ---------- */
-.stack-card .snow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;border-radius:inherit}
 @media(max-width:960px){.faq-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.faq-a p{padding:0 16px 18px 16px}}
+.rv{opacity:0;translate:0 26px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;translate:0 0}
+.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
 /* spotlight hover */
 .card{--mx:50%;--my:50%}
 .card.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(154,116,0,.12),transparent 65%);opacity:0;transition:opacity .3s}
@@ -432,7 +264,7 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
 /* hero entrance */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .rv,.rv-l,.rv-r,.rv-z{opacity:1;translate:0 0;scale:1}
+  .rv{opacity:1;translate:0 0}
 }
 @media(max-width:960px){
   .topnav{display:none}
@@ -454,7 +286,7 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
 }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://projectsbyayush.github.io/portfolio/#person","name":"Ayush Patil","url":"https://projectsbyayush.github.io/portfolio/","image":"https://projectsbyayush.github.io/portfolio/icon.png","jobTitle":"Full Stack Web Developer","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},"affiliation":{"@type":"CollegeOrUniversity","name":"Pravin R. Patil College of Engineering and Technology, Mumbai University"},"sameAs":["https://github.com/projectsbyayush","https://linkedin.com/in/projectsbyayush","https://instagram.com/projectsbyayush","https://x.com/projectsbyayush"],"knowsAbout":["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB"]}, {"@type":"ProfessionalService","@id":"https://projectsbyayush.github.io/portfolio/#service","name":"Ayush Patil - Full Stack Web Development","url":"https://projectsbyayush.github.io/portfolio/","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":19.076,"longitude":72.8777},"areaServed":["Mumbai","India","Worldwide"],"priceRange":"₹₹"}, {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services do you offer?","acceptedAnswer":{"@type":"Answer","text":"Frontend, backend and APIs, databases, performance tuning and support."}}, {"@type":"Question","name":"Are you available for work right now?","acceptedAnswer":{"@type":"Answer","text":"Yes - freelance, full-time and collaborations, based in Mumbai working worldwide."}}, {"@type":"Question","name":"How fast do you reply, and what's the process?","acceptedAnswer":{"@type":"Answer","text":"Within 24 hours via the contact form or email."}}, {"@type":"Question","name":"Do you work remotely with international clients?","acceptedAnswer":{"@type":"Answer","text":"Yes, in English and Hindi, overlapping EU, US and APAC hours."}}, {"@type":"Question","name":"How much does a project cost?","acceptedAnswer":{"@type":"Answer","text":"Fixed quote based on scope - mail requirements for timeline and pricing."}}, {"@type":"Question","name":"Will my site be fast and SEO-ready?","acceptedAnswer":{"@type":"Answer","text":"Yes - semantic HTML, tiny bundles, meta and Open Graph tags built in."}}, {"@type":"Question","name":"What technologies do you use for web development?","acceptedAnswer":{"@type":"Answer","text":"HTML5, CSS3, JavaScript with React.js or Angular.js, Node.js or Java REST APIs, and MySQL, PostgreSQL, Oracle SQL or MongoDB."}}, {"@type":"Question","name":"How long does it take to build a website?","acceptedAnswer":{"@type":"Answer","text":"A landing page typically ships in under two weeks; full-stack web apps take longer depending on features."}}]}]} 
+{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://projectsbyayush.github.io/portfolio/#person","name":"Ayush Patil","url":"https://projectsbyayush.github.io/portfolio/","image":"https://projectsbyayush.github.io/portfolio/icon.png","jobTitle":"Full Stack Web Developer","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},"affiliation":{"@type":"CollegeOrUniversity","name":"Pravin R. Patil College of Engineering and Technology, Mumbai University"},"sameAs":["https://github.com/projectsbyayush","https://linkedin.com/in/projectsbyayush","https://instagram.com/projectsbyayush","https://x.com/projectsbyayush"],"knowsAbout":["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB"]}, {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services do you offer?","acceptedAnswer":{"@type":"Answer","text":"Frontend, backend and APIs, databases, performance tuning and support."}}, {"@type":"Question","name":"Are you available for work right now?","acceptedAnswer":{"@type":"Answer","text":"Yes - freelance, full-time and collaborations, based in Mumbai working worldwide."}}, {"@type":"Question","name":"How fast do you reply, and what's the process?","acceptedAnswer":{"@type":"Answer","text":"Within 24 hours via the contact form or email."}}, {"@type":"Question","name":"Do you work remotely with international clients?","acceptedAnswer":{"@type":"Answer","text":"Yes, in English and Hindi, overlapping EU, US and APAC hours."}}, {"@type":"Question","name":"How much does a project cost?","acceptedAnswer":{"@type":"Answer","text":"Fixed quote based on scope - mail requirements for timeline and pricing."}}, {"@type":"Question","name":"Will my site be fast and SEO-ready?","acceptedAnswer":{"@type":"Answer","text":"Yes - semantic HTML, tiny bundles, meta and Open Graph tags built in."}}, {"@type":"Question","name":"What technologies do you use for web development?","acceptedAnswer":{"@type":"Answer","text":"HTML5, CSS3, JavaScript with React.js or Angular.js, Node.js or Java REST APIs, and MySQL, PostgreSQL, Oracle SQL or MongoDB."}}, {"@type":"Question","name":"How long does it take to build a website?","acceptedAnswer":{"@type":"Answer","text":"A landing page typically ships in under two weeks; full-stack web apps take longer depending on features."}}]}]} 
 </script>
 </head>
 <body>
@@ -464,13 +296,9 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
     <nav class="topnav" aria-label="Primary">
       <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="resume.html" download="Ayush-Patil-Resume.html" title="Download resume">Resume</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
-    <a class="top-mail" href="#contact" data-u="projectsbyayush" data-d="gmail.com">Get in Touch</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" aria-pressed="false"><i class="fa-solid fa-moon"></i></button>
+    <a class="top-mail" href="mailto:projectsbyayush@gmail.com">Get in Touch</a>
   </div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" hidden>
-    <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="resume.html" download="Ayush-Patil-Resume.html">Resume</a>
-    <a class="mm-cta" href="#contact" data-u="projectsbyayush" data-d="gmail.com">Get in Touch</a>
-  </nav>
 </header>
 
 <main id="top">
@@ -492,16 +320,15 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
         <path d="M82 6v50" opacity=".9"/>
       </svg>
       <h2>Have a project<br>in mind?</h2>
-      <a class="mail-pill" href="#contact" data-u="projectsbyayush" data-d="gmail.com"><span data-e>Send me an email</span></a>
+      <a class="mail-pill" href="mailto:projectsbyayush@gmail.com">projectsbyayush@gmail.com</a>
     </section>
   </div>
-  <div class="marquee in-shell" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
   <nav class="row strip" aria-label="Social links">
     <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub.</a>
     <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i>LinkedIn.</a>
     <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram.</a>
     <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>X.</a>
-    <a href="#contact" data-u="projectsbyayush" data-d="gmail.com"><i class="fa-solid fa-envelope"></i>Mail.</a>
+    <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i>Mail.</a>
     <a href="resume.html" download="Ayush-Patil-Resume.html"><i class="fa-solid fa-file-lines"></i>Resume.</a>
   </nav>
   <div class="row row-bottom" id="work">
@@ -515,7 +342,7 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
         <path d="M18 54c10-6 28-9 42-9s32 3 42 9"/>
       </svg>
       <p>Based in<br>Mumbai, India<br><span class="g">IST (UTC+5:30)</span></p>
-      <small>Available worldwide - remote &amp; on-site</small>
+      <small>Available worldwide â€” remote &amp; on-site</small>
     </section>
     <section class="card work" aria-label="Selected work">
       <div class="work-head"><h2>Selected Work</h2><a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">GitHub &#8599;</a></div>
@@ -537,50 +364,52 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
         <a class="pcol" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
           <span class="n">/ 03</span>
           <b>Devfolio</b>
-          <p>Fast portfolio template - 13KB, zero bloat, SEO ready.</p>
+          <p>Fast portfolio template â€” 13KB, zero bloat, SEO ready.</p>
           <span class="tags"><i>HTML5</i><i>CSS3</i><i>JavaScript</i></span>
           <span class="view">View &#8599;</span>
         </a>
       </div>
-      <div class="work-foot"><span>© 2026 Ayush Patil</span><a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">More on GitHub &#8599;</a></div>
+      <div class="work-foot"><span>Â© 2026 Ayush Patil</span><a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">More on GitHub &#8599;</a></div>
     </section>
   </div>
 </div>
 
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
 <section class="section" id="about">
-  <div class="sec-head"><h2>About <span>Me.</span></h2><p><i class="fa-solid fa-user"></i>01 - Profile</p></div>
+  <div class="sec-head"><h2>About <span>Me.</span></h2><p><i class="fa-solid fa-user"></i>01 â€” Profile</p></div>
   <div class="about-grid">
     <div class="card about-main">
-      <p>Ayush Patil - Full Stack Web Developer based in <span class="g">Mumbai, India.</span> I build fast, minimal web experiences from frontend to backend - <span class="g">clean interfaces, robust APIs and databases that scale.</span></p>
-      <div class="edu"><b>B.E. Computer Engineering</b> - Pravin R. Patil College of Engineering and Technology, Mumbai University.</div>
+      <p>Ayush Patil â€” Full Stack Web Developer based in <span class="g">Mumbai, India.</span> I build fast, minimal web experiences from frontend to backend â€” <span class="g">clean interfaces, robust APIs and databases that scale.</span></p>
+      <div class="edu"><b>B.E. Computer Engineering</b> â€” Pravin R. Patil College of Engineering and Technology, Mumbai University.</div>
       <div class="counts">
         <div class="count"><b>11<em>+</em></b><span>Technologies</span></div>
-        <div class="count"><b>03<em>×</em></b><span>Layers</span></div>
+        <div class="count"><b>03<em>Ã—</em></b><span>Layers</span></div>
         <div class="count"><b>24<em>h</em></b><span>Reply Time</span></div>
       </div>
     </div>
     <div class="side-stack">
-      <div class="card fact"><small>Location</small><b>Mumbai, India</b><p>IST (UTC+5:30) - English &amp; Hindi. Open to remote &amp; on-site collaborations worldwide.</p></div>
-      <div class="card fact"><small>Currently</small><b>Open to work</b><p>Freelance projects, full-time roles and collaborations - frontend to database.</p></div>
+      <div class="card fact"><small>Location</small><b>Mumbai, India</b><p>IST (UTC+5:30) â€” English &amp; Hindi. Open to remote &amp; on-site collaborations worldwide.</p></div>
+      <div class="card fact"><small>Currently</small><b>Open to work</b><p>Freelance projects, full-time roles and collaborations â€” frontend to database.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section" id="services">
-  <div class="sec-head"><h2>Services <span>I Provide.</span></h2><p><i class="fa-solid fa-briefcase"></i>02 - What I Do</p></div>
+  <div class="sec-head"><h2>Services <span>I Provide.</span></h2><p><i class="fa-solid fa-briefcase"></i>02 â€” What I Do</p></div>
   <div class="svc-grid">
-    <div class="svc"><div class="sic"><i class="fa-solid fa-code"></i></div><span class="n">/ 01</span><h3>Frontend development</h3><p>Semantic HTML5 markup, modern CSS3 layouts and interactive JavaScript experiences that feel instant on any device.</p><div class="tags">HTML5 · CSS3 · JAVASCRIPT</div></div>
-    <div class="svc"><div class="sic"><i class="fa-solid fa-layer-group"></i></div><span class="n">/ 02</span><h3>Component UI</h3><p>Reusable, maintainable web app interfaces with React.js and Angular.js that stay fast as you grow.</p><div class="tags">REACT.JS · ANGULAR.JS</div></div>
-    <div class="svc"><div class="sic"><i class="fa-solid fa-server"></i></div><span class="n">/ 03</span><h3>Backend &amp; APIs</h3><p>Secure server logic and REST API integrations with Node.js and Java - tested and documented.</p><div class="tags">NODE.JS · JAVA</div></div>
-    <div class="svc"><div class="sic"><i class="fa-solid fa-database"></i></div><span class="n">/ 04</span><h3>Database design</h3><p>Relational and NoSQL database design done properly - modelled, indexed and backed up.</p><div class="tags">MYSQL · POSTGRES · ORACLE · MONGO</div></div>
-    <div class="svc"><div class="sic"><i class="fa-solid fa-gauge-high"></i></div><span class="n">/ 05</span><h3>Performance</h3><p>Optimized delivery - small bundles, fast paint, zero bloat. This page paints in about a second.</p><div class="tags">SPEED · SEO</div></div>
-    <div class="svc"><div class="sic"><i class="fa-solid fa-headset"></i></div><span class="n">/ 06</span><h3>Support</h3><p>Maintenance, fixes and iteration with replies inside 24 hours.</p><div class="tags">MUMBAI · REMOTE</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-code"></i></div><span class="n">/ 01</span><h3>Frontend development</h3><p>Semantic markup, modern layouts and interactive experiences that feel instant on any device.</p><div class="tags">HTML5 Â· CSS3 Â· JAVASCRIPT</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-layer-group"></i></div><span class="n">/ 02</span><h3>Component UI</h3><p>Reusable, maintainable interfaces with React.js and Angular.js that stay fast as you grow.</p><div class="tags">REACT.JS Â· ANGULAR.JS</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-server"></i></div><span class="n">/ 03</span><h3>Backend &amp; APIs</h3><p>Secure server logic and REST integrations with Node.js and Java â€” tested and documented.</p><div class="tags">NODE.JS Â· JAVA</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-database"></i></div><span class="n">/ 04</span><h3>Database design</h3><p>Relational and NoSQL done properly â€” modelled, indexed and backed up.</p><div class="tags">MYSQL Â· POSTGRES Â· ORACLE Â· MONGO</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-gauge-high"></i></div><span class="n">/ 05</span><h3>Performance</h3><p>Optimized delivery â€” small bundles, fast paint, zero bloat. This page is 13KB.</p><div class="tags">SPEED Â· SEO</div></div>
+    <div class="svc"><div class="sic"><i class="fa-solid fa-headset"></i></div><span class="n">/ 06</span><h3>Support</h3><p>Maintenance, fixes and iteration with replies inside 24 hours.</p><div class="tags">MUMBAI Â· REMOTE</div></div>
   </div>
 </section>
 
 <section class="section" id="stack">
-  <div class="sec-head"><h2>Tools <span>I Use.</span></h2><p><i class="fa-solid fa-layer-group"></i>03 - Full Stack</p></div>
-  <p class="lead">Eleven technologies across three layers - minimal tools, maximum impact.</p>
+  <div class="sec-head"><h2>Tools <span>I Use.</span></h2><p><i class="fa-solid fa-layer-group"></i>03 â€” Full Stack</p></div>
+  <p class="lead">Eleven technologies across three layers â€” minimal tools, maximum impact.</p>
   <div class="stack-grid">
     <div class="card stack-card"><h3><i class="fa-solid fa-laptop-code"></i>Frontend</h3><p>What users see and touch.</p><div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Angular.js</span></div></div>
     <div class="card stack-card"><h3><i class="fa-solid fa-gears"></i>Backend</h3><p>What makes it work.</p><div class="chips"><span>Node.js</span><span>Java</span><span>REST APIs</span></div></div>
@@ -629,20 +458,20 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
 </section>
 
 <section class="section" id="contact">
-  <div class="sec-head"><h2>Have a Project <span>in Mind?</span></h2><p><i class="fa-solid fa-envelope"></i>05 - Contact</p></div>
+  <div class="sec-head"><h2>Have a Project <span>in Mind?</span></h2><p><i class="fa-solid fa-envelope"></i>05 â€” Contact</p></div>
   <div class="card contact-big">
     <div>
       <h3>Let's Build Something That Ships.</h3>
-      <p>Tell me what you want to build - landing pages, web apps, APIs or databases. Based in Mumbai, working worldwide.</p>
+      <p>Tell me what you want to build â€” landing pages, web apps, APIs or databases. Based in Mumbai, working worldwide.</p>
       <div class="clinks">
-        <a href="#contact" data-u="projectsbyayush" data-d="gmail.com"><i class="fa-solid fa-envelope"></i><span data-e>Email</span><span>&#8599;</span></a>
+        <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i><span>projectsbyayush@gmail.com</span><span>&#8599;</span></a>
         <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span>github.com/projectsbyayush</span><span>&#8599;</span></a>
         <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/projectsbyayush</span><span>&#8599;</span></a>
         <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i><span>instagram.com/projectsbyayush</span><span>&#8599;</span></a>
         <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i><span>x.com/projectsbyayush</span><span>&#8599;</span></a>
       </div>
     </div>
-    <form class="cform" onsubmit="event.preventDefault();this.reset();var b=this.querySelector('.send-btn');var o=b.textContent;b.textContent='Message sent - I will reply soon!';setTimeout(()=>{b.textContent=o},3000);">
+    <form class="cform" onsubmit="event.preventDefault();this.reset();var b=this.querySelector('.send-btn');var o=b.textContent;b.textContent='Message sent â€” I will reply soon!';setTimeout(()=>{b.textContent=o},3000);">
       <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
       <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
       <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
@@ -653,12 +482,12 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
 </main>
 
 <footer class="footer">
-  <div>© 2026 Ayush Patil - <b>projectsbyayush</b> · Mumbai, India</div>
+  <div>Â© 2026 Ayush Patil â€” <b>projectsbyayush</b> Â· Mumbai, India</div>
   <div class="foot-links">
     <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">GitHub</a>
     <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener">Instagram</a>
-    <a href="#contact" data-u="projectsbyayush" data-d="gmail.com">Email</a>
+    <a href="mailto:projectsbyayush@gmail.com">Email</a>
     <button class="to-top" id="toTop" aria-label="Back to top">
       <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="bgc" cx="26" cy="26" r="24"/><circle class="fgc" id="ringFg" cx="26" cy="26" r="24"/></svg>
       <i class="fa-solid fa-arrow-up"></i>
@@ -666,19 +495,11 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
   </div>
 </footer>
 
-<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
 <script>
 (function(){
   var items=["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB","Mumbai, India"];
-  var half=items.map(function(t){return t+" <b>•</b> "}).join("");
+  var half=items.map(function(t){return t+" <b>â€¢</b> "}).join("");
   document.getElementById("marquee").innerHTML=half+half;
-
-  /* email addresses are assembled here so scrapers don't harvest them from static HTML */
-  document.querySelectorAll("a[data-u]").forEach(function(a){
-    var em=a.getAttribute("data-u")+"@"+a.getAttribute("data-d");
-    a.setAttribute("href","mailto:"+em);
-    a.querySelectorAll("[data-e]").forEach(function(s){s.textContent=em;});
-  });
 
   /* scroll reveal */
   var els=document.querySelectorAll(".card,.sec-head,.svc,.marquee,.faq-item");
@@ -694,98 +515,20 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
     els.forEach(function(el){el.classList.add("in");});
   }
 
-  /* per-section scroll flavours: about slides in, services/stack zoom */
-  document.querySelectorAll("#about .about-main").forEach(function(el){el.classList.add("rv-l");});
-  document.querySelectorAll("#about .fact").forEach(function(el,i){el.classList.add("rv-r","rv-d"+((i%3)+1));});
-  document.querySelectorAll("#services .svc").forEach(function(el,i){el.classList.add("rv-z","rv-d"+((i%3)+1));});
-  document.querySelectorAll("#stack .stack-card").forEach(function(el,i){el.classList.add("rv-z","rv-d"+((i%3)+1));});
-  document.querySelectorAll("#contact .contact-big").forEach(function(el){el.classList.add("rv-z");});
-  document.querySelectorAll("#faq .faq-item").forEach(function(el,i){el.classList.add("rv-z","rv-d"+((i%3)+1));});
-
-  /* 3D tilt - each section leans its own way (desktop pointers only) */
-  var finePointer=window.matchMedia&&window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  var reduceMotion=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if(finePointer&&!reduceMotion){
-    var tiltZones=[
-      {sel:"#services .svc",max:9,flip:false,lift:-6},
-      {sel:"#stack .stack-card",max:11,flip:true,lift:-5},
-      {sel:"#about .fact",max:7,flip:true,lift:-4},
-      {sel:"#about .about-main",max:4,flip:false,lift:0},
-      {sel:".shell .card",max:5,flip:false,lift:0},
-      {sel:"#contact .contact-big",max:4,flip:true,lift:0},
-      {sel:".proj-cols .pcol",max:8,flip:false,lift:-3}
-    ];
-    tiltZones.forEach(function(z){
-      document.querySelectorAll(z.sel).forEach(function(el){
-        var tx=0,ty=0,cx=0,cy=0,raf=null,inside=false;
-        function frame(){
-          cx+=(tx-cx)*.14;cy+=(ty-cy)*.14;
-          el.style.transform="perspective(900px) rotateX("+cx.toFixed(2)+"deg) rotateY("+cy.toFixed(2)+"deg) translateY("+z.lift+"px)";
-          if(inside||Math.abs(tx-cx)>.04||Math.abs(ty-cy)>.04){raf=requestAnimationFrame(frame);}
-          else{raf=null;el.style.transform="";el.classList.remove("tilting");}
-        }
-        function kick(){el.classList.add("tilting");if(!raf){raf=requestAnimationFrame(frame);}}
-        el.addEventListener("pointermove",function(e){
-          var r=el.getBoundingClientRect();
-          var px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
-          var dir=z.flip?-1:1;
-          ty=dir*px*z.max;
-          tx=-py*z.max;
-          if(!inside){inside=true;}
-          kick();
-        });
-        el.addEventListener("pointerleave",function(){inside=false;tx=0;ty=0;kick();});
-      });
-    });
-    /* magnetic buttons + shine sweep */
-    document.querySelectorAll(".top-mail,.mail-pill,.send-btn").forEach(function(el){el.classList.add("shine");});
-    document.querySelectorAll(".top-mail,.mail-pill,.send-btn").forEach(function(el){
-      var strength=9;
-      el.addEventListener("pointermove",function(e){
-        var r=el.getBoundingClientRect();
-        var x=(e.clientX-r.left-r.width/2)/r.width*strength;
-        var y=(e.clientY-r.top-r.height/2)/r.height*strength;
-        el.style.translate=x.toFixed(1)+"px "+y.toFixed(1)+"px";
-      });
-      el.addEventListener("pointerleave",function(){el.style.translate="0 0";});
-    });
-    /* click ripple on buttons + social links */
-    document.querySelectorAll(".top-mail,.mail-pill,.send-btn,.strip a").forEach(function(btn){
-      btn.addEventListener("pointerdown",function(e){
-        var r=btn.getBoundingClientRect(),d=Math.max(r.width,r.height);
-        var s=document.createElement("span");
-        s.className="ripple";
-        s.style.width=s.style.height=d+"px";
-        s.style.left=(e.clientX-r.left-d/2)+"px";
-        s.style.top=(e.clientY-r.top-d/2)+"px";
-        btn.appendChild(s);
-        setTimeout(function(){s.remove();},650);
-      });
-    });
+  /* light / dark theme (light is default) */
+  var themeBtn=document.getElementById("themeBtn"),themeMeta=document.getElementById("themeColor");
+  function paintTheme(dark){
+    if(dark){document.documentElement.dataset.theme="dark";}else{document.documentElement.removeAttribute("data-theme");}
+    themeBtn.innerHTML=dark?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';
+    themeBtn.setAttribute("aria-pressed",dark?"true":"false");
+    themeBtn.setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode");
+    if(themeMeta)themeMeta.setAttribute("content",dark?"#0b0b0c":"#FAF6EE");
+    try{localStorage.setItem("ap-theme",dark?"dark":"light");}catch(e){}
   }
-
-  /* animated counters - numbers count up when scrolled into view */
-  (function(){
-    var rm=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if(rm||!("IntersectionObserver" in window))return;
-    function animateCount(b){
-      var em=b.querySelector("em"),suf=em?em.textContent:"",m=b.textContent.match(/\d+/);
-      if(!m)return;
-      var target=parseInt(m[0],10),pad=m[0].length,t0=null,dur=1300;
-      function frame(t){
-        if(!t0)t0=t;
-        var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3),v=String(Math.round(target*e));
-        while(v.length<pad)v="0"+v;
-        b.innerHTML=v+(suf?"<em>"+suf+"</em>":"");
-        if(p<1)requestAnimationFrame(frame);
-      }
-      requestAnimationFrame(frame);
-    }
-    var cio=new IntersectionObserver(function(es){
-      es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});
-    },{threshold:.5});
-    document.querySelectorAll(".count b").forEach(function(b){cio.observe(b);});
-  })();
+  themeBtn.addEventListener("click",function(){
+    paintTheme(document.documentElement.dataset.theme!=="dark");
+  });
+  paintTheme(document.documentElement.dataset.theme==="dark");
 
   /* topbar shadow + back-to-top with progress ring */
   var bar=document.querySelector(".topbar"),top=document.getElementById("toTop"),fg=document.getElementById("ringFg");
@@ -800,7 +543,7 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
     if(y>600){top.classList.add("show");}else{top.classList.remove("show");}
   }
   window.addEventListener("scroll",onScroll,{passive:true});onScroll();
-  top.addEventListener("click",function(){if(window.__lenis){window.__lenis.scrollTo(0);}else{window.scrollTo({top:0,behavior:"smooth"});}});
+  top.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
 
   /* spotlight hover on cards */
   document.querySelectorAll(".card,.svc").forEach(function(card){
@@ -811,77 +554,7 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
       card.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%");
     });
   });
-
-  /* hamburger menu */
-  var menuBtn=document.getElementById("menuBtn"),mMenu=document.getElementById("mobileMenu"),menuTimer=null;
-  function setMenu(open){
-    menuBtn.classList.toggle("open",open);
-    menuBtn.setAttribute("aria-expanded",open?"true":"false");
-    menuBtn.setAttribute("aria-label",open?"Close menu":"Open menu");
-    if(open){
-      mMenu.hidden=false;
-      requestAnimationFrame(function(){requestAnimationFrame(function(){mMenu.classList.add("open");});});
-    }else{
-      mMenu.classList.remove("open");
-      clearTimeout(menuTimer);
-      menuTimer=setTimeout(function(){mMenu.hidden=true;},340);
-    }
-  }
-  menuBtn.addEventListener("click",function(){setMenu(!mMenu.classList.contains("open"));});
-  mMenu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setMenu(false);});});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape")setMenu(false);});
-  document.addEventListener("pointerdown",function(e){
-    if(!mMenu.hidden&&mMenu.classList.contains("open")&&!mMenu.contains(e.target)&&!menuBtn.contains(e.target))setMenu(false);
-  });
-  window.addEventListener("resize",function(){
-    if(window.innerWidth>960&&mMenu.classList.contains("open"))setMenu(false);
-  });
-
-  /* scrollspy — yellow outline on the nav link of the section in view */
-  document.querySelectorAll('.topnav a[href^="#"],.mobile-menu a[href^="#"]').forEach(function(a){
-    a.addEventListener("click",function(){
-      document.querySelectorAll(".topnav a,.mobile-menu a").forEach(function(o){o.classList.remove("active");});
-      a.classList.add("active");
-    });
-  });
-  if("IntersectionObserver" in window){
-    var spy=new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(e.isIntersecting){
-          var id="#"+e.target.id;
-          document.querySelectorAll('.topnav a[href^="#"],.mobile-menu a[href^="#"]').forEach(function(a){
-            a.classList.toggle("active",a.getAttribute("href")===id);
-          });
-        }
-      });
-    },{rootMargin:"-38% 0px -55% 0px"});
-    ["work","about","services","stack","faq","contact"].forEach(function(id){
-      var s=document.getElementById(id);
-      if(s)spy.observe(s);
-    });
-  }
-
-  /* Lenis buttery smooth scroll (progressive enhancement — native scroll if CDN blocked) */
-  window.addEventListener("load",function(){
-    if(reduceMotion||!window.Lenis)return;
-    try{
-      var lenis=new Lenis({duration:1.15,smoothWheel:true});
-      window.__lenis=lenis;
-      var rafL=function(t){lenis.raf(t);requestAnimationFrame(rafL);};
-      requestAnimationFrame(rafL);
-      document.querySelectorAll('a[href^="#"]').forEach(function(a){
-        a.addEventListener("click",function(e){
-          var id=a.getAttribute("href");
-          if(id&&id.length>1){
-            var el=document.querySelector(id);
-            if(el){e.preventDefault();lenis.scrollTo(el,{offset:-104});}
-          }
-        });
-      });
-    }catch(err){}
-  });
-
-  /* FAQ accordion - one open at a time */
+/* FAQ accordion - one open at a time */
   document.querySelectorAll(".faq-item").forEach(function(item){
     var btn=item.querySelector(".faq-q");
     btn.addEventListener("click",function(){
@@ -893,45 +566,6 @@ body[data-theme="dark"] .card.spot::after{background:radial-gradient(420px circl
       if(willOpen){item.classList.add("open");btn.setAttribute("aria-expanded","true");}
     });
   });
-
-  /* mild snow inside Tools cards - only while hovered */
-  (function(){
-    if(reduceMotion)return;
-    var cards=document.querySelectorAll("#stack .stack-card");
-    if(!cards.length)return;
-    cards.forEach(function(card){
-      var cv=document.createElement("canvas");
-      cv.className="snow";cv.setAttribute("aria-hidden","true");
-      card.insertBefore(cv,card.firstChild);
-      var ctx=cv.getContext("2d");
-      if(!ctx)return;
-      var W=0,H=0,flakes=[],run=false,raf=null;
-      function size(){
-        var r=card.getBoundingClientRect(),d=Math.min(window.devicePixelRatio||1,2);
-        W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);
-      }
-      function mk(top){return{x:Math.random()*W,y:top?-8-Math.random()*16:Math.random()*H,r:.9+Math.random()*1.8,s:.35+Math.random()*.8,ph:Math.random()*6.283,sw:.3+Math.random()*.6,o:.3+Math.random()*.45};}
-      function init(){size();flakes=[];var n=Math.round(Math.min(34,Math.max(14,W/22)));for(var i=0;i<n;i++)flakes.push(mk(false));}
-      function tick(){
-        if(!run){raf=null;return;}
-        ctx.clearRect(0,0,W,H);
-        for(var i=0;i<flakes.length;i++){
-          var f=flakes[i];
-          f.ph+=.02;f.y+=f.s;f.x+=Math.sin(f.ph)*f.sw*.35;
-          if(f.y>H+8){flakes[i]=mk(true);continue;}
-          ctx.fillStyle="rgba(255,255,255,"+f.o+")";
-          ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,6.283);ctx.fill();
-        }
-        raf=requestAnimationFrame(tick);
-      }
-      function start(){size();if(!run){run=true;raf=requestAnimationFrame(tick);}}
-      function stop(){run=false;if(raf)cancelAnimationFrame(raf);raf=null;ctx.clearRect(0,0,W,H);}
-      init();
-      window.addEventListener("resize",init);
-      card.addEventListener("pointerenter",start);
-      card.addEventListener("pointerleave",stop);
-    });
-  })();
 
 })();
 </script>
