@@ -22,6 +22,10 @@ Frontend: HTML5, CSS3, JavaScript, React.js, Angular.js. Backend: Node.js, Java,
 
 Frontend development, component UI, backend and APIs, database design, performance optimization, maintenance and support. Open to freelance, full-time and remote collaborations. Replies within 24 hours.
 
+## FAQ
+
+What services do you offer? What technologies do you use (HTML5, CSS3, JavaScript, React.js, Angular.js, Node.js, Java, MySQL, PostgreSQL, Oracle SQL, MongoDB)? Are you available for freelance and full-time work? How fast do you reply (24 hours)? Do you work remotely with international clients? How much does a project cost (fixed quote)? Will my site be fast and SEO-ready? How long does a website take (landing page under two weeks)?
+
 ## Canonical site
 
 - https://projectsbyayush.github.io/portfolio/
