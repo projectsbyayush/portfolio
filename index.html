@@ -83,8 +83,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .topnav{display:flex;gap:4px}
 .topnav a{color:var(--dim);text-decoration:none;font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:100px}
 .topnav a:hover{color:var(--ink);background:var(--raise)}
-.top-mail{background:var(--orange);color:#0b0b0c;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:100px;padding:10px 20px;white-space:nowrap}
-.top-mail:hover{background:var(--orange-h)}
+.top-mail{background:var(--orange);color:#0b0b0c;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:100px;padding:10px 20px;white-space:nowrap;transition:background .25s cubic-bezier(.2,.7,.2,1),transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.top-mail:hover{background:var(--orange-h);transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,180,0,.35)}
 /* ---------- shell / bento ---------- */
 .shell{width:min(1480px,100%);margin:0 auto;padding:14px;display:grid;gap:12px}
 .row{display:grid;gap:12px}
@@ -103,12 +103,14 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .contact{align-items:center;justify-content:center;text-align:center;gap:clamp(14px,2.4vh,24px)}
 .rings{width:clamp(72px,8vw,110px);height:auto;color:var(--ink)}
 .contact h2{font-size:clamp(26px,3.2vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.08;text-wrap:balance}
-.mail-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#0b0b0c;text-decoration:none;font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-0.01em;border-radius:100px;padding:clamp(14px,2.2vh,20px) clamp(26px,3vw,46px);transition:background .2s,transform .2s;max-width:100%}
-.mail-pill:hover{background:var(--orange-h);transform:translateY(-2px)}
+.mail-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#0b0b0c;text-decoration:none;font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-0.01em;border-radius:100px;padding:clamp(14px,2.2vh,20px) clamp(26px,3vw,46px);transition:background .25s cubic-bezier(.2,.7,.2,1),transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s;max-width:100%;position:relative;overflow:hidden;isolation:isolate}
+.mail-pill:hover{background:var(--orange-h);transform:translateY(-2px) scale(1.015);box-shadow:0 16px 36px rgba(255,180,0,.35)}
+.mail-pill:active{transform:translateY(0) scale(.99)}
 /* social strip */
 .strip{grid-template-columns:repeat(6,1fr)}
-.strip a{background:var(--card2);color:var(--ink);text-decoration:none;text-align:center;font-size:clamp(12px,1.25vw,16px);font-weight:500;border-radius:100px;padding:clamp(13px,1.9vh,18px) 8px;transition:background .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.strip a:hover{background:var(--raise)}
+.strip a{background:var(--card2);color:var(--ink);text-decoration:none;text-align:center;font-size:clamp(12px,1.25vw,16px);font-weight:500;border-radius:100px;padding:clamp(13px,1.9vh,18px) 8px;transition:background .25s cubic-bezier(.2,.7,.2,1),transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid transparent;position:relative}
+.strip a:hover{background:var(--raise);transform:translateY(-3px);box-shadow:0 12px 26px rgba(20,16,4,.14);border-color:rgba(255,214,0,.5)}
+.strip a:active{transform:translateY(-1px) scale(.98)}
 /* based */
 .based{justify-content:flex-start;gap:clamp(14px,3vh,28px)}
 .globe{width:clamp(64px,7vw,100px);height:auto;color:var(--ink)}
@@ -122,8 +124,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .work-head a{font-size:13px;color:var(--dim);text-decoration:none;font-weight:500}
 .work-head a:hover{color:var(--ink)}
 .proj-cols{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1vw,14px)}
-.pcol{display:flex;flex-direction:column;gap:8px;min-width:0;border-top:1px solid var(--line);border-radius:14px;padding:14px 10px;text-decoration:none;color:var(--ink);transition:background .22s}
-.pcol:hover{background:var(--raise)}
+.pcol{display:flex;flex-direction:column;gap:8px;min-width:0;border-top:1px solid var(--line);border-radius:14px;padding:14px 10px;text-decoration:none;color:var(--ink);transition:background .25s cubic-bezier(.2,.7,.2,1),transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.pcol:hover{background:var(--raise);transform:translateY(-4px);box-shadow:0 16px 34px rgba(20,16,4,.12)}
 .pcol .n{font-size:12px;color:var(--dim);font-weight:500}
 .pcol b{font-size:clamp(18px,1.9vw,25px);font-weight:600;letter-spacing:-0.025em;line-height:1.1}
 .pcol p{font-size:13px;color:var(--dim);font-weight:500;line-height:1.55}
@@ -165,14 +167,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .fact p{font-size:13.5px;color:var(--dim);line-height:1.6}
 /* services */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
-.svc{background:var(--glass);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:none;border-radius:var(--r);padding:26px;transition:transform .22s,box-shadow .22s;box-shadow:0 16px 40px rgba(20,16,4,.10)}
+.svc{background:var(--glass);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:none;border-radius:var(--r);padding:26px;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s cubic-bezier(.2,.7,.2,1),border-color .3s;box-shadow:0 16px 40px rgba(20,16,4,.10);will-change:transform}
 [data-theme="dark"] .svc{box-shadow:0 16px 40px rgba(0,0,0,.45)}
 .svc{--mx:50%;--my:50%}
 .svc.spot{position:relative;overflow:hidden}
 .svc.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at var(--mx) var(--my),rgba(154,116,0,.14),transparent 65%);opacity:0;transition:opacity .3s}
 .svc.spot:hover::after{opacity:1}
 [data-theme="dark"] .svc.spot::after{background:radial-gradient(360px circle at var(--mx) var(--my),rgba(255,214,0,.12),transparent 65%)}
-.svc:hover{box-shadow:0 26px 60px rgba(20,16,4,.18)}
+.svc:hover{box-shadow:0 26px 60px rgba(20,16,4,.18);transform:translateY(-6px)}
+.svc:hover .sic{transform:rotate(-8deg) scale(1.08);box-shadow:0 10px 24px rgba(255,180,0,.35)}
 .svc .n{font-size:12px;color:var(--dim);font-weight:500}
 .svc h3{font-size:20px;font-weight:600;letter-spacing:-0.02em;margin-top:30px}
 .svc p{font-size:13.5px;color:var(--dim);line-height:1.65;margin-top:8px}
@@ -184,8 +187,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .chips span{font-size:12.5px;font-weight:500;border:1px solid var(--edge);border-radius:100px;padding:7px 14px;color:var(--soft);transition:border-color .2s,color .2s}
 .chips span:hover{border-color:var(--orange);color:var(--ink);box-shadow:0 0 14px rgba(255,214,0,.35)}
-.stack-card{transition:transform .25s,box-shadow .25s,border-color .25s;border:1px solid transparent}
-.stack-card:hover{transform:translateY(-5px);border-color:rgba(255,214,0,.55);box-shadow:0 0 0 1px rgba(255,214,0,.45),0 20px 55px rgba(255,180,0,.22)}
+.stack-card{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s cubic-bezier(.2,.7,.2,1),border-color .3s;border:1px solid transparent;will-change:transform}
+.stack-card:hover{transform:translateY(-6px) scale(1.01);border-color:rgba(255,214,0,.55);box-shadow:0 0 0 1px rgba(255,214,0,.45),0 20px 55px rgba(255,180,0,.22)}
 [data-theme="dark"] .stack-card:hover{box-shadow:0 0 0 1px rgba(255,214,0,.6),0 20px 60px rgba(255,214,0,.16)}
 .stack-card:hover h3 i{text-shadow:0 0 18px rgba(255,214,0,.65)}
 /* contact */
@@ -218,7 +221,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .theme-btn{width:40px;height:40px;flex:none;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;display:grid;place-items:center;transition:border-color .2s,transform .2s}
 .theme-btn:hover{border-color:var(--orange);transform:translateY(-1px)}
 .sec-head p i{color:var(--gold);margin-right:8px}
-.svc .sic{width:44px;height:44px;border-radius:14px;background:var(--raise);display:grid;place-items:center;font-size:18px;color:var(--gold);margin-bottom:4px}
+.svc .sic{width:44px;height:44px;border-radius:14px;background:var(--raise);display:grid;place-items:center;font-size:18px;color:var(--gold);margin-bottom:4px;transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
 .stack-card h3 i{color:var(--gold);margin-right:9px;font-size:.9em}
 .strip a i{color:var(--gold);margin-right:7px;font-size:.92em}
 .clinks a>i:first-child{color:var(--gold);font-size:13px;margin-right:2px}
@@ -236,14 +239,58 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 /* topbar shadow on scroll */
 .topbar{transition:box-shadow .3s,background .3s}
 .topbar.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+/* ---------- tilt + shine + weather FX ---------- */
+.tilt{transform-style:preserve-3d;will-change:transform;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s cubic-bezier(.2,.7,.2,1)}
+.tilt.tilting{transition:transform .08s linear,box-shadow .3s}
+.shine{position:relative;overflow:hidden}
+.shine::before{content:'';position:absolute;top:0;left:-80%;width:60%;height:100%;pointer-events:none;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s ease;z-index:1}
+.shine:hover::before{left:130%}
+[data-theme="dark"] .shine::before{background:linear-gradient(105deg,transparent,rgba(255,214,0,.22),transparent)}
+/* weather canvas */
+#fx{position:fixed;inset:0;width:100vw;height:100vh;z-index:70;pointer-events:none;opacity:0;transition:opacity .5s ease}
+#fx.on{opacity:1}
+#fx.rainy{opacity:.85}#fx.snowy{opacity:1}#fx.sparkly{opacity:1}
+/* floating weather dock */
+.fx-dock{position:fixed;left:18px;bottom:18px;z-index:80;display:flex;gap:6px;align-items:center;background:var(--topbar-bg);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid var(--edge-soft);border-radius:100px;padding:6px;box-shadow:0 12px 30px rgba(0,0,0,.14);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.fx-dock:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.fx-dock .fx-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:0 4px 0 10px}
+.fx-dock button{border:1px solid transparent;background:transparent;color:var(--dim);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:14px;display:grid;place-items:center;transition:background .25s,color .25s,transform .25s cubic-bezier(.34,1.56,.64,1),border-color .25s}
+.fx-dock button:hover{background:var(--raise);color:var(--ink);transform:translateY(-2px) scale(1.08)}
+.fx-dock button.active{background:var(--orange);color:#0b0b0c;border-color:rgba(0,0,0,.08);box-shadow:0 6px 18px rgba(255,180,0,.4)}
+.fx-dock button:active{transform:scale(.94)}
+/* ---------- FAQ ---------- */
+.faq-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:12px;margin-top:22px;align-items:start}
+.faq-side{position:sticky;top:110px}
+.faq-side .big-emoji{width:52px;height:52px;border-radius:16px;background:var(--raise);display:grid;place-items:center;font-size:22px;color:var(--gold);margin-bottom:14px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.faq-side:hover .big-emoji{transform:rotate(-10deg) scale(1.08)}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--glass);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:1px solid var(--glass-bd);border-radius:20px;overflow:hidden;transition:border-color .3s,box-shadow .3s cubic-bezier(.2,.7,.2,1),transform .3s cubic-bezier(.2,.7,.2,1),background .3s;box-shadow:0 14px 34px rgba(20,16,4,.08)}
+[data-theme="dark"] .faq-item{box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.faq-item:hover{transform:translateY(-2px);border-color:rgba(255,214,0,.5);box-shadow:0 20px 46px rgba(20,16,4,.14)}
+.faq-item.open{border-color:rgba(255,214,0,.65);box-shadow:0 0 0 1px rgba(255,214,0,.4),0 20px 50px rgba(255,180,0,.18);background:var(--card)}
+.faq-q{width:100%;background:none;border:none;color:var(--ink);font-family:var(--font);text-align:left;font-size:15.5px;font-weight:600;letter-spacing:-0.01em;padding:18px 20px;display:flex;align-items:center;gap:14px;cursor:pointer}
+.faq-q .qi{flex:none;width:32px;height:32px;border-radius:50%;background:var(--raise);display:grid;place-items:center;font-size:13px;color:var(--gold);transition:background .3s,transform .35s cubic-bezier(.34,1.56,.64,1),color .3s}
+.faq-item.open .qi{background:var(--orange);color:#0b0b0c;transform:rotate(135deg)}
+.faq-q .qt{flex:1}
+.faq-q .chev{flex:none;color:var(--dim);font-size:13px;transition:transform .35s cubic-bezier(.2,.7,.2,1),color .3s}
+.faq-item.open .chev{transform:rotate(180deg);color:var(--gold)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a-in{overflow:hidden;min-height:0}
+.faq-a p{font-size:14px;line-height:1.7;color:var(--dim);padding:0 20px 20px 66px}
+.faq-a p b,.faq-a p a{color:var(--ink)}
+.faq-a p a{color:var(--gold);font-weight:600;text-decoration:none}
+.faq-a p a:hover{text-decoration:underline}
 /* hero entrance */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;translate:0 0}
+  #fx,.fx-dock{display:none!important}
 }
 @media(max-width:960px){
   .topnav{display:none}
-  .row-top,.row-bottom,.about-grid,.contact-big{grid-template-columns:1fr}
+  .row-top,.row-bottom,.about-grid,.contact-big,.faq-grid{grid-template-columns:1fr}
+  .faq-side{position:static}
   .svc-grid,.stack-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
@@ -258,10 +305,13 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   .pcol{padding:14px 12px}
   .pcol p{white-space:normal}
   .pcol .tags{flex-wrap:wrap}
+  .faq-a p{padding:0 16px 18px 16px}
+  .fx-dock{left:12px;bottom:12px}
+  .fx-dock .fx-label{display:none}
 }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://projectsbyayush.github.io/portfolio/#person","name":"Ayush Patil","url":"https://projectsbyayush.github.io/portfolio/","image":"https://projectsbyayush.github.io/portfolio/icon.png","jobTitle":"Full Stack Web Developer","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},"affiliation":{"@type":"CollegeOrUniversity","name":"Pravin R. Patil College of Engineering and Technology, Mumbai University"},"sameAs":["https://github.com/projectsbyayush","https://linkedin.com/in/projectsbyayush","https://instagram.com/projectsbyayush","https://x.com/projectsbyayush"],"knowsAbout":["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB"]}]} 
+{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://projectsbyayush.github.io/portfolio/#person","name":"Ayush Patil","url":"https://projectsbyayush.github.io/portfolio/","image":"https://projectsbyayush.github.io/portfolio/icon.png","jobTitle":"Full Stack Web Developer","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"IN"},"affiliation":{"@type":"CollegeOrUniversity","name":"Pravin R. Patil College of Engineering and Technology, Mumbai University"},"sameAs":["https://github.com/projectsbyayush","https://linkedin.com/in/projectsbyayush","https://instagram.com/projectsbyayush","https://x.com/projectsbyayush"],"knowsAbout":["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB"]()}, {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What services do you offer?","acceptedAnswer":{"@type":"Answer","text":"Frontend, backend & APIs, databases, performance tuning and support — React, Angular, Node.js, Java, MySQL, PostgreSQL, Oracle SQL, MongoDB."}}, {"@type":"Question","name":"Are you available for work right now?","acceptedAnswer":{"@type":"Answer","text":"Yes — open to freelance, full-time and collaborations, based in Mumbai working worldwide."}}, {"@type":"Question","name":"How fast do you reply?","acceptedAnswer":{"@type":"Answer","text":"Within 24 hours via the contact form or email."}}, {"@type":"Question","name":"Do you work remotely?","acceptedAnswer":{"@type":"Answer","text":"Yes, in English and Hindi, overlapping with EU, US and APAC hours."}}, {"@type":"Question","name":"How much does a project cost?","acceptedAnswer":{"@type":"Answer","text":"Fixed quote based on scope — mail your requirements for timeline and pricing."}}, {"@type":"Question","name":"Will my site be fast and SEO-ready?","acceptedAnswer":{"@type":"Answer","text":"Yes — semantic HTML, tiny bundles, meta and Open Graph tags built in."}}]}]} 
 </script>
 </head>
 <body>
@@ -269,7 +319,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   <div class="topbar-in">
     <a class="brand" href="#top" aria-label="Ayush Patil home"><img src="icon.png" alt="Ayush Patil logo" class="brand-logo" width="60" height="60"></a>
     <nav class="topnav" aria-label="Primary">
-      <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#contact">Contact</a><a href="resume.html" download="Ayush-Patil-Resume.html" title="Download resume">Resume</a>
+      <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#stack">Stack</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="resume.html" download="Ayush-Patil-Resume.html" title="Download resume">Resume</a>
     </nav>
     <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" aria-pressed="false"><i class="fa-solid fa-moon"></i></button>
     <a class="top-mail" href="mailto:projectsbyayush@gmail.com">Get in Touch</a>
@@ -384,16 +434,53 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 
 <section class="section" id="stack">
   <div class="sec-head"><h2>Tools <span>I Use.</span></h2><p><i class="fa-solid fa-layer-group"></i>03 — Full Stack</p></div>
-  <p class="lead">Eleven technologies across three layers — minimal tools, maximum impact.</p>
+  <p class="lead">Eleven technologies across three layers — minimal tools, maximum impact. Hover a card — tilt it left / right and watch the weather react.</p>
   <div class="stack-grid">
-    <div class="card stack-card"><h3><i class="fa-solid fa-laptop-code"></i>Frontend</h3><p>What users see and touch.</p><div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Angular.js</span></div></div>
-    <div class="card stack-card"><h3><i class="fa-solid fa-gears"></i>Backend</h3><p>What makes it work.</p><div class="chips"><span>Node.js</span><span>Java</span><span>REST APIs</span></div></div>
-    <div class="card stack-card"><h3><i class="fa-solid fa-database"></i>Databases</h3><p>Where it all lives.</p><div class="chips"><span>MySQL</span><span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span></div></div>
+    <div class="card stack-card" data-weather="snow"><h3><i class="fa-solid fa-laptop-code"></i>Frontend</h3><p>What users see and touch.</p><div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Angular.js</span></div></div>
+    <div class="card stack-card" data-weather="rain"><h3><i class="fa-solid fa-gears"></i>Backend</h3><p>What makes it work.</p><div class="chips"><span>Node.js</span><span>Java</span><span>REST APIs</span></div></div>
+    <div class="card stack-card" data-weather="spark"><h3><i class="fa-solid fa-database"></i>Databases</h3><p>Where it all lives.</p><div class="chips"><span>MySQL</span><span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span></div></div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="sec-head"><h2>Questions, <span>Answered.</span></h2><p><i class="fa-solid fa-circle-question"></i>04 — FAQ</p></div>
+  <div class="faq-grid">
+    <div class="card faq-side">
+      <div class="big-emoji"><i class="fa-solid fa-comments"></i></div>
+      <p class="lead" style="max-width:100%">Everything clients usually ask before starting a project. Can't find your answer? <a href="mailto:projectsbyayush@gmail.com" style="color:var(--gold);font-weight:600;text-decoration:none">Mail me &#8599;</a></p>
+      <div class="chips" style="margin-top:16px"><span>24h reply</span><span>Remote + on-site</span><span>Mumbai · IST</span></div>
+    </div>
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="qi"><i class="fa-solid fa-plus"></i></span><span class="qt">What services do you offer?</span><i class="fa-solid fa-chevron-down chev"></i></button>
+        <div class="faq-a"><div class="faq-a-in"><p>End-to-end web builds — <b>frontend</b> (HTML5, CSS3, JavaScript, React.js, Angular.js), <b>backend &amp; APIs</b> (Node.js, Java, REST), <b>databases</b> (MySQL, PostgreSQL, Oracle SQL, MongoDB), plus performance tuning and ongoing support.</p></div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="qi"><i class="fa-solid fa-plus"></i></span><span class="qt">Are you available for work right now?</span><i class="fa-solid fa-chevron-down chev"></i></button>
+        <div class="faq-a"><div class="faq-a-in"><p>Yes — <b>open to freelance projects, full-time roles and collaborations.</b> Based in Mumbai (IST UTC+5:30), working with clients worldwide, remote or on-site.</p></div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="qi"><i class="fa-solid fa-plus"></i></span><span class="qt">How fast do you reply, and what's the process?</span><i class="fa-solid fa-chevron-down chev"></i></button>
+        <div class="faq-a"><div class="faq-a-in"><p>I reply <b>within 24 hours.</b> Share your idea via the <a href="#contact">contact form</a> — we scope it, agree on timeline, then I design, build, test and ship with updates at every step.</p></div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="qi"><i class="fa-solid fa-plus"></i></span><span class="qt">Do you work remotely with international clients?</span><i class="fa-solid fa-chevron-down chev"></i></button>
+        <div class="faq-a"><div class="faq-a-in"><p>Absolutely. I work in <b>English &amp; Hindi</b>, overlap with EU / US / APAC hours when needed, and keep communication async-friendly with clear milestones.</p></div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="qi"><i class="fa-solid fa-plus"></i></span><span class="qt">How much does a project cost?</span><i class="fa-solid fa-chevron-down chev"></i></button>
+        <div class="faq-a"><div class="faq-a-in"><p>It depends on scope — a landing page vs. a full-stack app with auth and database are very different. <b>Mail your requirements</b> and I'll send a fixed quote with timeline, no hidden costs.</p></div></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="qi"><i class="fa-solid fa-plus"></i></span><span class="qt">Will my site be fast and SEO-ready?</span><i class="fa-solid fa-chevron-down chev"></i></button>
+        <div class="faq-a"><div class="faq-a-in"><p>Yes — speed and SEO are built in: semantic HTML, tiny bundles, fast paint, meta + Open Graph tags. <b>This portfolio is ~13KB</b> and scores fast on any device.</p></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section" id="contact">
-  <div class="sec-head"><h2>Have a Project <span>in Mind?</span></h2><p><i class="fa-solid fa-envelope"></i>04 — Contact</p></div>
+  <div class="sec-head"><h2>Have a Project <span>in Mind?</span></h2><p><i class="fa-solid fa-envelope"></i>05 — Contact</p></div>
   <div class="card contact-big">
     <div>
       <h3>Let's Build Something That Ships.</h3>
@@ -430,6 +517,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   </div>
 </footer>
 
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="fx-dock" role="group" aria-label="Weather effects">
+  <span class="fx-label">FX</span>
+  <button type="button" data-fx="off" class="active" aria-label="Effects off" title="Off"><i class="fa-solid fa-ban"></i></button>
+  <button type="button" data-fx="rain" aria-label="Rain effect" title="Rain"><i class="fa-solid fa-cloud-rain"></i></button>
+  <button type="button" data-fx="snow" aria-label="Snow effect" title="Snow"><i class="fa-solid fa-snowflake"></i></button>
+  <button type="button" data-fx="spark" aria-label="Sparkle effect" title="Sparkle"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+</div>
+
 <script>
 (function(){
   var items=["HTML5","CSS3","JavaScript","React.js","Angular.js","Node.js","Java","MySQL","PostgreSQL","Oracle SQL","MongoDB","Mumbai, India"];
@@ -437,7 +533,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   document.getElementById("marquee").innerHTML=half+half;
 
   /* scroll reveal */
-  var els=document.querySelectorAll(".card,.sec-head,.svc,.marquee");
+  var els=document.querySelectorAll(".card,.sec-head,.svc,.marquee,.faq-item,.faq-side");
   for(var i=0;i<els.length;i++){els[i].classList.add("rv");}
   var cards=document.querySelectorAll(".row .card");
   for(var c=0;c<cards.length;c++){cards[c].classList.add("rv-d"+((c%3)+1));}
@@ -480,8 +576,9 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   window.addEventListener("scroll",onScroll,{passive:true});onScroll();
   top.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
 
-  /* spotlight hover on cards */
-  document.querySelectorAll(".card,.svc").forEach(function(card){
+  /* spotlight hover on cards + shine sweep */
+  var spotEls=document.querySelectorAll(".card,.svc,.faq-item");
+  spotEls.forEach(function(card){
     card.classList.add("spot");
     card.addEventListener("pointermove",function(e){
       var r=card.getBoundingClientRect();
@@ -489,6 +586,165 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
       card.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%");
     });
   });
+  document.querySelectorAll(".mail-pill,.top-mail,.send-btn,.svc,.stack-card,.pcol,.strip a").forEach(function(el){el.classList.add("shine");});
+
+  /* 3D tilt left / right */
+  var reduceMotion=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer=window.matchMedia&&window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if(!reduceMotion&&finePointer){
+    document.querySelectorAll(".hero,.contact,.based,.work,.about-main,.fact,.faq-side,.svc,.stack-card,.contact-big").forEach(function(el){
+      var max=el.classList.contains("svc")||el.classList.contains("stack-card")?9:6;
+      var tx=0,ty=0,cx=0,cy=0,raf=null,inside=false;
+      el.classList.add("tilt");
+      function render(){
+        cx+=(tx-cx)*0.16;cy+=(ty-cy)*0.16;
+        if(inside){
+          el.style.transform="perspective(950px) rotateX("+cx.toFixed(2)+"deg) rotateY("+cy.toFixed(2)+"deg) translateY(-4px)";
+        }
+        if(Math.abs(tx-cx)>0.05||Math.abs(ty-cy)>0.05){raf=requestAnimationFrame(render);}
+        else{raf=null;if(!inside){el.style.transform="";el.classList.remove("tilting");}}
+      }
+      function kick(){if(!raf){raf=requestAnimationFrame(render);}}
+      el.addEventListener("pointermove",function(e){
+        var r=el.getBoundingClientRect();
+        var px=(e.clientX-r.left)/r.width-0.5, py=(e.clientY-r.top)/r.height-0.5;
+        ty=px*max;
+        tx=-py*max;
+        if(!inside){inside=true;el.classList.add("tilting");}
+        kick();
+      });
+      el.addEventListener("pointerleave",function(){
+        inside=false;tx=0;ty=0;el.classList.remove("tilting");kick();
+      });
+    });
+  }
+
+  /* FAQ accordion — one open at a time, animated + accessible */
+  var faqItems=document.querySelectorAll(".faq-item");
+  faqItems.forEach(function(item,i){
+    var btn=item.querySelector(".faq-q"),ans=item.querySelector(".faq-a");
+    var panelId="faq-panel-"+(i+1);
+    ans.setAttribute("id",panelId);btn.setAttribute("aria-controls",panelId);
+    btn.addEventListener("click",function(){
+      var isOpen=item.classList.contains("open");
+      faqItems.forEach(function(o){o.classList.remove("open");o.querySelector(".faq-q").setAttribute("aria-expanded","false");});
+      if(!isOpen){item.classList.add("open");btn.setAttribute("aria-expanded","true");}
+    });
+  });
+  if(faqItems.length){faqItems[0].classList.add("open");faqItems[0].querySelector(".faq-q").setAttribute("aria-expanded","true");}
+
+  /* weather FX — rain / snow / sparkle on hover + ambient mode */
+  (function weather(){
+    if(reduceMotion)return;
+    var cv=document.getElementById("fx");if(!cv)return;
+    var ctx=cv.getContext("2d");
+    var W=0,H=0,dpr=1,mode="off",parts=[],bursts=[];
+    try{mode=localStorage.getItem("ap-fx")||"off";}catch(e){}
+    if(["off","rain","snow","spark"].indexOf(mode)<0)mode="off";
+    function resize(){
+      dpr=Math.min(window.devicePixelRatio||1,2);
+      W=window.innerWidth;H=window.innerHeight;
+      cv.width=W*dpr;cv.height=H*dpr;
+      cv.style.width=W+"px";cv.style.height=H+"px";
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    window.addEventListener("resize",resize);resize();
+    function dark(){return document.documentElement.dataset.theme==="dark";}
+    function mkAmbient(kind){
+      if(kind==="rain")return{x:Math.random()*W,y:-30-Math.random()*H*0.3,vx:-1.5-Math.random()*1.5,vy:11+Math.random()*7,len:10+Math.random()*14,op:0.25+Math.random()*0.3,type:"rain"};
+      if(kind==="snow")return{x:Math.random()*W,y:-10-Math.random()*H,vx:-0.4+Math.random()*0.8,vy:0.6+Math.random()*1.4,r:1+Math.random()*2.4,ph:Math.random()*Math.PI*2,sw:0.4+Math.random()*0.8,op:0.5+Math.random()*0.5,type:"snow"};
+      return{x:Math.random()*W,y:Math.random()*H,vx:-0.2+Math.random()*0.4,vy:-0.25-Math.random()*0.5,r:0.8+Math.random()*1.8,ph:Math.random()*Math.PI*2,op:0.3+Math.random()*0.6,type:"spark"};
+    }
+    function targetCount(){
+      if(mode==="rain")return W<640?70:130;
+      if(mode==="snow")return W<640?60:110;
+      if(mode==="spark")return W<640?35:60;
+      return 0;
+    }
+    function emit(x,y,kind,n){
+      var k=kind||(mode!=="off"?mode:"spark");
+      for(var i=0;i<(n||8);i++){
+        if(bursts.length>280)bursts.shift();
+        var a=Math.random()*Math.PI*2,sp=1+Math.random()*3;
+        bursts.push({x:x,y:y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-(k==="spark"?1.4:0.6),life:1,decay:0.015+Math.random()*0.02,r:k==="rain"?1:1.2+Math.random()*2.2,type:k,ph:Math.random()*6});
+      }
+      cv.classList.add("on");
+      clearTimeout(emit._t);
+      emit._t=setTimeout(function(){if(mode==="off"&&bursts.length===0)cv.classList.remove("on");},600);
+    }
+    function step(){
+      ctx.clearRect(0,0,W,H);
+      var want=targetCount();
+      while(parts.length<want)parts.push(mkAmbient(mode));
+      if(parts.length>want)parts.length=want;
+      var i,p;
+      for(i=0;i<parts.length;i++){
+        p=parts[i];
+        if(p.type==="rain"){
+          p.x+=p.vx;p.y+=p.vy;
+          if(p.y>H+30){p.x=Math.random()*(W+60);p.y=-30;}
+          ctx.strokeStyle=dark()?"rgba(150,180,255,"+p.op+")":"rgba(70,85,110,"+p.op+")";
+          ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-p.vx*2.2,p.y-p.len);ctx.stroke();
+        }else if(p.type==="snow"){
+          p.ph+=0.015;p.y+=p.vy;p.x+=p.vx+Math.sin(p.ph)*p.sw*0.4;
+          if(p.y>H+12){p.y=-12;p.x=Math.random()*W;}
+          if(p.x>W+12)p.x=-12;if(p.x<-12)p.x=W+12;
+          ctx.fillStyle=dark()?"rgba(255,255,255,"+p.op+")":"rgba(120,130,150,"+p.op+")";
+          ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();
+        }else{
+          p.ph+=0.05;p.y+=p.vy;p.x+=p.vx+Math.sin(p.ph)*0.3;
+          if(p.y<-12){p.y=H+12;p.x=Math.random()*W;}
+          var tw=0.45+0.55*Math.abs(Math.sin(p.ph));
+          ctx.fillStyle="rgba(255,190,0,"+(p.op*tw)+")";
+          ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();
+        }
+      }
+      for(i=bursts.length-1;i>=0;i--){
+        p=bursts[i];p.life-=p.decay;p.x+=p.vx;p.y+=p.vy;p.vy+=0.045;p.vx*=0.985;
+        if(p.life<=0){bursts.splice(i,1);continue;}
+        if(p.type==="rain"){
+          ctx.strokeStyle="rgba(90,140,255,"+(0.7*p.life)+")";ctx.lineWidth=1.4;
+          ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-p.vx*3,p.y-10);ctx.stroke();
+        }else if(p.type==="snow"){
+          ctx.fillStyle=dark()?"rgba(255,255,255,"+(0.9*p.life)+")":"rgba(110,125,150,"+(0.9*p.life)+")";
+          ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();
+        }else{
+          ctx.fillStyle="rgba(255,200,20,"+(0.95*p.life)+")";
+          ctx.shadowColor="rgba(255,190,0,.8)";ctx.shadowBlur=8;
+          ctx.beginPath();ctx.arc(p.x,p.y,p.r*p.life+0.6,0,6.283);ctx.fill();
+          ctx.shadowBlur=0;
+        }
+      }
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    /* hover bursts — weather per card, throttled */
+    var last=0;
+    function burstAt(e,el){
+      var now=performance.now();if(now-last<70)return;last=now;
+      var kind=(el&&el.getAttribute&&el.getAttribute("data-weather"))||(mode!=="off"?mode:"spark");
+      emit(e.clientX,e.clientY,kind,7);
+    }
+    document.querySelectorAll(".svc,.stack-card,.pcol,.strip a,.faq-item,.mail-pill,.top-mail,.count,.fact").forEach(function(el){
+      el.addEventListener("pointermove",function(e){burstAt(e,el);},{passive:true});
+      el.addEventListener("pointerenter",function(e){if(e.clientX)burstAt(e,el);},{passive:true});
+    });
+    /* dock */
+    var dock=document.querySelector(".fx-dock");
+    function paintDock(){
+      cv.className=mode==="off"?"":("on "+(mode==="rain"?"rainy":mode==="snow"?"snowy":"sparkly"));
+      dock.querySelectorAll("button").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-fx")===mode);});
+      try{localStorage.setItem("ap-fx",mode);}catch(e){}
+    }
+    dock.querySelectorAll("button").forEach(function(b){
+      b.addEventListener("click",function(){
+        mode=b.getAttribute("data-fx");parts.length=0;paintDock();
+        if(mode!=="off"){for(var i=0;i<24;i++)parts.push(mkAmbient(mode));}
+      });
+    });
+    paintDock();
+    window.__fxEmit=emit;
+  })();
 })();
 </script>
 </body>
