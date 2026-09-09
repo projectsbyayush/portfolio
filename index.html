@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#FAF6EE" id="themeColor">
 <meta name="color-scheme" content="light dark">
-<script>try{if(localStorage.getItem("ap-theme")==="dark"){document.documentElement.dataset.theme="dark";var m=document.getElementById("themeColor");if(m)m.setAttribute("content","#0b0b0c");}}catch(e){}</script>
+<script>try{var t=localStorage.getItem("ap-theme");if(t==="dark"||(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.dataset.theme="dark";var m=document.getElementById("themeColor");if(m)m.setAttribute("content","#0b0b0c");}}catch(e){}</script>
 <link rel="canonical" href="https://projectsbyayush.github.io/portfolio/">
 <link rel="alternate" hreflang="en" href="https://projectsbyayush.github.io/portfolio/">
 <link rel="alternate" hreflang="x-default" href="https://projectsbyayush.github.io/portfolio/">
@@ -379,11 +379,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     <section class="card work" aria-label="Selected work">
       <div class="work-head"><h2>Selected Work</h2><a href="https://github.com/projectsbyayush" target="_blank" rel="noopener">GitHub &#8599;</a></div>
       <div class="proj-cols">
-        <a class="pcol" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
+        <a class="pcol" href="https://github.com/projectsbyayush/WeloveSoftDrinks" target="_blank" rel="noopener">
           <span class="n">/ 01</span>
-          <b>Shopkart</b>
-          <p>E-commerce storefront with cart, checkout and admin dashboard.</p>
-          <span class="tags"><i>React.js</i><i>Node.js</i><i>MongoDB</i></span>
+          <b>WeLoveSoftDrinks</b>
+          <p>Soft-drinks ordering web app with Java backend and SQL database.</p>
+          <span class="tags"><i>Java</i><i>SQL</i><i>CSS</i></span>
           <span class="view">View &#8599;</span>
         </a>
         <a class="pcol" href="https://github.com/projectsbyayush" target="_blank" rel="noopener">
@@ -560,6 +560,18 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     paintTheme(document.documentElement.dataset.theme!=="dark");
   });
   paintTheme(document.documentElement.dataset.theme==="dark");
+
+  /* follow the visitor's OS theme until they pick one manually */
+  if(window.matchMedia){
+    var scheme=window.matchMedia("(prefers-color-scheme: dark)");
+    var onScheme=function(e){
+      var saved=null;
+      try{saved=localStorage.getItem("ap-theme");}catch(err){}
+      if(!saved)paintTheme(e.matches);
+    };
+    if(scheme.addEventListener){scheme.addEventListener("change",onScheme);}
+    else if(scheme.addListener){scheme.addListener(onScheme);}
+  }
 
   /* topbar shadow + back-to-top with progress ring */
   var bar=document.querySelector(".topbar"),top=document.getElementById("toTop"),fg=document.getElementById("ringFg");
