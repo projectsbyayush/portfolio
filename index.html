@@ -587,7 +587,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   };
   function applyIconColors(){
     var isDark=document.documentElement.dataset.theme==='dark';
-    document.querySelectorAll('i[class*="fa-"]').forEach(function(el){
+    document.querySelectorAll('i.fa-solid, i.fa-brands').forEach(function(el){
       var classes=el.className.split(' ');
       var icon=null;
       classes.forEach(function(c){if(c.startsWith('fa-')&&c!=='fa-solid'&&c!=='fa-brands'&&c!=='fa-regular'){icon=c;}});
