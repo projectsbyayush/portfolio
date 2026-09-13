@@ -583,11 +583,12 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     'fa-server':{l:'#6B7280',d:'#9CA3AF'},'fa-database':{l:'#F97316',d:'#FB923C'},'fa-gauge-high':{l:'#EF4444',d:'#F87171'},
     'fa-headset':{l:'#10B981',d:'#34D399'},'fa-laptop-code':{l:'#4A90D9',d:'#6BB3F9'},'fa-gears':{l:'#7C3AED',d:'#A78BFA'},
     'fa-circle-question':{l:'#F97316',d:'#FB923C'},'fa-arrow-up':{l:'#000000',d:'#FFFFFF'},
-    'fa-sun':{l:'#000000',d:'#FFFFFF'},'fa-moon':{l:'#FFFFFF',d:'#000000'}
+    'fa-sun':{l:'#000000',d:'#FFFFFF'},'fa-moon':{l:'#000000',d:'#FFFFFF'}
   };
   function applyIconColors(){
     var isDark=document.documentElement.dataset.theme==='dark';
     document.querySelectorAll('i.fa-solid, i.fa-brands').forEach(function(el){
+      if(el.closest('.faq-q,.sec-head p'))return;
       var classes=el.className.split(' ');
       var icon=null;
       classes.forEach(function(c){if(c.startsWith('fa-')&&c!=='fa-solid'&&c!=='fa-brands'&&c!=='fa-regular'){icon=c;}});
@@ -595,6 +596,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     });
   }
   applyIconColors();
+  /* topbar shadow + back-to-top with progress ring */
   /* topbar shadow + back-to-top with progress ring */
   var bar=document.querySelector(".topbar"),top=document.getElementById("toTop"),fg=document.getElementById("ringFg");
   var circ=2*Math.PI*24;
