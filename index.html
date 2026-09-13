@@ -39,9 +39,9 @@
   --ink:#17130B;
   --dim:#6F6353;
   --line:#E2D7BE;
-  --orange:#FFD600;
-  --orange-h:#E6C200;
-  --gold:#9A7400;
+   --orange:#9A7400;
+   --orange-h:#7A5E00;
+  --gold:#FFD600;
   --raise:#EEE4CC;
   --inset:#FFFFFF;
   --soft:#4D4536;
@@ -52,22 +52,24 @@
   --r:26px;
   --font:'Inter Tight',system-ui,-apple-system,sans-serif;
 }
-[data-theme="dark"]{
-  --bg:#0b0b0c;
-  --card:#1e1f21;
-  --card2:#161719;
-  --ink:#f4f4f4;
-  --dim:#8f8f93;
-  --line:#333437;
-  --gold:#FFD600;
-  --raise:#222426;
-  --inset:#101012;
-  --soft:#c9c9cd;
-  --edge:#3a3b3e;
-  --edge-soft:#26272a;
-  --input-bd:#2c2d30;
-  --topbar-bg:rgba(11,11,12,.66);--glass:rgba(26,27,30,.55);--glass-bd:rgba(255,255,255,.09);
-}
+ [data-theme="dark"]{
+   --bg:#0b0b0c;
+   --card:#1e1f21;
+   --card2:#161719;
+   --ink:#f4f4f4;
+   --dim:#8f8f93;
+   --line:#333437;
+   --gold:#FFD600;
+   --orange:#FFD600;
+   --orange-h:#E6C200;
+   --raise:#222426;
+   --inset:#101012;
+   --soft:#c9c9cd;
+   --edge:#3a3b3e;
+   --edge-soft:#26272a;
+   --input-bd:#2c2d30;
+   --topbar-bg:rgba(11,11,12,.66);--glass:rgba(26,27,30,.55);--glass-bd:rgba(255,255,255,.09);
+ }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:110px}
 section[id]{scroll-margin-top:104px}
 img{max-width:100%}
@@ -172,7 +174,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 [data-theme="dark"] .svc{box-shadow:0 16px 40px rgba(0,0,0,.45)}
 .svc{--mx:50%;--my:50%}
 .svc.spot{position:relative;overflow:hidden}
-.svc.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at var(--mx) var(--my),rgba(154,116,0,.14),transparent 65%);opacity:0;transition:opacity .3s}
+.svc.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at var(--mx) var(--my),rgba(154,116,0,.16),transparent 65%);opacity:0;transition:opacity .3s}
 .svc.spot:hover::after{opacity:1}
 [data-theme="dark"] .svc.spot::after{background:radial-gradient(360px circle at var(--mx) var(--my),rgba(255,214,0,.12),transparent 65%)}
 .svc:hover{box-shadow:0 26px 60px rgba(20,16,4,.18)}
@@ -186,11 +188,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .stack-card>p{font-size:13.5px;color:var(--dim);line-height:1.6;margin-top:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .chips span{font-size:12.5px;font-weight:500;border:1px solid var(--edge);border-radius:100px;padding:7px 14px;color:var(--soft);transition:border-color .2s,color .2s}
-.chips span:hover{border-color:var(--orange);color:var(--ink);box-shadow:0 0 14px rgba(255,214,0,.35)}
+.chips span:hover{border-color:var(--orange);color:var(--ink);box-shadow:0 0 14px rgba(154,116,0,.35)}
 .stack-card{transition:transform .25s,box-shadow .25s,border-color .25s;border:1px solid transparent}
-.stack-card:hover{transform:translateY(-5px);border-color:rgba(255,214,0,.55);box-shadow:0 0 0 1px rgba(255,214,0,.45),0 20px 55px rgba(255,180,0,.22)}
+.stack-card:hover{transform:translateY(-5px);border-color:rgba(154,116,0,.55);box-shadow:0 0 0 1px rgba(154,116,0,.45),0 20px 55px rgba(154,116,0,.22)}
 [data-theme="dark"] .stack-card:hover{box-shadow:0 0 0 1px rgba(255,214,0,.6),0 20px 60px rgba(255,214,0,.16)}
-.stack-card:hover h3 i{text-shadow:0 0 18px rgba(255,214,0,.65)}
+.stack-card:hover h3 i{text-shadow:0 0 18px rgba(154,116,0,.65)}
 /* contact */
 .contact-big{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);align-items:start}
 .contact-big h3{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-0.03em;line-height:1.1}
@@ -281,7 +283,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
 /* spotlight hover */
 .card{--mx:50%;--my:50%}
-.card.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(154,116,0,.12),transparent 65%);opacity:0;transition:opacity .3s}
+.card.spot::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(154,116,0,.14),transparent 65%);opacity:0;transition:opacity .3s}
 [data-theme="dark"] .card.spot::after{background:radial-gradient(420px circle at var(--mx) var(--my),rgba(255,214,0,.10),transparent 65%)}
 .card.spot:hover::after{opacity:1}
 /* topbar shadow on scroll */
