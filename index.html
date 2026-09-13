@@ -55,8 +55,8 @@
     --card:#1c1c1c;
     --card2:#161616;
     --ink:#FFFFFF;
-    --accent:#FFD600;
-    --accent-h:#E6C200;
+    --accent:#FFFFFF;
+    --accent-h:#CCCCCC;
     --line:#3a3a3a;
     --raise:#262626;
     --inset:#1a1a1a;
@@ -220,11 +220,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 /* font awesome accents */
 .theme-btn{width:40px;height:40px;flex:none;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;display:grid;place-items:center;transition:border-color .2s,transform .2s}
 .theme-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
-.sec-head p i{color:var(--accent);margin-right:8px}
-.svc .sic{width:44px;height:44px;border-radius:14px;background:transparent;display:grid;place-items:center;font-size:22px;color:var(--accent);margin-bottom:4px}
-.stack-card h3 i{color:var(--accent);margin-right:9px;font-size:.9em}
-.strip a i{color:var(--accent);margin-right:7px;font-size:.92em}
-.clinks a>i:first-child{color:var(--accent);font-size:13px;margin-right:2px}
+ .sec-head p i{margin-right:8px}
+ .svc .sic{width:44px;height:44px;border-radius:14px;background:transparent;display:grid;place-items:center;font-size:22px;margin-bottom:4px}
+ .stack-card h3 i{margin-right:9px;font-size:.9em}
+ .strip a i{margin-right:7px;font-size:.92em}
+ .clinks a>i:first-child{font-size:13px;margin-right:2px}
 .mail-pill i,.top-mail i,.send-btn i{font-size:.92em}
 .brand-logo{width:30px;height:30px;border-radius:9px;object-fit:cover;display:block;flex:none}
 /* ---------- hamburger + mobile menu ---------- */
@@ -555,6 +555,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     themeBtn.setAttribute("aria-label",dark?"Switch to light mode":"Switch to dark mode");
     if(themeMeta)themeMeta.setAttribute("content",dark?"#111111":"#FFFFFF");
     try{localStorage.setItem("ap-theme",dark?"dark":"light");}catch(e){}
+    applyIconColors();
   }
   themeBtn.addEventListener("click",function(){
     paintTheme(document.documentElement.dataset.theme!=="dark");
@@ -567,12 +568,33 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     var onScheme=function(e){
       var saved=null;
       try{saved=localStorage.getItem("ap-theme");}catch(err){}
-      if(!saved)paintTheme(e.matches);
+      if(!saved){paintTheme(e.matches);applyIconColors();}
     };
     if(scheme.addEventListener){scheme.addEventListener("change",onScheme);}
     else if(scheme.addListener){scheme.addListener(onScheme);}
   }
 
+  /* multicolor icons mapping — light and dark variants */
+  var iconMap={
+    'fa-github':{l:'#333333',d:'#999999'},'fa-linkedin':{l:'#0A66C2',d:'#0A66C2'},'fa-linkedin-in':{l:'#0A66C2',d:'#0A66C2'},
+    'fa-instagram':{l:'#E4405F',d:'#E4405F'},'fa-x-twitter':{l:'#1DA1F2',d:'#1DA1F2'},'fa-x':{l:'#1DA1F2',d:'#1DA1F2'},
+    'fa-envelope':{l:'#4A90D9',d:'#6BB3F9'},'fa-file-lines':{l:'#4A90D9',d:'#6BB3F9'},'fa-user':{l:'#4A90D9',d:'#6BB3F9'},
+    'fa-briefcase':{l:'#7C3AED',d:'#A78BFA'},'fa-code':{l:'#4A90D9',d:'#6BB3F9'},'fa-layer-group':{l:'#0D9488',d:'#2DD4BF'},
+    'fa-server':{l:'#6B7280',d:'#9CA3AF'},'fa-database':{l:'#F97316',d:'#FB923C'},'fa-gauge-high':{l:'#EF4444',d:'#F87171'},
+    'fa-headset':{l:'#10B981',d:'#34D399'},'fa-laptop-code':{l:'#4A90D9',d:'#6BB3F9'},'fa-gears':{l:'#7C3AED',d:'#A78BFA'},
+    'fa-circle-question':{l:'#F97316',d:'#FB923C'},'fa-arrow-up':{l:'#000000',d:'#FFFFFF'},
+    'fa-sun':{l:'#000000',d:'#FFFFFF'},'fa-moon':{l:'#FFFFFF',d:'#000000'}
+  };
+  function applyIconColors(){
+    var isDark=document.documentElement.dataset.theme==='dark';
+    document.querySelectorAll('i[class^="fa-"]').forEach(function(el){
+      var classes=el.className.split(' ');
+      var icon=null;
+      classes.forEach(function(c){if(c.startsWith('fa-')&&c!=='fa-solid'&&c!=='fa-brands'&&c!=='fa-regular'){icon=c;}});
+      if(icon&&iconMap[icon]){el.style.color=isDark?iconMap[icon].d:iconMap[icon].l;}
+    });
+  }
+  applyIconColors();
   /* topbar shadow + back-to-top with progress ring */
   var bar=document.querySelector(".topbar"),top=document.getElementById("toTop"),fg=document.getElementById("ringFg");
   var circ=2*Math.PI*24;
