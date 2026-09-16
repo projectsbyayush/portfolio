@@ -34,4 +34,4 @@ What services do you offer? What technologies do you use (HTML5, CSS3, JavaScrip
 
 ## Canonical site
 
-- https://projectsbyayush.github.io/portfolio/
+- https://projectsbyayush.pages.dev/
