@@ -108,7 +108,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .mail-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:-0.01em;border-radius:100px;padding:clamp(14px,2.2vh,20px) clamp(26px,3vw,46px);transition:background .2s,transform .2s;max-width:100%}
 .mail-pill:hover{background:var(--accent-h);color:var(--bg);transform:translateY(-2px)}
 /* social strip */
-.strip{grid-template-columns:repeat(6,1fr)}
+.strip{display:flex;flex-wrap:wrap}
+.strip a{flex:1 1 150px}
 .strip a{background:var(--card2);color:var(--ink);text-decoration:none;text-align:center;font-size:clamp(12px,1.25vw,16px);font-weight:500;border-radius:100px;padding:clamp(13px,1.9vh,18px) 8px;transition:background .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .strip a:hover{background:var(--raise)}
 /* based */
@@ -197,10 +198,6 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .contact-big{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);align-items:start}
 .contact-big h3{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-0.03em;line-height:1.1}
 .contact-big>p{font-size:14.5px;color:var(--dim);line-height:1.7;margin-top:12px}
-.clinks{display:flex;flex-direction:column;gap:2px;margin-top:16px}
-.clinks a{color:var(--soft);text-decoration:none;font-size:14.5px;font-weight:500;padding:9px 0;border-bottom:1px solid var(--edge-soft);display:flex;justify-content:space-between;gap:10px}
-.clinks a:hover{color:var(--accent)}
-.clinks a span:last-child{color:var(--dim)}
 .cform{display:flex;flex-direction:column;gap:10px}
 .cform input,.cform textarea{width:100%;background:var(--inset);border:1px solid var(--input-bd);border-radius:14px;color:var(--ink);font-family:var(--font);font-size:16px;padding:14px 16px;outline:none;transition:border-color .2s}
 .cform input:focus,.cform textarea:focus{border-color:var(--accent)}
@@ -212,6 +209,10 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
 .footer a{color:var(--dim);text-decoration:none;font-weight:600}
 .footer a:hover{color:var(--accent)}
 .foot-links{display:flex;gap:16px;flex-wrap:wrap}
+.fsocial{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;max-width:640px}
+.fsocial a{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--edge);border-radius:50%;color:var(--ink);font-size:14px;text-decoration:none;transition:border-color .2s,transform .2s}
+.fsocial a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.contact-big .fsocial{justify-content:flex-start;margin-top:16px;max-width:none}
 .to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:52px;height:52px;border-radius:50%;border:1px solid var(--edge);background:var(--card);color:var(--ink);cursor:pointer;font-size:17px;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.45);opacity:0;translate:0 14px;pointer-events:none;transition:opacity .3s,translate .3s,background .2s,transform .2s}
 .to-top.show{opacity:1;translate:0 0;pointer-events:auto}
 .to-top:hover{background:var(--raise);color:var(--ink);transform:translateY(-3px);border-color:var(--accent)}
@@ -226,8 +227,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
  .sec-head p i{margin-right:8px}
  .svc .sic{width:44px;height:44px;border-radius:14px;background:transparent;display:grid;place-items:center;font-size:22px;margin-bottom:4px}
  .stack-card h3 i{margin-right:9px;font-size:.9em}
- .strip a i{margin-right:7px;font-size:.92em}
- .clinks a>i:first-child{font-size:13px;margin-right:2px}
+.strip a i{margin-right:7px;font-size:.92em}
 .mail-pill i,.top-mail i,.send-btn i{font-size:.92em}
 .brand-logo{width:30px;height:30px;border-radius:9px;object-fit:cover;display:block;flex:none}
 /* ---------- hamburger + mobile menu ---------- */
@@ -301,7 +301,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   .svc-grid,.stack-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
-  .strip{grid-template-columns:repeat(3,1fr)}
+  .strip a{flex:1 1 28%}
   .svc-grid,.stack-grid{grid-template-columns:1fr}
   .counts{grid-template-columns:repeat(3,1fr)}
   .hero h1{font-size:clamp(28px,8.4vw,38px)}
@@ -359,12 +359,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
   </div>
   <div class="marquee in-shell" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
   <nav class="row strip" aria-label="Social links">
+    <a href="resume.html" download="Ayush-Patil-Resume.html"><i class="fa-solid fa-file-lines"></i>Resume.</a>
     <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub.</a>
     <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i>LinkedIn.</a>
-    <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram.</a><a href="https://facebook.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i>Facebook.</a><a href="https://youtube.com/@projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i>YouTube.</a>
-    <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>X.</a>
     <a href="javascript:void(0)" onclick="window.location.href='mailto:'+atob('cG9zaXRpb25iYXlhaXQuZ21haWwuY29t')"><i class="fa-solid fa-envelope"></i>Mail.</a>
-    <a href="resume.html" download="Ayush-Patil-Resume.html"><i class="fa-solid fa-file-lines"></i>Resume.</a>
+    <a href="https://leetcode.com/u/projectsbyayush/" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i>LeetCode.</a>
+    <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram.</a>
+    <a href="https://www.threads.com/@projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-threads"></i>Threads.</a>
+    <a href="https://bsky.app/profile/projectsbyayush.pages.dev" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky"></i>Bluesky.</a>
+    <a href="https://mastodon.social/@projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon"></i>Mastodon.</a>
   </nav>
   <div class="row row-bottom" id="work">
     <section class="card based" aria-label="Location">
@@ -496,12 +499,29 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     <div>
       <h3>Let's Build Something That Ships.</h3>
       <p>Tell me what you want to build landing pages, web apps, APIs or databases. Based in Mumbai, working worldwide.</p>
-      <div class="clinks">
-        <a href="mailto:projectsbyayush@gmail.com"><i class="fa-solid fa-envelope"></i><span>projectsbyayush@gmail.com</span><span>&#8599;</span></a>
-        <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span>github.com/projectsbyayush</span><span>&#8599;</span></a>
-        <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/projectsbyayush</span><span>&#8599;</span></a>
-        <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i><span>instagram.com/projectsbyayush</span><span>&#8599;</span></a>
-        <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i><span>x.com/projectsbyayush</span><span>&#8599;</span></a>
+      <div class="fsocial" aria-label="Social links">
+        <a href="resume.html" download="Ayush-Patil-Resume.html" aria-label="Resume"><i class="fa-solid fa-file-lines"></i></a>
+        <a href="https://github.com/projectsbyayush" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://leetcode.com/u/projectsbyayush/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+        <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/projectsbyayush" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://bsky.app/profile/projectsbyayush.pages.dev" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+        <a href="https://medium.com/@projectsbyayush" target="_blank" rel="noopener" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+        <a href="https://youtube.com/@projectsbyayush" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.figma.com/@projectsbyayush" target="_blank" rel="noopener" aria-label="Figma"><i class="fa-brands fa-figma"></i></a>
+        <a href="https://dribbble.com/projectsbyayush" target="_blank" rel="noopener" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+        <a href="https://www.threads.com/@projectsbyayush" target="_blank" rel="noopener" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+        <a href="https://mastodon.social/@projectsbyayush" target="_blank" rel="noopener" aria-label="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
+        <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://facebook.com/projectsbyayush" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://discord.gg/R9h8gQd9c" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://www.reddit.com/user/projectsbyayush/" target="_blank" rel="noopener" aria-label="Reddit"><i class="fa-brands fa-reddit-alien"></i></a>
+        <a href="https://projectsbyayush.itch.io" target="_blank" rel="noopener" aria-label="Itch.io"><i class="fa-brands fa-itch-io"></i></a>
+        <a href="https://stackoverflow.com/users/32938027/projectsbyayush" target="_blank" rel="noopener" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
+        <a href="https://www.quora.com/profile/projectsbyayush" target="_blank" rel="noopener" aria-label="Quora"><i class="fa-brands fa-quora"></i></a>
+        <a href="https://www.pinterest.com/projectsbyayush/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="https://www.snapchat.com/add/projectsbyayush" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+        <a href="https://vimeo.com/projectsbyayush" target="_blank" rel="noopener" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i></a>
       </div>
     </div>
     <form class="cform" onsubmit="event.preventDefault();this.reset();var b=this.querySelector('.send-btn');var o=b.textContent;b.textContent='Message sent I will reply soon!';setTimeout(()=>{b.textContent=o},3000);">
@@ -521,11 +541,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     <a href="https://linkedin.com/in/projectsbyayush" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://instagram.com/projectsbyayush" target="_blank" rel="noopener">Instagram</a>
     <a href="javascript:void(0)" onclick="window.location.href='mailto:'+atob('cG9zaXRpb25iYXlhaXQuZ21haWwuY29t')">Email</a>
+  </div>
     <button class="to-top" id="toTop" aria-label="Back to top">
       <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="bgc" cx="26" cy="26" r="24"/><circle class="fgc" id="ringFg" cx="26" cy="26" r="24"/></svg>
       <i class="fa-solid fa-arrow-up"></i>
     </button>
-  </div>
 </footer>
 
 <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
@@ -569,7 +589,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);min-height:10
     'fa-server':{l:'#6B7280',d:'#9CA3AF'},'fa-database':{l:'#F97316',d:'#FB923C'},'fa-gauge-high':{l:'#EF4444',d:'#F87171'},
     'fa-headset':{l:'#10B981',d:'#34D399'},'fa-laptop-code':{l:'#4A90D9',d:'#6BB3F9'},'fa-gears':{l:'#7C3AED',d:'#A78BFA'},
     'fa-circle-question':{l:'#F97316',d:'#FB923C'},'fa-arrow-up':{l:'#000000',d:'#FFFFFF'},
-    'fa-sun':{l:'#000000',d:'#FFFFFF'},'fa-moon':{l:'#000000',d:'#FFFFFF'}
+    'fa-sun':{l:'#000000',d:'#FFFFFF'},'fa-moon':{l:'#000000',d:'#FFFFFF'},
+    'fa-stack-overflow':{l:'#F48024',d:'#F48024'},
+    'fa-facebook':{l:'#1877F2',d:'#1877F2'},'fa-youtube':{l:'#FF0000',d:'#FF0000'},
+    'fa-bluesky':{l:'#0285FF',d:'#0285FF'},'fa-threads':{l:'#000000',d:'#FFFFFF'},
+    'fa-mastodon':{l:'#6364FF',d:'#6364FF'},    'fa-reddit-alien':{l:'#FF4500',d:'#FF4500'},'fa-itch-io':{l:'#FA5C5C',d:'#FA5C5C'},
+    'fa-pinterest':{l:'#E60023',d:'#E60023'},'fa-medium':{l:'#000000',d:'#FFFFFF'},
+    'fa-quora':{l:'#B92B27',d:'#B92B27'},    'fa-discord':{l:'#5865F2',d:'#5865F2'},
+    'fa-dribbble':{l:'#EA4C89',d:'#EA4C89'},'fa-snapchat':{l:'#FFFC00',d:'#FFFC00'},
+    'fa-vimeo-v':{l:'#1AB7EA',d:'#1AB7EA'},'fa-figma':{l:'#A259FF',d:'#C4B5FD'}
   };
   function applyIconColors(){
     var isDark=document.documentElement.dataset.theme==='dark';
