@@ -10,9 +10,11 @@
 - Education: B.E. Computer Engineering — Pravin R. Patil College of Engineering and Technology, Mumbai University
 - Email: projectsbyayush@gmail.com
 - GitHub: https://github.com/projectsbyayush
+- LeetCode: https://leetcode.com/u/projectsbyayush/
 - LinkedIn: https://linkedin.com/in/projectsbyayush
 - Instagram: https://instagram.com/projectsbyayush
 - X: https://x.com/projectsbyayush
+- Mastodon: https://mastodon.social/@projectsbyayush
 
 ## Stack
 
