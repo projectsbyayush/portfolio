@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://projectsbyayush.pages.dev/sitemap.xml

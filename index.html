@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var theme = localStorage.getItem("theme")
+        if (
+          theme === "dark" ||
+          (!theme &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark")
+        }
+      } catch (error) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="canonical" href="https://projectsbyayush.pages.dev/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Ayush Patil — Full Stack Web Developer in Mumbai, India. React, Angular, Node.js and Java with MySQL, PostgreSQL and MongoDB. Freelance websites and APIs with 24-hour replies."
+    />
+    <meta name="author" content="Ayush Patil" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#f7f4f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#211c1a" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://projectsbyayush.pages.dev/" />
+    <meta property="og:site_name" content="Ayush Patil — Portfolio" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="Ayush Patil — Full Stack Web Developer | Mumbai, India" />
+    <meta
+      property="og:description"
+      content="Full Stack Web Developer from Mumbai. React, Angular, Node.js, Java, MySQL, PostgreSQL, MongoDB. Open to freelance and full-time work — replies within 24 hours."
+    />
+    <meta property="og:image" content="https://projectsbyayush.pages.dev/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Ayush Patil — Full Stack Web Developer, Mumbai, India"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@projectsbyayush" />
+    <meta name="twitter:title" content="Ayush Patil — Full Stack Web Developer | Mumbai, India" />
+    <meta
+      name="twitter:description"
+      content="Full Stack Web Developer from Mumbai. React, Angular, Node.js, Java, MySQL, PostgreSQL, MongoDB. Replies within 24 hours."
+    />
+    <meta name="twitter:image" content="https://projectsbyayush.pages.dev/og.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Ayush Patil — Full Stack Web Developer, Mumbai, India"
+    />
+    <title>Ayush Patil — Full Stack Web Developer | Mumbai, India</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://projectsbyayush.pages.dev/#person",
+            "name": "Ayush Patil",
+            "jobTitle": "Full Stack Web Developer",
+            "description": "Full Stack Web Developer from Mumbai, India building fast, SEO-ready websites and APIs with React, Angular, Node.js and Java.",
+            "url": "https://projectsbyayush.pages.dev/",
+            "email": "mailto:projectsbyayush@gmail.com",
+            "image": "https://projectsbyayush.pages.dev/og.png",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mumbai",
+              "addressRegion": "Maharashtra",
+              "addressCountry": "IN"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Pravin R. Patil College of Engineering and Technology, Mumbai University"
+            },
+            "knowsLanguage": ["English", "Hindi"],
+            "sameAs": [
+              "https://github.com/projectsbyayush",
+              "https://linkedin.com/in/projectsbyayush",
+              "https://x.com/projectsbyayush",
+              "https://instagram.com/projectsbyayush"
+            ],
+            "knowsAbout": [
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "React.js",
+              "Angular.js",
+              "Node.js",
+              "Java",
+              "REST APIs",
+              "MySQL",
+              "PostgreSQL",
+              "Oracle SQL",
+              "MongoDB"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Web development services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Frontend development",
+                    "description": "Semantic markup, modern layouts and interactive experiences that feel instant on any device."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Component UI",
+                    "description": "Reusable, maintainable interfaces with React.js and Angular.js that stay fast as you grow."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Backend & APIs",
+                    "description": "Secure server logic and REST integrations with Node.js and Java — tested and documented."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Database design",
+                    "description": "Relational and NoSQL databases modelled, indexed and backed up."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Performance",
+                    "description": "Optimized delivery — small bundles, fast paint, zero bloat."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Support",
+                    "description": "Maintenance, fixes and iteration with replies inside 24 hours."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://projectsbyayush.pages.dev/#website",
+            "url": "https://projectsbyayush.pages.dev/",
+            "name": "Ayush Patil — Portfolio",
+            "description": "Portfolio of Ayush Patil, Full Stack Web Developer in Mumbai, India.",
+            "inLanguage": "en-IN",
+            "publisher": { "@id": "https://projectsbyayush.pages.dev/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://projectsbyayush.pages.dev/#webpage",
+            "url": "https://projectsbyayush.pages.dev/",
+            "name": "Ayush Patil — Full Stack Web Developer | Mumbai, India",
+            "isPartOf": { "@id": "https://projectsbyayush.pages.dev/#website" },
+            "about": { "@id": "https://projectsbyayush.pages.dev/#person" },
+            "mainEntity": { "@id": "https://projectsbyayush.pages.dev/#person" },
+            "inLanguage": "en-IN"
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://projectsbyayush.pages.dev/#faq",
+            "isPartOf": { "@id": "https://projectsbyayush.pages.dev/#website" },
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What services do you offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "End-to-end web builds — frontend (HTML5, CSS3, JavaScript, React.js, Angular.js), backend & APIs (Node.js, Java, REST), databases (MySQL, PostgreSQL, Oracle SQL, MongoDB), plus performance tuning and ongoing support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are you available for work right now?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes — open to freelance projects, full-time roles and collaborations. Based in Mumbai (IST UTC+5:30), working with clients worldwide, remote or on-site."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How fast do you reply, and what's the process?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "I reply within 24 hours. Share your idea via the contact form — we scope it, agree on a timeline, then I design, build, test and ship with updates at every step."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you work remotely with international clients?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. I work in English & Hindi, overlap with EU / US / APAC hours when needed, and keep communication async-friendly with clear milestones."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does a project cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It depends on scope — a landing page vs. a full-stack app with auth and database are very different. Mail your requirements and I'll send a fixed quote with a timeline, no hidden costs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will my site be fast and SEO-ready?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes — speed and SEO are built in: semantic HTML, tiny bundles, fast paint, meta and Open Graph tags."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What technologies do you use for web development?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "HTML5, CSS3 and JavaScript with React.js or Angular.js on the frontend, Node.js or Java REST APIs on the backend, and MySQL, PostgreSQL, Oracle SQL or MongoDB for data."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does it take to build a website?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A landing page typically ships in under two weeks, while full-stack web apps with databases take longer depending on features. You get a fixed timeline before we start, with updates at every step."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <h1>Ayush Patil — Full Stack Web Developer, Mumbai, India</h1>
+      <p>
+        I build fast, SEO-ready websites and APIs with HTML5, CSS3, JavaScript,
+        React.js, Angular.js, Node.js and Java, backed by MySQL, PostgreSQL,
+        Oracle SQL and MongoDB.
+      </p>
+      <p>
+        Open to freelance projects and full-time roles — based in Mumbai (IST
+        UTC+5:30), working with clients worldwide. I reply within 24 hours.
+      </p>
+      <p>
+        Contact: <a href="mailto:projectsbyayush@gmail.com">projectsbyayush@gmail.com</a> ·
+        <a href="https://github.com/projectsbyayush">GitHub</a> ·
+        <a href="https://linkedin.com/in/projectsbyayush">LinkedIn</a>
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

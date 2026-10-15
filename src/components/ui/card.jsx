@@ -1,0 +1,85 @@
+import * as React from "react"
+import { cn } from "cn"
+
+function Card({ className, ...props }) {
+  return (
+    <div
+      data-slot="card"
+      className={cn(
+        "flex flex-col rounded-md bg-surface-container-low text-body-md text-on-surface",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function CardHeader({ className, ...props }) {
+  return (
+    <div
+      data-slot="card-header"
+      className={cn("flex flex-col gap-1 p-6", className)}
+      {...props}
+    />
+  )
+}
+
+function CardTitle({ className, ...props }) {
+  return (
+    <div
+      data-slot="card-title"
+      className={cn("text-title-lg text-on-surface", className)}
+      {...props}
+    />
+  )
+}
+
+function CardDescription({ className, ...props }) {
+  return (
+    <div
+      data-slot="card-description"
+      className={cn("text-body-md text-on-surface-variant", className)}
+      {...props}
+    />
+  )
+}
+
+function CardAction({ className, ...props }) {
+  return (
+    <div
+      data-slot="card-action"
+      className={cn("self-start justify-self-end", className)}
+      {...props}
+    />
+  )
+}
+
+function CardContent({ className, ...props }) {
+  return (
+    <div
+      data-slot="card-content"
+      className={cn("p-6 pt-0", className)}
+      {...props}
+    />
+  )
+}
+
+function CardFooter({ className, ...props }) {
+  return (
+    <div
+      data-slot="card-footer"
+      className={cn("flex items-center p-6 pt-0", className)}
+      {...props}
+    />
+  )
+}
+
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+}
